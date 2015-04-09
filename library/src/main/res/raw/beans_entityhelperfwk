@@ -1,4 +1,0 @@
-com.adeuza.movalysfwk.mobile.mf4mjcommons.model.MParameters|factory=com.adeuza.movalysfwk.mobile.mf4mjcommons.factory.MParametersFactory
-com.adeuza.movalysfwk.mobile.mf4mjcommons.model.MParameters|dao=com.adeuza.movalysfwk.mobile.mf4mjcommons.data.dao.MParametersDao
-com.adeuza.movalysfwk.mobile.mf4mjcommons.model.MObjectToSynchronize|factory=com.adeuza.movalysfwk.mobile.mf4mjcommons.factory.MObjectToSynchronizeFactory
-com.adeuza.movalysfwk.mobile.mf4mjcommons.model.MObjectToSynchronize|dao=com.adeuza.movalysfwk.mobile.mf4mjcommons.data.dao.MObjectToSynchronizeDao

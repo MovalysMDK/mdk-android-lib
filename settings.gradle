@@ -1,1 +1,0 @@
-include ':mdk',':mdk-database',':mdk-nodatabase',':mdk-databasecipher',':mdk-scanner',':mdk-test',':mdk-testdatabase',':mdk-workspace', ':dist'
