@@ -25,8 +25,23 @@ allprojects {
     group = GROUP
 
     repositories {
-        jcenter()
         mavenLocal()
+
+        maven {
+            url mdkArtifactoryRepoReleases
+            credentials {
+                username mdkArtifactoryUsername
+                password mdkArtifactoryPassword
+            }
+        }
+        maven {
+            url mdkArtifactoryRepoSnapshots
+            credentials {
+                username mdkArtifactoryUsername
+                password mdkArtifactoryPassword
+            }
+        }
+        jcenter()
     }
 }
 
