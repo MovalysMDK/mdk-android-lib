@@ -1,8 +1,14 @@
 #!/bin/sh
 
+MF4A_VERSION=$1
+
+if [ -x $MF4A_VERSION ]; then
+   echo "missing mdk version"
+   exit 1
+fi
+
 URL_REPO=http://svn.ntes.fr.sopra/svnpolemobility/svn/Movalys/repository/
 
-MF4A_VERSION=3.4.1-SNAPSHOT
 MF4A_SVNPATH=branches/Cotopaxi
 
 # clean
