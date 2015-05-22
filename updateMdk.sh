@@ -47,6 +47,8 @@ svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/test/src/main/java/ ../mdk-test/src/main/java
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/test-database/src/main/java/ ../mdk-testdatabase/src/main/java
 
-# End
 cd ..
+
+# Integrate MMBBase parent classes
+cp -rf mmbase/* mdk/src/main/java/
 
