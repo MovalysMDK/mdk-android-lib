@@ -44,8 +44,6 @@ svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/database-cipher/src/main/java/ ../mdk-databasecipher/src/main/java
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/scanner/src/main/java/ ../mdk-scanner/src/main/java
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/workspace/src/main/java/ ../mdk-workspace/src/main/java
-svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/test/src/main/java/ ../mdk-test/src/main/java
-svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/test-database/src/main/java/ ../mdk-testdatabase/src/main/java
 
 cd ..
 

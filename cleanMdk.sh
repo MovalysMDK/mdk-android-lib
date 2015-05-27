@@ -9,9 +9,5 @@ rm -rf mdk-workspace/src/main/java/*
 rm -rf mdk-test/src/main/java/*
 rm -rf mdk-testdatabase/src/main/java/*
 
-rm -rf mdk/src/test/java/*
-rm -rf mdk-database/src/test/java/*
-
-
 rm -rf mdk/src/res/*
 
