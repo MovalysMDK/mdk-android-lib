@@ -44,6 +44,7 @@ dependencies {
     compile ('ch.acra:acra:4.6.1') {
         exclude(group: 'org.json', module: 'json')
     }
+    compile 'com.android.databinding:library:1.0-rc0'
 
     // these libraries should be optional:
     compile 'com.google.zxing:core:2.2'

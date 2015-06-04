@@ -13,7 +13,7 @@ public class TestHelper {
      * Create a context with a transaction
      * @return a new context
      */
-    public MContext createTransactionContext() {
+    public static MContext createTransactionContext() {
         MContextFactory oMContextFactory = BeanLoader.getInstance().getBean(MContextFactory.class);
         return oMContextFactory.createContext();
     }
@@ -26,7 +26,7 @@ public class TestHelper {
      * @return result of action
      * @throws ActionException action failure
      */
-    protected ActionParameter launchAction( Class<? extends Action<?,?,?,?>>  p_oActionClass,
+    public static ActionParameter launchAction( Class<? extends Action<?,?,?,?>>  p_oActionClass,
                                             ActionParameter p_oParameterIn,  MContext p_oContext) throws ActionException {
 
         Action oAction = BeanLoader.getInstance().getBean(p_oActionClass);
