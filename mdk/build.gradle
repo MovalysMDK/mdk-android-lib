@@ -45,6 +45,7 @@ dependencies {
         exclude(group: 'org.json', module: 'json')
     }
     compile 'com.android.databinding:library:1.0-rc0'
+    compile 'com.soprasteria.movalysmdk.widget:widget-core:1.0.0-SNAPSHOT'
 
     // these libraries should be optional:
     compile 'com.google.zxing:core:2.2'
