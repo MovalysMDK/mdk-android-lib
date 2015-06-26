@@ -37,27 +37,27 @@ public class FixedListDataInteraction {
         this.dataMatcher = (Matcher) Preconditions.checkNotNull(dataMatcher);
     }
 
-    public FixedListDataInteraction onFixedListChildView(Matcher<View> childMatcher) {
+    public FixedListDataInteraction onChildView(Matcher<View> childMatcher) {
         this.childViewMatcher = Optional.of(Preconditions.checkNotNull(childMatcher));
         return this;
     }
 
-    public FixedListDataInteraction inFixedListRoot(Matcher<Root> rootMatcher) {
+    public FixedListDataInteraction inRoot(Matcher<Root> rootMatcher) {
         this.rootMatcher = (Matcher)Preconditions.checkNotNull(rootMatcher);
         return this;
     }
 
-    public FixedListDataInteraction inFixedListAdapterView(Matcher<View> adapterMatcher) {
+    public FixedListDataInteraction inAdapterView(Matcher<View> adapterMatcher) {
         this.adapterMatcher = (Matcher)Preconditions.checkNotNull(adapterMatcher);
         return this;
     }
 
-    public FixedListDataInteraction atFixedListPosition(Integer atPosition) {
+    public FixedListDataInteraction atPosition(Integer atPosition) {
         this.atPosition = Optional.of(Preconditions.checkNotNull(atPosition));
         return this;
     }
 
-    public FixedListDataInteraction usingFixedListAdapterViewProtocol(FixedListAdapterViewProtocolImpl adapterViewProtocol) {
+    public FixedListDataInteraction usingAdapterViewProtocol(FixedListAdapterViewProtocolImpl adapterViewProtocol) {
         this.adapterViewProtocol = (FixedListAdapterViewProtocolImpl)Preconditions.checkNotNull(adapterViewProtocol);
         return this;
     }

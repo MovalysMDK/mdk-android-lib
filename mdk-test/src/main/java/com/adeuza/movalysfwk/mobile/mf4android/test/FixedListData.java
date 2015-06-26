@@ -6,7 +6,7 @@ import org.hamcrest.Matcher;
 
 public final class FixedListData {
 
-    public static FixedListDataInteraction onData(Matcher<Object> dataMatcher) {
+    public static FixedListDataInteraction onFixedListData(Matcher<Object> dataMatcher) {
         return new FixedListDataInteraction(dataMatcher);
     }
 
