@@ -26,11 +26,9 @@ cp -a mdkapklib/mdk-ressources/res/* ../mdk/src/main/res/ &&
 # Get mf4android
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/core/src/main/java/ ../mdk/src/main/java &&
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/widget-legacy/src/main/java/ ../mdk-widget-legacy/src/main/java &&
-svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/recycler-view/src/main/java/ ../mdk-scanner/src/main/java &&
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/database/src/main/java/ ../mdk-database/src/main/java &&
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/no-database/src/main/java/ ../mdk-nodatabase/src/main/java &&
-svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/recycler-view/src/main/java/ ../mdk-recycler-view/src/main/java &&
-svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/widget-legacy/src/main/java/ ../mdk-widget-legacy/src/main/java &&
+svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/recycler-view/src/main/java/ ../mdk-recyclerview/src/main/java &&
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/database-cipher/src/main/java/ ../mdk-databasecipher/src/main/java &&
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/scanner/src/main/java/ ../mdk-scanner/src/main/java &&
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/workspace/src/main/java/ ../mdk-workspace/src/main/java &&
