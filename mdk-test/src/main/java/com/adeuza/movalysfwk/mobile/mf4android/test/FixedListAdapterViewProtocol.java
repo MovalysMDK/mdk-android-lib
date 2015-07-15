@@ -2,8 +2,6 @@ package com.adeuza.movalysfwk.mobile.mf4android.test;
 
 import android.support.test.espresso.action.AdapterViewProtocol;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
 
 import com.adeuza.movalysfwk.mobile.mf4android.ui.views.AbstractFixedListView;
 import com.google.android.apps.common.testing.deps.guava.base.Optional;

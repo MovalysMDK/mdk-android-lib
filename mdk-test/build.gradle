@@ -42,6 +42,7 @@ dependencies {
     compile 'com.android.support:support-annotations:22.1.1'
     compile 'com.android.support.test:runner:0.2'
     compile 'com.squareup.spoon:spoon-client:1.1.9'
+    compile 'com.soprasteria.movalysmdk.espresso:mdk-espresso:1.0.0-SNAPSHOT@aar'
 }
 
 apply from: '../maven_push.gradle'
