@@ -44,7 +44,7 @@ dependencies {
     compile ('ch.acra:acra:4.6.1') {
         exclude(group: 'org.json', module: 'json')
     }
-    compile 'com.android.databinding:library:1.0-rc0'
+    compile 'com.android.databinding:library:1.0-rc1'
     compile 'com.soprasteria.movalysmdk.widget:widget-core:1.0.0-SNAPSHOT@aar'
 
     // these libraries should be optional:

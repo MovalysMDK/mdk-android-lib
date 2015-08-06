@@ -39,7 +39,7 @@ android {
 
 dependencies {
     compile project(':mdk-database')
-    compile 'net.sqlcipher:sqlcipher:2.0.5'
+    compile 'net.sqlcipher:sqlcipher:3.3.0'
 }
 
 apply from: '../maven_push.gradle'
