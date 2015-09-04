@@ -4,14 +4,14 @@ import android.support.test.espresso.PerformException;
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
 import android.support.test.espresso.action.AdapterViewProtocol;
+import android.support.test.espresso.core.deps.guava.base.Optional;
+import android.support.test.espresso.core.deps.guava.base.Preconditions;
+import android.support.test.espresso.core.deps.guava.collect.Lists;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.espresso.util.HumanReadables;
 import android.view.View;
 
 import com.adeuza.movalysfwk.mobile.mf4android.ui.views.AbstractFixedListView;
-import com.google.android.apps.common.testing.deps.guava.base.Optional;
-import com.google.android.apps.common.testing.deps.guava.base.Preconditions;
-import com.google.android.apps.common.testing.deps.guava.collect.Lists;
 
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;

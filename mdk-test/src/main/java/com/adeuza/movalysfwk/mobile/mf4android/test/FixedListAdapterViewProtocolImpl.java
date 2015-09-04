@@ -1,6 +1,9 @@
 package com.adeuza.movalysfwk.mobile.mf4android.test;
 
 import android.database.Cursor;
+import android.support.test.espresso.core.deps.guava.base.Optional;
+import android.support.test.espresso.core.deps.guava.base.Preconditions;
+import android.support.test.espresso.core.deps.guava.collect.Lists;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.util.Log;
 import android.view.View;
@@ -9,9 +12,6 @@ import android.widget.AdapterView;
 
 import com.adeuza.movalysfwk.mobile.mf4android.ui.views.AbstractFixedListView;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.messages.NotImplementedException;
-import com.google.android.apps.common.testing.deps.guava.base.Optional;
-import com.google.android.apps.common.testing.deps.guava.base.Preconditions;
-import com.google.android.apps.common.testing.deps.guava.collect.Lists;
 
 import java.util.ArrayList;
 

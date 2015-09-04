@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolsVersion
 
     defaultConfig {
-        minSdkVersion 10
-        targetSdkVersion 22
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
         versionCode Integer.parseInt(project.VERSION_CODE)
         versionName project.VERSION_NAME
     }
@@ -38,11 +38,12 @@ android {
 dependencies {
     compile project(':mdk')
     compile project(':mdk-widget-legacy')
-    compile 'com.android.support.test.espresso:espresso-core:2.1'
-    compile 'com.android.support:support-annotations:22.1.1'
-    compile 'com.android.support.test:runner:0.2'
-    compile 'com.squareup.spoon:spoon-client:1.1.9'
-    compile 'com.soprasteria.movalysmdk.espresso:mdk-espresso:1.0.0-SNAPSHOT@aar'
+
+    compile testDependencies.espressoCore
+    compile supportDependencies.supportAnnotations
+    compile testDependencies.testRunner
+    compile testDependencies.spoonClient
+    compile testDependencies.mdkEspresso
 }
 
 apply from: '../maven_push.gradle'

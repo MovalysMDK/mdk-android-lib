@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion androidCompileSdkVersion
+    buildToolsVersion androidBuildToolsVersion
 
     defaultConfig {
-        minSdkVersion 10
-        targetSdkVersion 22
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
         versionCode Integer.parseInt(project.VERSION_CODE)
         versionName project.VERSION_NAME
     }
@@ -19,7 +19,7 @@ android {
 
     buildTypes {
         debug {
-
+            testCoverageEnabled true
         }
         release {
             minifyEnabled false
@@ -39,22 +39,23 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.1.+'
-    compile 'com.android.support:appcompat-v7:22.1.+'
-    compile ('ch.acra:acra:4.6.1') {
-        exclude(group: 'org.json', module: 'json')
-    }
-    compile 'com.android.databinding:library:1.0-rc1'
-    compile 'com.soprasteria.movalysmdk.widget:widget-core:1.0.0-SNAPSHOT@aar'
+    compile supportDependencies.support
+    compile supportDependencies.appCompat
+    compile supportDependencies.databinding
+
+    compile mdkWidgetDependencies.widgetCore
 
     // these libraries should be optional:
-    compile 'com.google.zxing:core:2.2'
-    compile 'com.google.code.gson:gson:1.7.2'
-    compile 'com.squareup.okhttp:okhttp:2.2.0'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.4.3'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.3'
+    compile (otherDependencies.acra) {
+        exclude(group: 'org.json', module: 'json')
+    }
+    compile otherDependencies.zxingCore
+    compile otherDependencies.gson
+    compile otherDependencies.okhttp
+    compile otherDependencies.jacksonCore
+    compile otherDependencies.jacksonDatabind
 
-    testCompile 'junit:junit:4.12'
+    testCompile testDependencies.junit
 }
 
 apply from: '../maven_push.gradle'

@@ -1,0 +1,55 @@
+ext {
+    //Version
+    supportLibrary = '23.0.1' //avant: 22.1.+
+    supportDatabinding = '1.0-rc1'
+
+    espressoVersion = "2.2"
+    testRunnerVersion = "0.3"
+    mdkEspressoVersion = "1.0.0-SNAPSHOT"
+    spoonClientVersion = "1.1.9"
+    jacocoVersion = "0.7.1.201405082137"
+    junitVersion = "4.12"
+
+    mdkWidgetVersion = "1.0.0-SNAPSHOT"
+
+    acraVersion = "4.6.1"
+    zxingVersion = "2.2"
+    gsonVersion = "1.7.2"
+    okhttpVersion = "2.2.0"
+    jacksonVersion = "2.4.3"
+    sqlcipherVersion = "3.3.0"
+
+    //Support Libraries dependencies
+    supportDependencies = [
+            //design           :         "com.android.support:design:${supportLibrary}",
+            //recyclerView     :         "com.android.support:recyclerview-v7:${supportLibrary}",
+            //cardView         :         "com.android.support:cardview-v7:${supportLibrary}",
+            support:                    "com.android.support:support-v4:${supportLibrary}",
+            appCompat:                  "com.android.support:appcompat-v7:${supportLibrary}",
+            supportAnnotations:         "com.android.support:support-annotations:${supportLibrary}",
+            databinding:                "com.android.databinding:library:${supportDatabinding}"
+    ]
+
+    testDependencies = [
+            espressoCore:    "com.android.support.test.espresso:espresso-core:$espressoVersion",
+            espressoContrib: "com.android.support.test.espresso:espresso-contrib:$espressoVersion",
+            testRunner:      "com.android.support.test:runner:${testRunnerVersion}",
+            mdkEspresso:     "com.soprasteria.movalysmdk.espresso:mdk-espresso:${mdkEspressoVersion}@aar",
+            spoonClient:     "com.squareup.spoon:spoon-client:${spoonClientVersion}",
+            junit:           "junit:junit:${junitVersion}"
+    ]
+
+    mdkWidgetDependencies = [
+            widgetCore:     "com.soprasteria.movalysmdk.widget:widget-core:${mdkWidgetVersion}@aar"
+    ]
+
+    otherDependencies = [
+            acra:               "ch.acra:acra:${acraVersion}",
+            zxingCore:          "com.google.zxing:core:${zxingVersion}",
+            gson:               "com.google.code.gson:gson:${gsonVersion}",
+            okhttp:             "com.squareup.okhttp:okhttp:${okhttpVersion}",
+            jacksonCore:        "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}",
+            jacksonDatabind:    "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
+            sqlcipher:          "net.sqlcipher:sqlcipher:${sqlcipherVersion}"
+    ]
+}
