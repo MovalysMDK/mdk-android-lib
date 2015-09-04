@@ -38,3 +38,5 @@ cd .. &&
 # Integrate MMBBase parent classes
 cp -rf mmbase/* mdk/src/main/java/
 
+# Delete Apache HttpClient RestInvoker
+rm -f mdk/src/main/java/com/adeuza/movalysfwk/mobile/mf4mjcommons/rest/invoker/RestInvoker.java
