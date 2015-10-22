@@ -38,7 +38,9 @@ android {
 
 dependencies {
     compile project(':mdk')
+	compile project(':mdk-recyclerview')
 	compile supportDependencies.recyclerView
+	compile mdkWidgetDependencies.widgetFixedList
 }
 
 uploadArchives {
