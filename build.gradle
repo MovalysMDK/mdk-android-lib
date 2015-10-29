@@ -16,6 +16,11 @@ def isReleaseBuild() {
     return version.contains("SNAPSHOT") == false
 }
 
+configurations.all {
+    // check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 allprojects {
     version = VERSION_NAME
     group = GROUP

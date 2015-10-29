@@ -44,7 +44,7 @@ dependencies {
     compile supportDependencies.appCompat
     compile supportDependencies.databinding
 
-    compile mdkWidgetDependencies.widgetCore
+    compile group: mdkWidgetDependencies.widgetGroup, name: mdkWidgetDependencies.widgetCoreArtifact, version: "${mdkWidgetVersion}", ext: "aar", changing: true
 
     // these libraries should be optional:
     compile (otherDependencies.acra) {

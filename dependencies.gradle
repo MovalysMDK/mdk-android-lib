@@ -40,8 +40,10 @@ ext {
     ]
 
     mdkWidgetDependencies = [
-            widgetCore:     "com.soprasteria.movalysmdk.widget:widget-core:${mdkWidgetVersion}@aar",
-			widgetFixedList:     "com.soprasteria.movalysmdk.widget:widget-fixedlist:${mdkWidgetVersion}@aar"
+            widgetGroup: "com.soprasteria.movalysmdk.widget",
+
+            widgetCoreArtifact:     "widget-core",
+            widgetFixedListArtifact:     "widget-fixedlist"
     ]
 
     otherDependencies = [
