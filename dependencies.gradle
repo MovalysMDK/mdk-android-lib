@@ -1,6 +1,6 @@
 ext {
     //Version
-    supportLibrary = '23.0.1' //avant: 22.1.+
+    supportLibrary = '23.1.0'
     supportDatabinding = '1.0-rc1'
 
     espressoVersion = "2.2"
