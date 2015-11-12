@@ -6,8 +6,12 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+        classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
     }
 }
+
+apply plugin: 'license'
 
 // Load dependencies
 apply from: 'dependencies.gradle'
@@ -19,6 +23,14 @@ def isReleaseBuild() {
 configurations.all {
     // check for updates every build
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
 }
 
 allprojects {
@@ -52,6 +64,41 @@ allprojects {
         androidCompileSdkVersion = 23
     }
 }
+
+
+license {
+    strictCheck true
+    //exclude "**/*.properties"
+    //excludes(["**/*.txt", "**/*.conf"])
+    //include "**/*.groovy"
+    //includes(["**/*.java", "**/*.properties"])
+}
+
+// compilation options
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.deprecation = true
+    options.debug = true
+}
+
+task mdkLicenseFormat (type:nl.javadude.gradle.plugins.license.License) {
+    source = [
+            fileTree(dir:"core/src/main/java").include("**/*.java"),
+            fileTree(dir:"core/src/main/res").include("**/*.xml"),
+            fileTree(dir:"core/src/main").include("AndroidManifest.xml"),
+            fileTree(dir:"basic/src/main/java").include("**/*.java"),
+            fileTree(dir:"basic/src/main/res").include("**/*.xml"),
+            fileTree(dir:"basic/src/main").include("AndroidManifest.xml"),
+            fileTree(dir:"sample/src/main/java").include("**/*.java"),
+            fileTree(dir:"sample/src/main/res").include("**/*.xml"),
+            fileTree(dir:"sample/src/main").include("AndroidManifest.xml"),
+            fileTree(dir:"sample/src/androidTest/java").include("**/*.java")
+    ]
+}
+
+// Run ./gradlew licenseFormat
+licenseFormat.dependsOn mdkLicenseFormat
+clean.dependsOn licenseFormat
 
 // generate a single report for tests for all modules
 apply plugin: 'android-reporting'
