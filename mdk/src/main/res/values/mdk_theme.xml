@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="MDKAppBaseTheme" parent="MDKWidgetTheme.Light.DarkActionBar">
+
+        <!-- Movalys Components -->
+        <item name="MovalysProgressBarIndeterminate">@style/MovalysProgressBarIndeterminate</item>
+        <item name="MovalysProgressBarHorizontal">@style/MovalysProgressBarHorizontal</item>
+        <item name="MovalySeekBar">@style/MovalySeekBar</item>
+        <item name="fixedListItemBloc">@style/fixedListItemBloc</item>
+
+        <!-- Movalys style -->
+        <item name="detail_label">@style/detail_label</item>
+        <item name="detail_value">@style/detail_value</item>
+        <item name="detail_edit">@style/detail_edit</item>
+        <item name="detail_valuemultiautocomplete">@style/detail_valuemultiautocomplete</item>
+        <item name="SectionTitle">@style/SectionTitle</item>
+        <item name="LineSeparatorView">@style/LineSeparatorView</item>
+        <item name="splashscreen_copyright">@style/splashscreen_copyright</item>
+        <item name="splashscreen">@style/splashscreen</item>
+        <item name="FilterButton">@style/FilterButton</item>
+        <item name="Button">@style/Button</item>
+        <item name="ImageButton">@style/ImageButton</item>
+        <item name="flipperexpandabletitle_valueItem1">@style/flipperexpandabletitle_valueItem1</item>
+        <item name="flipperexpandabletitle_valueItem2">@style/flipperexpandabletitle_valueItem2</item>
+        <item name="expandableGroup_valueItem1">@style/expandableGroup_valueItem1</item>
+        <item name="expandableGroup_valueItem2">@style/expandableGroup_valueItem2</item>
+        <item name="expandableChild_valueItem1">@style/expandableChild_valueItem1</item>
+        <item name="expandableChild_valueItem2">@style/expandableChild_valueItem2</item>
+        <item name="simplelistitem_valueItem1">@style/simplelistitem_valueItem1</item>
+        <item name="simplelistitem_valueItem2">@style/simplelistitem_valueItem2</item>
+        <item name="simpleSpinner_Item">@style/simpleSpinner_Item</item>
+        <item name="simpleSpinner_dropDown">@style/simpleSpinner_dropDown</item>
+        <item name="SpinnerCustom">@style/SpinnerCustom</item>
+        <item name="LISTITEM_1">@style/LISTITEM_1</item>
+        <item name="LISTITEM_2">@style/LISTITEM_2</item>
+        <item name="LISTITEM_3">@style/LISTITEM_3</item>
+        <item name="tab_theme">@style/tab_theme</item>
+        <item name="SearchSpinnerCustom">@style/SearchSpinnerCustom</item>
+
+    </style>
+
+</resources>
