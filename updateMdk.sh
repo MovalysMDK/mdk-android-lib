@@ -19,9 +19,10 @@ mkdir workdir
 cd workdir &&
 
 # Retrieve resources from apklib
-mvn -B -q archetype:generate -DarchetypeGroupId=com.adeuza.movalysfwk -DarchetypeArtifactId=mdk-apklib-template -DarchetypeVersion=${MF4A_VERSION} -DgroupId=com.adeuza.movalysfwk -DartifactId=mdkapklib -Dversion=${MF4A_VERSION} &&
+#mvn -B -q archetype:generate -DarchetypeGroupId=com.adeuza.movalysfwk -DarchetypeArtifactId=mdk-apklib-template -DarchetypeVersion=${MF4A_VERSION} -DgroupId=com.adeuza.movalysfwk -DartifactId=mdkapklib -Dversion=${MF4A_VERSION} &&
+#cp -a mdkapklib/mdk-ressources/res/* ../mdk/src/main/res/ &&
 
-cp -a mdkapklib/mdk-ressources/res/* ../mdk/src/main/res/ &&
+svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mdk-apklib-template/branches/Cotopaxi/src/main/resources/archetype-resources/mdk-ressources/res/ ../mdk/src/main/res/ &&
 
 # Get mf4android
 svn export -q --force ${URL_REPO}/com/adeuza/movalysfwk/mobile/mf4android/${MF4A_SVNPATH}/core/src/main/java/ ../mdk/src/main/java &&
