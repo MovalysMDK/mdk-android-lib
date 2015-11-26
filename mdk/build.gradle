@@ -35,7 +35,7 @@ android {
         exclude 'META-INF/LICENCE.txt'
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/LICENSE'
-	exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE'
     }
 }
 

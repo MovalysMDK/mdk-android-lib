@@ -7,7 +7,6 @@ ext {
     testRunnerVersion = "0.3"
     mdkEspressoVersion = "1.0.0-SNAPSHOT"
     spoonClientVersion = "1.1.9"
-    jacocoVersion = "0.7.1.201405082137"
     junitVersion = "4.12"
 
     mdkWidgetVersion = "1.0.0-SNAPSHOT"
