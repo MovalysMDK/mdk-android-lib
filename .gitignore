@@ -2,6 +2,7 @@
 build
 .gradle
 .idea
+local.properites
 mdk/build
 mdk-database/build
 mdk-databasecipher/build
@@ -13,3 +14,15 @@ mdk-test/build
 mdk-testdatabase/build
 mdk-widget-legacy/build
 mdk-workspace/build
+mdk-android-lib.iml
+mdk/mdk.iml
+mdk-database/mdk-database.iml
+mdk-databasecipher/mdk-databasecipher.iml
+mdk-fixedlist/mdk-fixedlist.iml
+mdk-nodatabase/mdk-nodatabase.iml
+mdk-recyclerview/mdk-recyclerview.iml
+mdk-scanner/mdk-scanner.iml
+mdk-test/mdk-test.iml
+mdk-testdatabase/mdk-testdatabase.iml
+mdk-widget-legacy/mdk-widget-legacy.iml
+mdk-workspace/mdk-workspace.iml
