@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mdkapp="http://schemas.android.com/apk/res-auto">
+    
+	<!-- configuration -->
+	<item android:id="@+id/menu_base_configuration"
+			android:icon="@android:drawable/ic_menu_preferences"
+			android:title="@string/menu_base_configuration__title"
+			android:visible="@string/menu_base_configuration$visible"
+			android:orderInCategory="97">
+
+		<menu>
+			<item android:id="@+id/menu_base_configuration_doDisplaySetting"
+					android:title="@string/menu_base_configuration_doDisplaySetting__title"
+					android:visible="@string/menu_base_configuration_doDisplaySetting$visible"/>
+
+			<item android:id="@+id/menu_base_configuration_doResetSetting"
+					android:title="@string/menu_base_configuration_doResetSetting__title"
+					android:visible="@string/menu_base_configuration_doResetSetting$visible"/>
+
+			<item android:id="@+id/menu_base_configuration_doResetDataBase"
+					android:title="@string/menu_base_configuration_doResetDataBase__title"
+					android:visible="@string/menu_base_configuration_doResetDataBase$visible"/>
+					
+			<item android:id="@+id/menu_base_configuration_doSendReport" 
+					android:title="@string/menu_base_configuration_doSendReport__title"
+					android:visible="@string/menu_base_configuration_doSendReport$visible"/>
+			<item android:id="@+id/menu_base_configuration_doImportDatabase" 
+					android:title="@string/menu_base_configuration_doImportDatabase__title"
+					android:visible="@string/menu_base_configuration_doImportDatabase$visible"/>
+		</menu>
+	</item>
+	
+	<!-- synchronisation -->
+	<item android:id="@+id/menu_base_doClassicSynchronisation" 
+			android:icon="@drawable/ic_menu_refresh"
+			android:title="@string/menu_base_doClassicSynchronisation__title"
+			android:visible="@string/menu_base_doClassicSynchronisation$visible"
+			android:orderInCategory="98"/>
+
+	<!-- Quit -->
+	<item android:id="@+id/menu_base_doDisplayExitApplicationDialog" 
+			android:icon="@android:drawable/ic_menu_close_clear_cancel"
+			android:title="@string/menu_base_doDisplayExitApplicationDialog__title"
+			android:visible="@string/menu_base_doDisplayExitApplicationDialog$visible"
+			android:orderInCategory="99"/>
+</menu>

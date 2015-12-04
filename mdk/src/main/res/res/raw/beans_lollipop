@@ -1,0 +1,8 @@
+# This file contains the beans needing a compatibility with Android 22+ 
+
+# Component delegates
+MMFixedListDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableFixedListComponentDelegate
+
+# Adapter connector wrappers
+connectorwrapper_MMRecyclerView=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.recyclerview.MDKRecyclerViewConnectorWrapper
+connectorwrapper_MMFixedList=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.fixedlist.MDKFixedListConnectorWrapper

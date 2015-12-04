@@ -1,0 +1,191 @@
+#
+#
+# !!! WARNING !!!
+# DO NOT MODIFY THIS FILE ....
+# If you want to change a class definition use the file custom.properties
+#
+# Loading by key words
+application=com.adeuza.movalysfwk.mobile.mf4android.application.AndroidApplication
+controller=com.adeuza.movalysfwk.mobile.mf4android.controller.AndroidFwkControllerImpl
+
+# Divers ...
+com.adeuza.movalysfwk.mobile.mf4mjcommons.messages.MessagesList=com.adeuza.movalysfwk.mobile.mf4mjcommons.messages.MessagesListImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.RestResponse=com.adeuza.movalysfwk.mobile.mf4mjcommons.synchro.FwkSynchronizationRestResponse
+SyncAction_com.adeuza.movalysfwk.mobile.mf4mjcommons.actiontask.MMActionTask=com.adeuza.movalysfwk.mobile.mf4android.actiontask.ActionSyncTask
+ASyncAction_com.adeuza.movalysfwk.mobile.mf4mjcommons.actiontask.MMActionTask=com.adeuza.movalysfwk.mobile.mf4android.actiontask.ActionASyncTask
+com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericsave.ChainSaveDetailAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericsave.ChainSaveDetailActionImpl
+com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdelete.ChainDeleteDetailAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdelete.ChainDeleteDetailActionImpl
+com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdisplay.LoadDataForMultipleDisplayDetailAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdisplay.LoadDataForMultipleDisplayDetailActionImpl
+ConfigurableListViewHolder=com.adeuza.movalysfwk.mobile.mf4android.ui.modele.ConfigurableListViewHolderImpl
+ConfigurableExpandedListViewHolder=com.adeuza.movalysfwk.mobile.mf4android.ui.modele.ConfigurableExpandedListViewHolderImpl
+MMMasterLayoutWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMMasterLayoutWrapper
+GenericUpdateVMForDisplayDetailActionFilter=com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdisplay.GenericUpdateVMForDisplayDetailActionFilter
+
+# Factory ...
+com.adeuza.movalysfwk.mobile.mf4mjcommons.context.MContextFactory=com.adeuza.movalysfwk.mobile.mf4android.context.AndroidContextFactoryImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.factory.MParametersFactory=com.adeuza.movalysfwk.mobile.mf4mjcommons.model.MParametersFactoryImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.factory.MObjectToSynchronizeFactory=com.adeuza.movalysfwk.mobile.mf4mjcommons.model.MObjectToSynchronizeFactoryImpl
+
+# Dao ...
+com.adeuza.movalysfwk.mobile.mf4mjcommons.serialization.SerializationDao=com.adeuza.movalysfwk.mobile.mf4android.serialization.AndroidSerializationDao
+
+# Helpers ...
+hiddenBusinessCompute=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.listener.businessrule.BusinessRuleComputeHiddenHelperImpl
+enableBusinessCompute=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.listener.businessrule.BusinessRuleComputeEnableHelperImpl
+mandatoryBusinessCompute=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.listener.businessrule.BusinessRuleComputeMandatoryHelperImpl
+com.adeuza.movalysfwk.mf4jcommons.crypt.LocalAuthHelper=com.adeuza.movalysfwk.mobile.mf4android.security.LocalAuthHelperImpl
+
+# android
+com.adeuza.movalysfwk.mobile.mf4android.helper.AndroidNotificationHelper=com.adeuza.movalysfwk.mobile.mf4android.helper.AndroidNotificationHelperImpl
+com.adeuza.movalysfwk.mobile.mf4android.network.NetworkHelper=com.adeuza.movalysfwk.mobile.mf4android.network.NetworkHelperImpl
+
+# Actions ...
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.deleteconfiguration.DeleteConfigurationAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.deleteconfiguration.DeleteConfigurationActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displayexitdialog.DisplayExitDialogAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.displayexitdialog.DisplayExitDialogActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displaymessage.DisplayMessageAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.displaymessage.DisplayMessageActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displayparameterdialog.DisplayParameterDialogAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.displayparameterdialog.DisplayParameterDialogActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displayresetsettingsandexitdialog.DisplayResetSettingsAndExitDialogAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.displayresetsettingsandexitdialog.DisplayResetSettingsAndExitDialogActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displaysettings.DisplaySettingAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.displaysettings.DisplaySettingActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.doopenmap.DoOpenMapAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.doopenmap.DoOpenMapActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.resetsettings.ResetSettingAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.resetsettings.ResetSettingActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.restartapplicationstartup.RestartApplicationStartupAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.restartapplicationstartup.RestartApplicationStartupActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.stopapplicationstartup.StopApplicationStartupAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.stopapplicationstartup.StopApplicationStartupActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.sendreport.SendReportAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.sendreport.SendReportActionImpl
+com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdisplay.GenericLoadDataForDisplayDetailAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdisplay.GenericLoadDataForDisplayDetailActionImpl
+com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdisplay.GenericUpdateVMForDisplayDetailAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.genericdisplay.GenericUpdateVMForDisplayDetailActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.dowritemail.DoWriteMailAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.dowritemail.DoWriteEmailActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.doafterbarcodescan.DoAfterBarCodeScanAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.doafterbarcodescan.DoAfterBarCodeScanActionImpl
+
+#media
+com.adeuza.movalysfwk.mobile.mf4android.mediastore.images.MMediaStoreImageService=com.adeuza.movalysfwk.mobile.mf4android.mediastore.images.MMediaStoreImageServiceImpl
+
+# synchro
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.ClassicSynchronizationAction=com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.MainSynchronizationActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.FwkSynchronizationAction=com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.FwkSynchronizationActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.response.RestResponse=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.response.RestResponse
+com.adeuza.movalysfwk.mobile.mf4android.helper.SynchroNotificationHelper=com.adeuza.movalysfwk.mobile.mf4android.helper.SynchroNotificationHelperImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.IRestInvoker=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.RestInvoker
+#com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.auth.RestAuth=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.auth.HMACRestAuth
+#com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.auth.RestAuth=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.auth.AESRestAuth
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.auth.RestAuth=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.auth.BasicRestAuth
+com.adeuza.movalysfwk.mobile.mf4mjcommons.synchro.SyncTimestampService=com.adeuza.movalysfwk.mobile.mf4mjcommons.synchro.SyncTimestampServiceImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.synchro.ObjectToSynchronizeService=com.adeuza.movalysfwk.mobile.mf4mjcommons.synchro.ObjectToSynchronizeServiceImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.credentials.LocalCredentialService=com.adeuza.movalysfwk.mobile.mf4mjcommons.credentials.LocalCredentialServiceImpl
+com.adeuza.movalysfwk.mobile.mf4android.ui.command.ImageDownloadCommand=com.adeuza.movalysfwk.mobile.mf4android.ui.command.ImageUrlDirectDownloadCommandImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.auth.UserKeyStoreHelper=com.adeuza.movalysfwk.mobile.mf4android.rest.UserKeyStoreHelperImpl
+
+# RestInvoker
+#legacy: com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.IRestInvoker=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.RestInvoker
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.okhttp.IHttpClientHandler=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.okhttp.OkHttpClientHandler
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.IRestInvoker=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.invoker.okhttp.OkHttpRestInvoker
+
+# Json
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.MJsonMapper=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.gson.MGsonMapper
+com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.MJsonReader=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.gson.MGsonReader
+#com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.MJsonMapper=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.jackson.MJacksonMapper
+#com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.MJsonReader=com.adeuza.movalysfwk.mobile.mf4mjcommons.rest.json.jackson.MJacksonReader
+
+
+transfer_com.adeuza.movalysfwk.mf4jcommons.model.configuration.visual.TComponentGraphConfiguration=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.assembler.TransferBasicComponentAssembler
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.management.ManagementZoneMandatoryRule=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.management.ManagementZoneMandatoryRuleImpl
+
+com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.dialog.ActionDialogFactory=com.adeuza.movalysfwk.mobile.mf4android.ui.dialog.ActionDialogFactoryImpl
+
+com.adeuza.movalysfwk.mobile.mf4mjcommons.application.ScreenListenerDelegate=com.adeuza.movalysfwk.mobile.mf4mjcommons.application.ScreenListenerDelegateImpl
+
+#validateurs de champ selon le type de donnees AbstractEntityFieldConfiguration.DataType
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DateFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DateFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DateTimeFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DateTimeFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.TimeFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.TimeFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DurationFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DurationFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DoubleFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.DoubleFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.FloatFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.FloatFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.EmailFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.EmailFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.IntegerFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.IntegerFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.LongFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.LongFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.PhoneFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.PhoneFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.UrlFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.UrlFormFieldValidatorImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.StringFormFieldValidator=com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.StringFormFieldValidatorImpl
+
+#NullOrEmpty computers return if a value is null or empty
+NullOrEmptyComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNonTypeComputer
+NullOrEmptyNoneTypeComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNonTypeComputer
+NullOrEmptyBooleanComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNonTypeComputer
+NullOrEmptyItemViewModelComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNonTypeComputer
+NullOrEmptyEnumComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNonTypeComputer
+
+NullOrEmptyStringComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyStringComputer
+
+NullOrEmptyIntegerComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNumberComputer
+NullOrEmptyLongComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNumberComputer
+NullOrEmptyDoubleComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyNumberComputer
+
+NullOrEmptyMPhotoVOComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyMPhotoVOComputer
+NullOrEmptyListViewModelComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyListViewModelComputer
+NullOrEmptyAddressLocationSVMImplComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyAddressLocationSVMImplComputer
+NullOrEmptyEMailSVMImplComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.delegate.NullOrEmptyEMailSVMImplComputer
+
+## Component Delegate && Wrappers
+MMAutoCompleteTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
+MMMultiAutoCompleteEditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
+EditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableEditTextComponentDelegate
+MMTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
+MMTextViewEllipsizedDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
+MMSpinnerCheckedTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
+MMDateTimeTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableDateTimeTextViewComponentDelegate
+
+MMEnumImageViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableEnumComponentDelegate
+MMEnumTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableEnumComponentDelegate
+MMLinearBackgroundedLayoutDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableEnumComponentDelegate
+MMRelativeBackgroundedLayoutDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableEnumComponentDelegate
+
+MMDatePickerFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.MMDatePickerVisualComponentFwkDelegate
+
+MMDoublePickerDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurablePickerComponentDelegate
+MMDurationPickerDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurablePickerComponentDelegate
+
+MMFixedListViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableFixedListViewComponentDelegate
+MMFixedListViewFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.FixedListViewConfigurableVisualComponentFwkDelegate
+MMScrollableViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableFixedListViewComponentDelegate
+MMScrollableViewFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.FixedListViewConfigurableVisualComponentFwkDelegate
+MMSimpleFixedListViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableFixedListViewComponentDelegate
+MMSimpleFixedListViewFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.FixedListViewConfigurableVisualComponentFwkDelegate
+MMMultiSelectedFixedListViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableFixedListViewComponentDelegate
+MMMultiSelectedFixedListViewFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.FixedListViewConfigurableVisualComponentFwkDelegate
+MMPhotoFixedListViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableFixedListViewComponentDelegate
+MMPhotoFixedListViewFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.FixedListViewConfigurableVisualComponentFwkDelegate
+MMSpinnerDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableSpinnerComponentDelegate
+MMSearchSpinnerDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableSpinnerComponentDelegate
+MMSeekBarDoubleDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableSeekBarComponentDelegate
+MMSeekBarDoubleFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableVisualComponentFwkDelegate
+MMSeekBarIntegerDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableSeekBarComponentDelegate
+MMPositionEditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurablePositionComponentDelegate
+
+# Component wrappers
+CheckBoxWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMCheckBoxWrapper
+EditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMEditTextWrapper
+MDKRichEditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
+MDKRichPhoneWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
+MDKRichUriWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
+MDKRichEmailWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichEmailWidgetWrapper
+MDKBaseRichDateWidgetWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichDateTimeWidgetWrapper
+MDKBaseRichCheckableWidgetWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichCheckableWidgetWrapper
+MDKRichPositionWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichPositionWidgetWrapper
+MDKRichMapsPositionWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichPositionWidgetWrapper
+MDKRichStaticMapsPositionWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichPositionWidgetWrapper
+MDKRichEnumViewWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichEnumViewWrapper
+MDKRichSeekBarWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichSeekBarWrapper
+MDKRichSpinnerWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichSpinnerWrapper
+MDKRichMediaWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichMediaWrapper
+MDKPresenterViewWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKPresenterViewWrapper
+
+photoCommand=com.adeuza.movalysfwk.mobile.mf4android.ui.command.MMPhotoCommand
+
+# Adapter connector wrappers
+connectorwrapper_AbsListView=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.listview.MDKListViewConnectorWrapper
+connectorwrapper_ExpandableListView=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.expandablelist.MDKExpandableListConnectorWrapper
+connectorwrapper_MMFlipperExpandableListView=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.flipperlist.MDKFlipperListConnectorWrapper
+connectorwrapper_MDKRichSpinner=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.spinner.MDKRichSpinnerConnectorWrapper
+connectorwrapper_Spinner=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.spinner.MDKSpinnerConnectorWrapper
+connectorwrapper_MMSearchSpinner=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.spinner.MDKSpinnerConnectorWrapper
+connectorwrapper_MMRecyclerView=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.recyclerview.MDKRecyclerViewConnectorWrapper

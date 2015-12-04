@@ -1,0 +1,20 @@
+#
+#
+# !!! WARNING !!!
+# DO NOT MODIFY THIS FILE ....
+# If you want to change a class definition use the file custom.properties
+#
+# Loading by key words
+createDatabaseInit=com.adeuza.movalysfwk.mobile.mf4android.application.AndroidCreateDataBaseInit
+com.adeuza.movalysfwk.mobile.mf4mjcommons.data.DBUpdaterService=com.adeuza.movalysfwk.mobile.mf4mjcommons.data.DBUpdaterServiceImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.transaction.ConnectionFactory=com.adeuza.movalysfwk.mobile.mf4android.jdbc.AndroidConnectionFactoryImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.data.dao.MObjectToSynchronizeDao=com.adeuza.movalysfwk.mobile.mf4mjcommons.data.dao.MObjectToSynchronizeDaoImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.data.dao.MParametersDao=com.adeuza.movalysfwk.mobile.mf4mjcommons.data.dao.MParametersDaoImpl
+
+#Choose first to use crypted database
+#com.adeuza.movalysfwk.mobile.mf4android.jdbc.SQLiteOpenHelperFactory=com.adeuza.movalysfwk.mobile.mf4android.sqlitecipher.CipherSQLiteOpenHelperFactoryImpl
+com.adeuza.movalysfwk.mobile.mf4android.jdbc.SQLiteOpenHelperFactory=com.adeuza.movalysfwk.mobile.mf4android.jdbc.SQLiteOpenHelperFactoryImpl
+
+#Actions
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.resetdatabase.ResetDataBaseAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.resetdatabase.ResetDataBaseActionImpl
+com.adeuza.movalysfwk.mobile.mf4mjcommons.business.importdatabase.ImportDatabaseAction=com.adeuza.movalysfwk.mobile.mf4android.activity.business.importdatabase.ImportDatabaseActionImpl

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_fixedlist_detail__visualpanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/component__fixedlist_detail__master"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- the generated content will be included here -->
+
+        <View
+            android:id="@+id/bottom_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/dialog_text"
+            android:paddingTop="3dp" />
+
+        <LinearLayout
+            android:id="@+id/component__fixedlist_detail__visualpanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/component__fixedlist_detail_cancel__button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_btn_cancel" />
+
+            <ImageButton
+                android:id="@+id/component__fixedlist_detail_ok__button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_btn_ok" />
+
+            <ImageButton
+                android:id="@+id/component__fixedlist_detail_okandnext__button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_btn_okandnext" />
+        </LinearLayout>
+        <!--
+            com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableLayout android:id="@+id/component__fixedlist_detail__toolbar" 
+			android:layout_width="match_parent" android:layout_height="match_parent" android:stretchColumns="0,1,2" 
+			android:background="@color/dialog_button_background" android:paddingTop="5dp"> 
+			<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableRow android:id="@+id/component__fixedlist_detail__group" 
+			android:padding="2dp"> <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMButton 
+			android:id="@+id/component__fixedlist_detail_ok__button" android:layout_height="wrap_content" 
+			android:layout_width="wrap_content" android:text="@string/generic_message_valid" 
+			/> <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMButton android:id="@+id/component__fixedlist_detail_cancel__button" 
+			android:layout_height="wrap_content" android:layout_width="wrap_content" 
+			android:text="@string/generic_message_cancel" /> </com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableRow> 
+			</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableLayout
+        -->
+    </LinearLayout>
+
+</ScrollView>

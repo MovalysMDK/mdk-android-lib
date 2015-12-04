@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_background"
+    tools:context="android.support.v7.app.ActionBarActivity" >
+
+    <!-- layout pour la barre de progression et le copyright adeuza -->
+
+    <LinearLayout
+        android:id="@+id/splash_progress_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:orientation="vertical" >
+
+        <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMProgressBar
+            android:id="@+id/splash_progress"
+            style="?attr/MovalysProgressBarHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView
+            android:id="@+id/splash_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/splash_version" />
+
+        <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView
+            android:id="@+id/splash_copyright"
+            style="?attr/splashscreen_copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/splash_copyright" />
+
+        <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_framework" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/splash_custom_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/splash_progress_group"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <LinearLayout
+            android:id="@+id/splash_panel"
+            style="?attr/splashscreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dip" >
+
+            <!-- logo spécifique -->
+
+            <include layout="@layout/fwk_dev_screen_splash" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

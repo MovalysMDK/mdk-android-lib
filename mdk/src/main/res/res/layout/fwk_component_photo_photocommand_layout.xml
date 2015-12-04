@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:movalys="http://www.adeuza.com/movalys/mm/android"
+    android:id="@+id/component_photo_photocommand_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageButton
+        android:id="@+id/component_photo__button_ok__button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_btn_ok" />
+
+    <ImageButton
+        android:id="@+id/component_photo__button_cancel__button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_btn_cancel" />
+
+    <LinearLayout
+        android:id="@+id/component_photo__photo_buttons__visualpanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top|right"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/component_photo__camera__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_camera" />
+
+        <ImageButton
+            android:id="@+id/component_photo__attachment__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_attachment" />
+
+        <ImageButton
+            android:id="@+id/component_photo__erase__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_btn_drop"
+            android:text="@string/generic_message_clear" />
+    </LinearLayout>
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMPhotoView
+        android:id="@+id/component_photo__image_photo__value"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/component_photo__button_cancel__button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_toLeftOf="@id/component_photo__photo_buttons__visualpanel"
+        android:background="@color/splash_background"
+        android:src="@drawable/component__photoview__nophoto" />
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSlidingDrawer
+        android:id="@+id/component_photo__SlidingDrawer__group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:content="@+id/component_photo__metadata__group"
+        android:handle="@+id/component_photo__metadata_slideHandleButton__value"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <Button
+            android:id="@id/component_photo__metadata_slideHandleButton__value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sliding_drawer_up" />
+
+        <LinearLayout
+            android:id="@id/component_photo__metadata__group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/panel_background_black"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/component_photo__date__label"
+                style="?attr/detail_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/component_photo__date__label" />
+
+            <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMDateTimeTextView
+                android:id="@+id/component_photo__date__value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMPositionTextView
+                android:id="@+id/component_photo__position__value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                movalys:label="@string/component_photo__position__label"
+                movalys:labelLatitude="@string/component_photo__position_latitude__label"
+                movalys:labelLongitude="@string/component_photo__position_longitude__label" />
+
+            <TextView
+                android:id="@+id/component_photo__name__label"
+                style="?attr/detail_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/component_photo__name__label" />
+
+            <EditText
+                android:id="@+id/component_photo__name__edit"
+                style="?attr/detail_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLength="255" />
+
+            <TextView
+                android:id="@+id/component_photo__description__label"
+                style="?attr/detail_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/component_photo__description__label" />
+
+            <EditText
+                android:id="@+id/component_photo__description__edit"
+                style="?attr/detail_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLength="255" />
+        </LinearLayout>
+    </com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSlidingDrawer>
+
+</RelativeLayout>

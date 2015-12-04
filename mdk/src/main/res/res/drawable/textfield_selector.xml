@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:state_enabled="false">
+		<shape android:shape="rectangle">
+		     <size
+		        android:height="50sp" />
+			<gradient android:startColor="#333333"
+				android:centerColor="#55111111"
+				android:endColor="#333333"
+				android:angle="270" android:centerX="0.5" android:centerY="0.5" />
+			<stroke android:width="2dip" android:color="#000000"/>
+			<corners android:radius="3dip" />
+			<padding android:left="5dip" android:top="10dip"
+				android:right="5dip" android:bottom="10dip" />
+		</shape>
+	</item>
+	<item android:state_pressed="true">
+		<shape android:shape="rectangle" >
+		    <size
+		        android:height="50sp" />
+			<gradient android:startColor="#aad52f35"
+				android:centerColor="#55111111"
+				android:endColor="#aad52f35"
+				android:angle="270" android:centerX="0.5" android:centerY="0.5" />
+			<stroke android:width="2dip" android:color="#ffd52f35" />
+			<corners android:radius="3dip" />
+			<padding android:left="5dip" android:top="10dip"
+				android:right="5dip" android:bottom="10dip" />
+		</shape>
+	</item>
+	<item android:state_focused="true">
+		<shape android:shape="rectangle">
+		    <size
+		        android:height="50sp" />
+			<gradient android:startColor="#555555"
+				android:centerColor="#55111111"
+				android:endColor="#555555"
+				android:angle="270" android:centerX="0.5" android:centerY="0.5" />
+			<stroke android:width="2dip" android:color="#ffd52f35" />
+			<corners android:radius="3dip" />
+			<padding android:left="5dip" android:top="10dip"
+				android:right="5dip" android:bottom="10dip" />
+		</shape>
+	</item>
+	<item>
+		<shape android:shape="rectangle">
+		     <size
+		        android:height="50sp" />
+			<gradient android:startColor="#555555"
+				android:centerColor="#55111111"
+				android:endColor="#555555"
+				android:angle="270" android:centerX="0.5" android:centerY="0.5" />
+			<stroke android:width="2dip" android:color="#000000"/>
+			<corners android:radius="3dip" />
+			<padding android:left="5dip" android:top="10dip"
+				android:right="5dip" android:bottom="10dip" />
+		</shape>
+	</item>
+</selector>

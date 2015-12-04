@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_edittextdialog_edittextcommand_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@color/dialog_background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/component_edittextdialog__sep1__separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/white" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/component_edittextdialog__textview__value"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/dialog_background"
+        android:fadeScrollbars="true"
+        android:focusable="true"
+        android:inputType="textLongMessage|textMultiLine|textAutoCorrect|textAutoComplete"
+        android:maxLength="4000"
+        android:minLines="4"
+        android:scrollbars="vertical"
+        android:textColor="@color/white" >
+
+        <requestFocus />
+    </MultiAutoCompleteTextView>
+
+    <TextView
+        android:id="@+id/component_edittextdialog__sep2__separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/white"
+        android:padding="5dip" />
+
+    <RelativeLayout
+        android:id="@+id/component_edittextdialog_edittextcommand_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:contentDescription="@string/content_description_ok"
+            android:id="@+id/component_edittextdialog__ok__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dip"
+            android:src="@drawable/ic_btn_ok" />
+
+        <ImageButton
+            android:contentDescription="@string/content_description_cancel"
+            android:id="@+id/component_edittextdialog__cancel__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:layout_toLeftOf="@id/component_edittextdialog__ok__button"
+            android:src="@drawable/ic_btn_cancel" />
+
+        <ImageButton
+            android:contentDescription="@string/content_description_erase"
+            android:id="@+id/component_edittextdialog__erase__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:layout_toLeftOf="@id/component_edittextdialog__cancel__button"
+            android:src="@android:drawable/ic_input_delete" />
+
+        <ImageButton
+            android:contentDescription="@string/content_description_speaknow"
+            android:id="@+id/component_edittextdialog__speaknow__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:layout_toLeftOf="@id/component_edittextdialog__erase__button"
+            android:src="@drawable/ic_btn_speak_now" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_window_focused="false" android:state_enabled="true"
+        android:drawable="@drawable/spinner_normal" />
+    <item
+        android:state_window_focused="false" android:state_enabled="false"
+        android:drawable="@drawable/spinner_disabled" />
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/spinner_pressed" />
+    <item
+        android:state_focused="true" android:state_enabled="true"
+        android:drawable="@drawable/spinner_focused" />
+    <item
+        android:state_focused="true" android:state_enabled="false"
+        android:drawable="@drawable/spinner_focus_disabled" />
+    <item
+        android:state_focused="true"
+        android:drawable="@drawable/spinner_focused" />
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/spinner_normal" />
+    <item
+        android:drawable="@drawable/spinner_normal" />
+</selector>

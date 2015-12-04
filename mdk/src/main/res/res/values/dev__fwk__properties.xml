@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<!-- MF_DEV_INFO you can change the value of property-->
+<resources>
+	<string name="debug_mode" translatable="false">false</string>
+	<string name="sync_mock_mode" translatable="false">false</string>
+	<string name="dev_mode" translatable="false">false</string>
+	
+	<string name="display_setting_window">false</string>
+	
+	<!-- sync_mock_testid :
+			* 400 : test impossible de joindre le serveur 
+			* 403 : test message d'erreur	
+			* 408 : test authentification trop ancienne 
+		Propriété utilisée seulement quand sync_mock_mode=true
+			-->
+	<string name="sync_mock_testid" translatable="false">408</string>
+	<string name="desactivate_auth" translatable="false">false</string>	
+	<string name="synchronization_exitAppOnFirstSynchroFailure" translatable="false">false</string>
+	<string name="sync_debug_mode" translatable="false">false</string>
+	<string name="sync_data_stream_from_file_mode" translatable="false">false</string>
+	<string name="sync_transparent_mode" translatable="false">false</string>
+		
+	<string name="logger_name" translatable="false">log</string>
+	<string name="database" translatable="false">true</string>
+	<string name="database_name" translatable="false">database</string>
+	<string name="database_version" translatable="false">1</string>
+
+	<string name="menu_base_doStopApplicationStartup$visible" translatable="false">false</string>
+	<string name="menu_base_doRestartApplicationStartup$visible" translatable="false">false</string>
+	<string name="menu_base_configuration_during_application_stop$visible" translatable="false">false</string>
+	<string name="menu_base_configuration_during_application_stop_doDeleteSerializedConfiguration$visible" translatable="false">false</string>
+	<string name="menu_base_configuration_during_application_stop_doResetSetting$visible" translatable="false">false</string>
+	<string name="menu_base_configuration_during_application_stop_doResetDataBase$visible" translatable="false">false</string>
+	<string name="menu_base_configuration$visible" translatable="false">true</string>
+	<string name="menu_base_configuration_doDisplaySetting$visible" translatable="false">true</string>
+	<string name="menu_base_configuration_doResetSetting$visible" translatable="false">true</string>
+	<string name="menu_base_configuration_doResetDataBase$visible" translatable="false">true</string>
+	<string name="menu_base_configuration_doSendReport$visible" translatable="false">true</string>
+	<string name="menu_base_configuration_doImportDatabase$visible" translatable="false">true</string>
+	<string name="menu_base_doDisplayExitApplicationDialog$visible" translatable="false">true</string>
+	<string name="menu_base_doClassicSynchronisation$visible" translatable="false">true</string>
+	
+	<string name="synchronization_emptyDBSync_3GGPRS" translatable="false">0</string>
+	<string name="synchronization_emptyDBSync_wifi" translatable="false">0</string>
+	<string name="synchronization_firstSync_3GGPRS" translatable="false">0</string>
+	<string name="synchronization_firstSync_wifi" translatable="false">0</string>
+	<string name="synchronization_otherSync_3GGPRS" translatable="false">0</string>
+	<string name="synchronization_otherSync_wifi" translatable="false">0</string>
+	
+	<string name="synchronization_emptyDB_failure_popup" translatable="false">true</string>
+	<string name="synchronization_max_time_without_sync" translatable="false">3</string>
+	
+	<!--  Hide logo/copyright on splash screen -->
+	<string name="splashScreen_logoCopyright_hidden" translatable="false">false</string>
+	
+	<!-- crash report -->
+	<string name="crashreport_mail_enabled" translatable="false">true</string>
+	<string name="crashreport_mail_sender" translatable="false">adeuzamovalys@gmail.com</string>
+	<string name="crashreport_file_enabled" translatable="false">true</string>
+	<string name="crashreport_file_dbexport" translatable="false">true</string>
+	
+	<!-- crypt db -->
+	<string name="dbcrypt_keystorefile" translatable="false">dbkeystore</string>
+	<string name="dbcrypt_keystorepass" translatable="false">a2aandroidSC</string>
+	<string name="dbcrypt_keyalias" translatable="false">dbcrypt</string>
+	
+	<!--valeure par défaut pour le nombre maximum d'items que l'on peut sélectionner 
+	dans une liste de type MMMultiSelectedListView -->
+	<string name="default_maxNumberSelectableItem" translatable="false">3</string>
+	
+	<!-- Case-sensitive login parameter -->
+	<string name="case_sensitive_login" translatable="false">false</string>
+</resources>

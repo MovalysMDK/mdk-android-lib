@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fwksearchactivity__screendetail__master"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+       
+	<LinearLayout
+	        android:id="@+id/fwksearchactivity__mainpanel__master"
+	        android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:orientation="vertical">
+	            
+		    <LinearLayout
+		        android:id="@+id/fwk_searchactivity_criteriapanel__master"
+		        android:layout_width="match_parent"
+		    	android:layout_height="wrap_content"
+		    	android:orientation="horizontal">
+		    </LinearLayout>
+	    
+		    <LinearLayout
+		        android:id="@+id/fwk_searchactivity_resultpanel__master"
+		        android:layout_width="match_parent"
+		    	android:layout_height="match_parent"
+		    	android:orientation="horizontal">
+		    </LinearLayout>
+	    
+	</LinearLayout>
+    
+    <!-- 
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout
+        android:id="@+id/fwk_searchactivity_resultpanel__master"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent" >
+    </com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout>
+     -->
+    
+</RelativeLayout>

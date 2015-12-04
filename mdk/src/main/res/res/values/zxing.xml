@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<item type="id" name="decode"/>
+	<item type="id" name="decode_failed"/>
+	<item type="id" name="decode_succeeded"/>
+	<item type="id" name="launch_product_query"/>
+	<item type="id" name="quit"/>
+	<item type="id" name="restart_preview"/>
+	<item type="id" name="return_scan_result"/>
+	<item type="id" name="preview_view" />
+
+	<!-- zxing -->
+	<color name="result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+	<color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+	<color name="result_view">#b0000000</color>
+	<color name="viewfinder_laser">#FF36B4E6</color> <!-- Android standard ICS color -->
+	<color name="viewfinder_mask">#90000000</color>
+</resources>

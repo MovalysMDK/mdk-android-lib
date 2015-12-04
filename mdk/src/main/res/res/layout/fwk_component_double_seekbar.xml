@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_seekbar__double__group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:stretchColumns="0" >
+
+    <TableRow android:id="@+id/component_seekbar__row1__group" >
+
+        <SeekBar
+            android:saveEnabled="false"
+            android:id="@+id/component_seekbar__double__seekbar"
+            style="?attr/MovalySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:saveEnabled="false"
+            android:id="@+id/component_seekbar__double__value"
+            style="?attr/detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4" />
+    </TableRow>
+
+</TableLayout>

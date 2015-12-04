@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_position__positionDialog__panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@color/dialog_separator_background"
+    android:orientation="vertical" >
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSeparator
+        android:id="@+id/component_position__positionDialog_content__separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/dialog_separator" />
+
+    <LinearLayout
+        android:id="@+id/component_position__positionDialog_content__top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_text_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <ProgressBar
+            android:id="@+id/component_position__positionDialog_progress_elem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp" />
+
+        <TableLayout
+            android:id="@+id/component_position__positionDialog_content__group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableRow android:id="@+id/component_position__positionDialog_latitude__group" >
+
+                <TextView
+                    android:id="@+id/component_position__positionDialog_latitude__label"
+                    style="?attr/detail_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/component_position__positionDialog_latitude__label" />
+
+                <TextView
+                    android:id="@+id/component_position__positionDialog_latitude__value"
+                    style="?attr/detail_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:id="@+id/component_position__positionDialog_longitude__group" >
+
+                <TextView
+                    android:id="@+id/component_position__positionDialog_longitude__label"
+                    style="?attr/detail_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/component_position__positionDialog_longitude__label" />
+
+                <TextView
+                    android:id="@+id/component_position__positionDialog_longitude__value"
+                    style="?attr/detail_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:id="@+id/component_position__positionDialog_accuracy__group" >
+
+                <TextView
+                    android:id="@+id/component_position__positionDialog_accuracy__label"
+                    style="?attr/detail_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/component_position__positionDialog_accuracy__label" />
+
+                <TextView
+                    android:id="@+id/component_position__positionDialog_accuracy__value"
+                    style="?attr/detail_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/dialog_text"
+        android:paddingTop="3dp" />
+
+    <TableLayout
+        android:id="@+id/component_position__positionDialog_button__mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_button_background"
+        android:paddingTop="5dp"
+        android:stretchColumns="0,1,2" >
+
+        <TableRow
+            android:id="@+id/component_position__positionDialog_button__group"
+            android:padding="2dp" >
+
+            <Button
+                android:id="@+id/component_position__positionDialog_ok__button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generic_message_valid" />
+
+            <Button
+                android:id="@+id/component_position__positionDialog_cancel__button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generic_message_cancel" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

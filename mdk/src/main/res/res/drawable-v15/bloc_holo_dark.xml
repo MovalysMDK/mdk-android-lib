@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_window_focused="false">
+    	<shape android:shape="rectangle">
+            <solid android:color="@color/background_Bloc"/>
+            <stroke android:width="1dip" android:color="@color/white" />    
+            <corners android:radius="5dip" />
+            <padding android:left="10dip" android:top="10dip"
+                android:right="10dip" android:bottom="10dip" />
+        </shape>
+    </item>
+
+    <!-- Even though these two point to the same resource, have two states so the drawable will invalidate itself when coming out of pressed state. -->
+    <item android:state_focused="true"  android:state_enabled="false" android:state_pressed="true" android:drawable="@drawable/list_selector_disabled_holo_dark" />
+    <item android:state_focused="true"  android:state_enabled="false"                              android:drawable="@drawable/list_selector_disabled_holo_dark" />
+    <item android:state_focused="true"                                android:state_pressed="true" android:drawable="@drawable/bloc_transition_holo_dark" />
+    <item android:state_focused="false"                               android:state_pressed="true" android:drawable="@drawable/bloc_transition_holo_dark" />
+    <item android:state_focused="true"                                                             android:drawable="@drawable/list_focused_holo" />
+</selector>

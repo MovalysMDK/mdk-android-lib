@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory android:title="@string/preference_category_identification">
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEditTextPreference android:key="login"
+			android:title="@string/preference_login_title" 
+			android:summary="@string/preference_login_summary"
+			android:dialogTitle="@string/preference_login_dialogTitle"
+			android:inputType="textUri"/>
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEncryptedPasswordTextPreference android:key="password" 
+			android:inputType="textPassword"
+			android:title="@string/preference_password_title" 
+			android:summary="@string/preference_password_summary"
+			android:dialogTitle="@string/preference_password_dialogTitle" />
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory>
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory android:title="@string/preference_category_server">
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEditTextPreference android:key="urlserver"
+			android:title="@string/preference_url_title" 
+			android:inputType="textUri"
+			android:summary="@string/preference_url_summary"
+			android:dialogTitle="@string/preference_url_dialogTitle"
+			android:defaultValue="http://" />
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory>
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory android:title="@string/preference_category_display">
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEditTextPreference android:key="landscapeWidthMargin"
+			android:title="@string/preference_landscapeWidthMargin_title"
+			android:summary="@string/preference_landscapeWidthMargin_summary" 
+			android:dialogTitle="@string/preference_landscapeWidthMargin_dialogTitle" 
+			android:dialogMessage="@string/preference_landscapeWidthMargin_dialogMessage"
+			android:defaultValue="0"
+			android:inputType="number"/>
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEditTextPreference android:key="portraitWidthMargin"
+			android:title="@string/preference_portraitWidthMargin_title"
+			android:summary="@string/preference_portraitWidthMargin_summary" 
+			android:dialogTitle="@string/preference_portraitWidthMargin_dialogTitle" 
+			android:dialogMessage="@string/preference_portraitWidthMargin_dialogMessage"
+			android:defaultValue="0"
+			android:inputType="number"/>
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMListPreference android:key="landscapeColumnNumber"
+			android:title="@string/preference_landscapeColumnNumber_title"
+			android:summary="@string/preference_landscapeColumnNumber_summary"
+			android:dialogTitle="@string/preference_landscapeColumnNumber_dialogTitle"
+			android:defaultValue="0"
+			android:entries="@array/preference_ColumnNumber_entries"
+			android:entryValues="@array/preference_ColumnNumber_entryvalues">
+		</com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMListPreference>
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMListPreference android:key="portraitColumnNumber"
+			android:title="@string/preference_portraitColumnNumber_title" 
+			android:summary="@string/preference_portraitColumnNumber_summary"
+			android:dialogTitle="@string/preference_portraitColumnNumber_dialogTitle"
+			android:defaultValue="0"
+			android:entries="@array/preference_ColumnNumber_entries"
+			android:entryValues="@array/preference_ColumnNumber_entryvalues">
+		</com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMListPreference>
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory>
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory android:title="@string/preference_category_proxy">
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEditTextPreference android:key="proxylogin"
+			android:title="@string/preference_proxylogin_title" 
+			android:summary="@string/preference_proxylogin_summary"
+			android:dialogTitle="@string/preference_proxylogin_dialogTitle" />
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEditTextPreference android:key="proxypassword"
+			android:title="@string/preference_proxypassword_title"
+			android:summary="@string/preference_proxypassword_summary" 
+			android:dialogTitle="@string/preference_proxypassword_dialogTitle"
+			android:inputType="textPassword" />
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMEditTextPreference android:key="proxyurlserver"
+			android:title="@string/preference_proxyurlserver_title" 
+			android:summary="@string/preference_proxyurlserver_summary"
+			android:dialogTitle="@string/preference_proxyurlserver_dialogTitle" 
+			android:inputType="textUri"/>
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.preferences.MMPreferenceCategory>
+</PreferenceScreen>

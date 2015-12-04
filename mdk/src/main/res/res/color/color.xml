@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">    
+	<color android:name="dark_grey">#CC000000</color>
+	<color android:name="transparent">#00000000</color>
+	<color android:name="red">#B71717</color>
+	<color android:name="blue">#191CDA</color>
+	<color android:name="lime">#58F405</color>
+	<color android:name="yellow">#F4F005</color>
+	<color android:name="orange">#F4B005</color>
+	<color android:name="black">#000000</color>
+	<color android:name="white">#FFFFFF</color>
+</resources>

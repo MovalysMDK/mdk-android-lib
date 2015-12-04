@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+
+    This file is part of Movalys MDK.
+    Movalys MDK is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Movalys MDK is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU Lesser General Public License for more details.
+    You should have received a copy of the GNU Lesser General Public License
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_dialog_main_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@color/dialog_separator_background"
+    android:orientation="vertical" >
+
+    <!--
+    icon + titre : désactivé au profit du icon+title du DialogFragment
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout 
+			android:id="@+id/custom_dialog_title_layout"
+			android:layout_width="match_parent"	android:layout_height="wrap_content"
+			android:orientation="horizontal" android:background="@color/dialog_text_background">
+	
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMImageView
+				android:id="@+id/custom_dialog_icon"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:src="@android:drawable/ic_dialog_alert"
+				android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+				android:layout_marginTop="15dp" android:layout_marginBottom="15dp"
+				android:layout_gravity="center_vertical"/>
+
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView 
+				android:id="@+id/custom_dialog_title_text"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="Title"
+				android:textColor="@color/dialog_text"
+				android:layout_gravity="center_vertical" />
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout>
+    
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSeparator
+        android:id="@+id/custom_dialog_top_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/dialog_separator" />
+-->
+    <!-- texte -->
+
+    <LinearLayout
+        android:id="@+id/custom_dialog_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_text_background"
+        android:orientation="horizontal" >
+
+        <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView
+            android:id="@+id/custom_dialog_content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Text content of the dialog. It could be long."
+            android:textColor="@color/dialog_text" />
+    </LinearLayout>
+
+    <!--
+    boutons  : désactivés au profit des boutons du dialogFragment
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableLayout 
+			android:id="@+id/custom_dialog_table_layout"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:stretchColumns="0,1,2"
+			android:background="@color/dialog_button_background">
+
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableRow 
+				android:id="@+id/custom_dialog_table_row"
+				android:gravity="center">
+
+			<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMButton 
+				android:id="@+id/custom_dialog_positive_button" 
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:text="YES" android:layout_marginTop="5dp"/>
+
+			<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMButton 
+				android:id="@+id/custom_dialog_negative_button" 
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:text="NO" android:layout_marginTop="5dp"/>
+
+			<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMButton
+				android:id="@+id/custom_dialog_cancel_button" 
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:text="CANCEL" android:layout_marginTop="5dp"/>
+		</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableRow>
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableLayout>
+    -->
+
+</LinearLayout>
