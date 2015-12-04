@@ -1,0 +1,13 @@
+*.impl
+build
+mdk/build
+mdk-database/build
+mdk-databasecipher/build
+mdk-fixedlist/build
+mdk-nodatabase/build
+mdk-recyclerview/build
+mdk-scanner/build
+mdk-test/build
+mdk-testdatabase/build
+mdk-widget-legacy/build
+mdk-workspace/build
