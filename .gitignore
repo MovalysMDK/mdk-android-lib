@@ -26,3 +26,4 @@ mdk-test/mdk-test.iml
 mdk-testdatabase/mdk-testdatabase.iml
 mdk-widget-legacy/mdk-widget-legacy.iml
 mdk-workspace/mdk-workspace.iml
+local.properties
