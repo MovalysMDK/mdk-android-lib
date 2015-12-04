@@ -1,5 +1,7 @@
 *.impl
 build
+.gradle
+.idea
 mdk/build
 mdk-database/build
 mdk-databasecipher/build
