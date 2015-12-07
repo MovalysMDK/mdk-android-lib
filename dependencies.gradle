@@ -5,7 +5,7 @@ ext {
 
     espressoVersion = "2.2"
     testRunnerVersion = "0.3"
-    mdkEspressoVersion = "1.0.0"
+    mdkEspressoVersion = "1.0.1-SNAPSHOT"
     spoonClientVersion = "1.1.9"
     junitVersion = "4.12"
 
