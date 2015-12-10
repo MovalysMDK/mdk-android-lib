@@ -36,7 +36,7 @@ public class AndroidSubControllerTransverse extends SubControllerTransverse {
 	@Override
 	public void doResetDataBase( Screen p_oScreen) {
 		this.getController().launchActionByActionTask(
-				p_oScreen, ResetDataBaseAction.class, null, null);
+				p_oScreen, ResetDataBaseAction.class, null, p_oScreen);
 	}
 	
 	/**
