@@ -211,6 +211,7 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
         } else if (p_oObjectToSet == null && this.getSelectedItemPosition() != 0) {
             this.setSelection(0);
         }
+        this.writingData = false;
     }
 
     @Override
@@ -385,7 +386,6 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
         if (!this.writingData) {
             this.aivFwkDelegate.changed();
         }
-        this.writingData = false;
     }
 
     @Override
