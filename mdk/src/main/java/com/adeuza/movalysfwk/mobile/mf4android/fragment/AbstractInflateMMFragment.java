@@ -45,6 +45,9 @@ public abstract class AbstractInflateMMFragment extends AbstractMMFragment {
 	@Override
 	public View onCreateView(LayoutInflater p_oInflater, ViewGroup p_oContainer, Bundle p_oSavedInstanceState) {
 		Application.getInstance().addActiveDisplayList(this);
+
+		this.isRotated = (p_oSavedInstanceState != null && p_oSavedInstanceState.getBoolean("ROTATED"));
+
 		this.layout = (ViewGroup) p_oInflater.inflate(getLayoutId(), p_oContainer, false);
 		
 		doAfterInflate(this.layout);
@@ -55,9 +58,7 @@ public abstract class AbstractInflateMMFragment extends AbstractMMFragment {
 	@Override
 	public void onActivityCreated(Bundle p_oSavedInstanceState) {
 		super.onActivityCreated(p_oSavedInstanceState);
-		
-		this.isRotated = (p_oSavedInstanceState != null && p_oSavedInstanceState.getBoolean("ROTATED"));
-		
+
 		if (!this.isRotated) {
 			doFillAction();
 		}
