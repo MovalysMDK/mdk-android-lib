@@ -262,7 +262,7 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 	 */
 	public List<Integer> getOptionMenuIds() {
 		List<Integer> r_listMenuIds = new ArrayList<>();
-		r_listMenuIds.add(((AndroidApplication) Application.getInstance()).getAndroidIdByRKey(AndroidApplicationR.menu_base));
+		r_listMenuIds.add(this.androidApplication.getAndroidIdByRKey(AndroidApplicationR.menu_base));
 		return r_listMenuIds ;
 	}
 
@@ -313,14 +313,14 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 			oItem = p_oMenu.getItem(i);
 
 			try {
-				sTitle = Application.getInstance().getStringResource(((AndroidApplication)Application.getInstance())
+				sTitle = this.getAndroidApplication().getStringResource(this.getAndroidApplication()
 						.getAndroidIdStringByIntKey(oItem.getItemId()).concat("__title"));
 				if (sTitle != null) {
 					oItem.setTitle(sTitle);
 				}
 			} catch( Resources.NotFoundException oException ) { 
 				// No title override
-				Application.getInstance().getLog().debug("AbstractMMActivity", "No title override");
+				this.getAndroidApplication().getLog().debug("AbstractMMActivity", "No title override");
 			}
 
 			if (oItem.hasSubMenu()) {
