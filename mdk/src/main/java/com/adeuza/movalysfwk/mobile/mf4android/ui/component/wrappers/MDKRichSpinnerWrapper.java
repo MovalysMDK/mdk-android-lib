@@ -1,6 +1,6 @@
 /**
  * Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
- *
+ * <p/>
  * This file is part of Movalys MDK.
  * Movalys MDK is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -44,7 +44,6 @@ import com.soprasteria.movalysmdk.widget.core.delegate.MDKWidgetDelegate;
 import com.soprasteria.movalysmdk.widget.core.listener.ChangeListener;
 
 
-
 import java.util.List;
 import java.util.Map;
 
@@ -82,17 +81,17 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
         if (p_oComponent instanceof HasChangeListener) {
             ((HasChangeListener) p_oComponent).registerChangeListener(this);
         }
-		if (p_oComponent instanceof MDKBaseRichWidget) {
-			MDKWidgetDelegate delegate = ((HasDelegate)((MDKBaseRichWidget) p_oComponent).getInnerWidget()).getMDKWidgetDelegate();
-			// converter
-			if (delegate.getAttributeMap().containsKey(R.attr.converter_name)) {
-				this.aivFwkDelegate.setCustomConverter((CustomConverter) BeanLoader.getInstance().getBeanByType(delegate.getAttributeMap().getValue(R.attr.converter_name)));
-			}
-			// formatter
-			if (delegate.getAttributeMap().containsKey(R.attr.formatter_name)) {
-				this.aivFwkDelegate.setCustomFormatter((CustomFormatter) BeanLoader.getInstance().getBeanByType(delegate.getAttributeMap().getValue(R.attr.formatter_name)));
-			}
-		}
+        if (p_oComponent instanceof MDKBaseRichWidget) {
+            MDKWidgetDelegate delegate = ((HasDelegate) ((MDKBaseRichWidget) p_oComponent).getInnerWidget()).getMDKWidgetDelegate();
+            // converter
+            if (delegate.getAttributeMap().containsKey(R.attr.converter_name)) {
+                this.aivFwkDelegate.setCustomConverter((CustomConverter) BeanLoader.getInstance().getBeanByType(delegate.getAttributeMap().getValue(R.attr.converter_name)));
+            }
+            // formatter
+            if (delegate.getAttributeMap().containsKey(R.attr.formatter_name)) {
+                this.aivFwkDelegate.setCustomFormatter((CustomFormatter) BeanLoader.getInstance().getBeanByType(delegate.getAttributeMap().getValue(R.attr.formatter_name)));
+            }
+        }
     }
 
     @Override
@@ -172,7 +171,9 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
         View v = this.component.get();
         if (v != null) {
             if (v instanceof HasAdapter) {
+                this.writingData = true;
                 ((HasAdapter) v).setSelection(iPositionSelected);
+                this.writingData = false;
             }
         }
     }
@@ -197,7 +198,6 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
 
     @Override
     public void configurationSetValue(ITEMVM p_oObjectToSet) {
-        this.writingData = true;
         if (p_oObjectToSet != null && !p_oObjectToSet.equals(this.configurationGetValue())
                 || p_oObjectToSet == null && this.configurationGetValue() != null) {
             int iPositionSelected = 0;
@@ -211,7 +211,6 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
         } else if (p_oObjectToSet == null && this.getSelectedItemPosition() != 0) {
             this.setSelection(0);
         }
-        this.writingData = false;
     }
 
     @Override
