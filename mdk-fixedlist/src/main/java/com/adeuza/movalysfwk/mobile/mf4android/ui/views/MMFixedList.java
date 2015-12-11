@@ -239,6 +239,7 @@ public class MMFixedList<ITEM extends MIdentifiable, ITEMVM extends ItemViewMode
 		if (oItemVM != null) {
 			this.getAdapter().getMasterVM().remove(oItemVM);
 			this.updateTitle();
+			this.getAdapter().getMasterVM().setDirectlyModified(true);
 		}
 	}
 	
@@ -397,8 +398,9 @@ public class MMFixedList<ITEM extends MIdentifiable, ITEMVM extends ItemViewMode
 				
 				this.getAdapter().getMasterVM().update(p_iIndexOfItem, p_oViewModel);
 			}
-			this.getAdapter().getMasterVM().setDirectlyModified(true);
-
+			if(p_oViewModel.isDirectlyModified()){
+				this.getAdapter().getMasterVM().setDirectlyModified(true);
+			}
 			this.updateTitle();
 
 			InParameter oActionParameters = new InParameter();
