@@ -17,6 +17,7 @@ package com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View.BaseSavedState;
 
 
@@ -49,6 +50,9 @@ public class AndroidConfigurableVisualComponentSavedState extends BaseSavedState
 	public AndroidConfigurableVisualComponentSavedState(Parcel p_oInParcel) {
 		super(p_oInParcel);
 		this.changed = p_oInParcel.readInt() == 1;
+		this.visibility = p_oInParcel.readInt();
+		this.enabled = p_oInParcel.readInt() == 1;
+		this.hasRules = p_oInParcel.readInt() == 1;
 	}
 	/**
 	 * Is the component have changed
@@ -84,6 +88,7 @@ public class AndroidConfigurableVisualComponentSavedState extends BaseSavedState
 	 */
 	public void setEnabled(boolean p_bEnabled) {
 		this.enabled = p_bEnabled;
+		Log.d("ACVCSS.setEnabled - " + p_bEnabled, Log.getStackTraceString(new Exception()));
 	}
 	/**
 	 * Is the component enable
@@ -117,6 +122,9 @@ public class AndroidConfigurableVisualComponentSavedState extends BaseSavedState
 				i = 1 ;
 			}
 			p_oOutParcel.writeInt(i);
+			p_oOutParcel.writeInt(this.visibility);
+			p_oOutParcel.writeInt(this.enabled ? 1 : 0);
+			p_oOutParcel.writeInt(this.hasRules ? 1 : 0);
 		}
 	} 
 	/**
