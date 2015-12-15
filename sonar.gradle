@@ -1,0 +1,18 @@
+apply plugin: "org.sonarqube"
+
+subprojects {
+    sonarqube {
+        properties {
+            properties["sonar.language"] = "java"
+            properties["sonar.sources"] = android.sourceSets.main.java.srcDirs
+            properties["sonar.java.binaries"] = file("build/intermediates/classes/debug")
+        }
+    }
+}
+
+project(":mdk-testdatabase") {
+    sonarqube {
+        skipProject = true
+    }
+}
+
