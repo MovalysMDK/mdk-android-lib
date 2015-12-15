@@ -27,7 +27,7 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.EMailSVMImpl;
 public class EmailFormFieldValidatorImpl extends AbstractRegexFormFieldValidator implements EmailFormFieldValidator {
 	
 	/** Regular expression to verify */
-	//Regex actuelle tr��s permissive mais qui obtient de bon r��sultats : 
+	//Regex actuelle très permissive mais qui obtient de bon résultats :
 	public static final String EMAIL_REGEX = "[a-z0-9!#$%&\\'*+/=?^_\\`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@" +
 			"(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
 
