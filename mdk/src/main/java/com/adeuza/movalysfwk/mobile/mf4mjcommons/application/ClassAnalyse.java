@@ -176,7 +176,6 @@ public class ClassAnalyse {
 	 *
 	 * @param p_oActionClass l'action
 	 * @param p_oStep l'étape
-	 * @param p_oAction the instance of the action being executed
 	 * @param p_oActionResult the result of the action
 	 * @param <OUT> the type of the action result object
 	 * @return la méthode de callback

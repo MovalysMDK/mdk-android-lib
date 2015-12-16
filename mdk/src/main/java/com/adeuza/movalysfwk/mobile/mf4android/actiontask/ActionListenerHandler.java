@@ -117,7 +117,8 @@ public class ActionListenerHandler {
 
 	/**
 	 * Invoke pending events
-	 * @param p_sListenerIdentifier
+	 * @param p_oListenerIdentifier
+	 * @param p_oContext
 	 */
 	public void invokePendingEvents( ListenerIdentifier p_oListenerIdentifier, MContext p_oContext ) {
 		Queue<EventHolder> events = this.pendingEvents.get(p_oListenerIdentifier.getUniqueId());
@@ -253,9 +254,9 @@ public class ActionListenerHandler {
 
 	/**
 	 * @param p_oActionInterface
+	 * @param p_oEvent
+	 * @param p_oListenerIdentifier
 	 * @param p_oContext
-	 * @param oEvent
-	 * @param oActivity
 	 */
 	private void invokeFailureListener(
 			Class<? extends Action<?,?,?,?>> p_oActionInterface,
@@ -277,9 +278,9 @@ public class ActionListenerHandler {
 	
 	/**
 	 * @param p_oActionInterface
-	 * @param p_oInfo
-	 * @param oEvent
-	 * @param oActivity
+	 * @param p_oStep
+	 * @param p_oEvent
+	 * @param p_oListenerIdentifier
 	 */
 	private <IN extends ActionParameter> void invokeProgressListener(
 			Class<? extends Action<?,?,?,?>> p_oActionInterface,
@@ -291,18 +292,37 @@ public class ActionListenerHandler {
 		if (oMethod != null ) {
 			this.invokeMethod(p_oListenerIdentifier, oMethod, p_oEvent);
 		}
+
+		//Cherche si d'autres objets (fragment par exemple) sont listeners
+		List<Object> listListener = Application.getInstance().getActionListeners(p_oActionInterface) ;
+		if ( listListener != null) {
+			ClassAnalyse oAnalyse ;
+			for ( final Object oListener : listListener ){
+				Object oRealListener = oListener;
+				if (oListener instanceof String) {
+					oRealListener = Application.getInstance().getScreenObjectFromName((String)oListener);
+				}
+
+				if (oRealListener != null) {
+					oAnalyse = Application.getInstance().getClassAnalyser().getClassAnalyse(oRealListener);
+					oMethod = oAnalyse.getMethodOfClass(p_oActionInterface, p_oStep);
+					this.invokeMethod(oRealListener, oMethod, p_oEvent);
+				}
+			}
+		}
 	}
 	
 	/**
 	 * call the listeners given as parameter
-	 * @param p_oActionTaskState the current step of the action
-	 * @param p_oEvent the event processed by the action
-	 * @param p_oParameterOut the action result
+	 * @param p_oListenerIdentifier
+	 * @param p_oActionInterface
+	 * @param p_oActionTaskState
+	 * @param p_oEvent
 	 */
 	private void callListeners(
 			ListenerIdentifier p_oListenerIdentifier,
 			Class<? extends Action<?,?,?,?>> p_oActionInterface,
-			ActionTaskStep p_oActionTaskState, 
+			ActionTaskStep p_oActionTaskState,
 			AbstractResultEvent<ActionParameter> p_oEvent) {
 		List<Object> listListener = Application.getInstance().getActionListeners(p_oActionInterface) ;
 		if ( listListener != null) {
@@ -348,7 +368,7 @@ public class ActionListenerHandler {
 	
 	/**
 	 * Add a event to be replayed on activity restart
-	 * @param p_oEvent event
+	 * @param p_oEventHolder event
 	 * @param p_sListenerName listener name
 	 */
 	private void addPendingEvent( EventHolder p_oEventHolder, String p_sListenerName) {
@@ -365,8 +385,8 @@ public class ActionListenerHandler {
 	
 	/**
 	 * Add a event to be replayed on activity restart
-	 * @param p_oEvent event
-	 * @param p_sListenerName listener name
+	 * @param p_oInParam
+	 * @param p_sScreenIdentifier
 	 */
 	private AbstractMMActivity getRunningActivity(ActionParameter p_oInParam, String p_sScreenIdentifier) {
 		// Get running activity

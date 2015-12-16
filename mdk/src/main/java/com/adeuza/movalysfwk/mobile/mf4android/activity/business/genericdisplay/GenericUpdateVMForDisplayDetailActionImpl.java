@@ -59,6 +59,7 @@ public class GenericUpdateVMForDisplayDetailActionImpl extends AbstractTaskableA
 	 */
 	@Override
 	public OutUpdateVMParameter doAction(MContext p_oContext, InUpdateVMParameter p_oParam) throws ActionException {
+		this.doPublishProgress(p_oContext, DefaultActionStep.DO);
 		OutUpdateVMParameter out = new OutUpdateVMParameter();
 		out.setDataloader(p_oParam.getDataLoader());
 		out.setViewModel(p_oParam.getVm());
