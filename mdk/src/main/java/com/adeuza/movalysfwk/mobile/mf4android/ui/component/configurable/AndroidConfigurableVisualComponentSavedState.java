@@ -17,7 +17,6 @@ package com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 import android.view.View.BaseSavedState;
 
 
@@ -88,7 +87,6 @@ public class AndroidConfigurableVisualComponentSavedState extends BaseSavedState
 	 */
 	public void setEnabled(boolean p_bEnabled) {
 		this.enabled = p_bEnabled;
-		Log.d("ACVCSS.setEnabled - " + p_bEnabled, Log.getStackTraceString(new Exception()));
 	}
 	/**
 	 * Is the component enable
