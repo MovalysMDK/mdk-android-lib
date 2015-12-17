@@ -15,14 +15,6 @@
  */
 package com.adeuza.movalysfwk.mobile.mf4android.activity;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -81,6 +73,14 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.Confi
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.screen.Screen;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.screen.ScreenDelegate;
 import com.soprasteria.movalysmdk.widget.core.provider.MDKWidgetApplication;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -157,6 +157,14 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 			Application.getInstance().setCurrentUserResource(p_oSavedInstanceState.getLong("CurrentUserResource"));
 			this.getAndroidApplication().setScreenDictionary((SparseArrayIntArrayParcelable)p_oSavedInstanceState.getParcelable("screenDictionary"));
 			this.complexeComponents = (ArrayList<HashMap<String, String>>) p_oSavedInstanceState.getSerializable("complexeComponents");
+		}
+
+		// if no splash is defined and we should show settings
+		if (this.getAndroidApplication().displayMandatorySettingWindow()) {
+			this.loadSettings();
+			if (this.getAndroidApplication().hasUndefinedMandatorySetting()) {
+				this.getAndroidApplication().getController().doDisplayParameterDialog();
+			}
 		}
 	}
 
