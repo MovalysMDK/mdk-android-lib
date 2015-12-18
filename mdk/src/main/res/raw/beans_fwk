@@ -189,3 +189,7 @@ connectorwrapper_MDKRichSpinner=com.adeuza.movalysfwk.mobile.mf4android.ui.adapt
 connectorwrapper_Spinner=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.spinner.MDKSpinnerConnectorWrapper
 connectorwrapper_MMSearchSpinner=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.spinner.MDKSpinnerConnectorWrapper
 connectorwrapper_MMRecyclerView=com.adeuza.movalysfwk.mobile.mf4android.ui.adapters.connectors.recyclerview.MDKRecyclerViewConnectorWrapper
+
+# mdk-android-widget providers
+com.soprasteria.movalysmdk.widget.core.provider.MDKWidgetComponentProvider=com.adeuza.movalysfwk.mobile.mf4android.application.MDKWidgetComponentProviderImpl
+com.soprasteria.movalysmdk.widget.core.provider.MDKWidgetComponentActionHelper=com.adeuza.movalysfwk.mobile.mf4android.application.MDKWidgetComponentActionHelperImpl
