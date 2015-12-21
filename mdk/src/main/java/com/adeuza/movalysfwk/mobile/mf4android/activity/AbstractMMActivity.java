@@ -97,6 +97,8 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 	private static final int ACTIVITY_SUPPORT_MASK = 0x0000ffff;
 	/** mask for result code on startActivityForResult */
 	protected static final int REQUEST_CODE_MASK = 0x0000ffff;
+	/** constant to create parameter activity */
+	public static final int REDIRECT_TO_PARAMETER_ACTIVITY_REQUEST_CODE = 0x000f123;
 	/**
 	 * Utilisé pour retrouver l'activité de détail précédemment lancée dans un intent.
 	 */
@@ -159,13 +161,7 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 			this.complexeComponents = (ArrayList<HashMap<String, String>>) p_oSavedInstanceState.getSerializable("complexeComponents");
 		}
 
-		// if no splash is defined and we should show settings
-		if (this.getAndroidApplication().displayMandatorySettingWindow()) {
-			this.loadSettings();
-			if (this.getAndroidApplication().hasUndefinedMandatorySetting()) {
-				this.getAndroidApplication().getController().doDisplayParameterDialog();
-			}
-		}
+
 	}
 
 	@Override
@@ -181,6 +177,14 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 					oAction.createProgressDialog();
 					break;
 				}
+			}
+		}
+
+		// if no splash is defined and we should show settings
+		if (this.getAndroidApplication().displayMandatorySettingWindow()) {
+			this.loadSettings();
+			if (this.getAndroidApplication().hasUndefinedMandatorySetting()) {
+				this.getAndroidApplication().getController().doDisplayParameterDialog();
 			}
 		}
 	}
@@ -492,14 +496,14 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 			}
 
 			// cas du clic sur le bouton Paramétrer de la popup du splash screen
-			else if (p_oRequestCode == ParameterDialogActivity.REDIRECT_TO_PARAMETER_ACTIVITY_REQUEST_CODE
+			else if (p_oRequestCode == REDIRECT_TO_PARAMETER_ACTIVITY_REQUEST_CODE
 					&& p_oResultCode == RESULT_OK) {
 
 				// lancement de l'action pour l'affichage de la page de paramétrage
 				Application.getInstance().getController().doDisplaySetting(this);
 			}
 			// cas du clic sur le bouton quiter de la popup du splash screen
-			else if (p_oRequestCode == ParameterDialogActivity.REDIRECT_TO_PARAMETER_ACTIVITY_REQUEST_CODE
+			else if (p_oRequestCode == REDIRECT_TO_PARAMETER_ACTIVITY_REQUEST_CODE
 					&& p_oResultCode == RESULT_CANCELED) {
 				// fermeture de l'application
 				((MFAndroidApplication) getApplication()).launchStopApplication();

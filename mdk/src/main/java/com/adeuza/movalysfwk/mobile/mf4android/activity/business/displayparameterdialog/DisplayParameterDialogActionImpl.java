@@ -15,11 +15,11 @@
  */
 package com.adeuza.movalysfwk.mobile.mf4android.activity.business.displayparameterdialog;
 
-import android.content.Intent;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 
-import com.adeuza.movalysfwk.mobile.mf4android.activity.ParameterDialogActivity;
 import com.adeuza.movalysfwk.mobile.mf4android.application.AndroidApplication;
-import com.adeuza.movalysfwk.mobile.mf4android.context.AndroidMMContext;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.Action;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.ActionException;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.DefaultActionStep;
@@ -27,6 +27,8 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.NullActionParameterImpl;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.application.Application;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displayparameterdialog.DisplayParameterDialogAction;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.context.MContext;
+import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.screen.Screen;
+import com.sopragroup.mobility.mdk.R;
 
 /**
  * <p>
@@ -53,9 +55,27 @@ public class DisplayParameterDialogActionImpl implements DisplayParameterDialogA
 	 * {@inheritDoc}
 	 */
 	@Override
-	public NullActionParameterImpl doAction(MContext p_oContext, NullActionParameterImpl p_oParameterIn) {
-		Intent oIntent= new Intent(((AndroidMMContext)p_oContext).getAndroidNativeContext(), ParameterDialogActivity.class);
-		 ((AndroidApplication) Application.getInstance()).startActivityForResult(oIntent, ParameterDialogActivity.REDIRECT_TO_PARAMETER_ACTIVITY_REQUEST_CODE);
+	public NullActionParameterImpl doAction(final MContext p_oContext, NullActionParameterImpl p_oParameterIn) {
+
+		final Activity activity = AndroidApplication.getInstance().getCurrentActivity();
+
+
+		AlertDialog alert = new AlertDialog.Builder(activity)
+				.setMessage(R.string.screen_redirect_to_parameter_text)
+				.setTitle(R.string.activityname_parameter)
+				.setPositiveButton(R.string.screen_redirect_to_parameter_param_button, new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						Application.getInstance().getController().doDisplaySetting((Screen) activity);
+					}
+				})
+				.setNegativeButton(R.string.screen_redirect_to_parameter_stop_button, new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						AndroidApplication.getInstance().getApplication().launchStopApplication();
+					}
+				})
+				.show();
 		return null;
 	}
 
