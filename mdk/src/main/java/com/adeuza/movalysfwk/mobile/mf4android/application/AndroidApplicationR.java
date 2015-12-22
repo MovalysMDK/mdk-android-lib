@@ -53,20 +53,6 @@ public enum AndroidApplicationR implements ApplicationR {
 	/** R.screen_parameters */
 	screen_parameters(ApplicationRGroup.XML, "screen_parameters"),
 
-	/** R.layout.fwk_screen_redirect_to_parameter_main */
-	fwk_screen_redirect_to_parameter_main(ApplicationRGroup.LAYOUT, "fwk_screen_redirect_to_parameter_main"),
-	/** R.id.screen_redirect_to_parameter_param_button */
-	screen_redirect_to_parameter_param_button(ApplicationRGroup.ID, "screen_redirect_to_parameter_param_button"),
-	/** R.id.screen_redirect_to_parameter_stop_button */
-	screen_redirect_to_parameter_stop_button(ApplicationRGroup.ID, "screen_redirect_to_parameter_stop_button"),
-	
-	/** R.layout.fwk_screen_reset_settings_and_exit */
-	fwk_screen_reset_settings_and_exit(ApplicationRGroup.LAYOUT, "fwk_screen_reset_settings_and_exit"),	
-	/** R.id.screen_reset_settings_and_exit_ok_button */
-	screen_reset_settings_and_exit_ok_button(ApplicationRGroup.ID, "screen_reset_settings_and_exit_ok_button"),
-
-	
-	
 	/** R.id.fwk_screen_question */
 	fwk_screen_question(ApplicationRGroup.ID, "screen_question"),
 	/** R.id.screen_question_text */

@@ -15,18 +15,19 @@
  */
 package com.adeuza.movalysfwk.mobile.mf4android.activity.business.displayresetsettingsandexitdialog;
 
-import android.content.Intent;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 
-import com.adeuza.movalysfwk.mobile.mf4android.activity.ResetSettingsAndExitDialogActivity;
 import com.adeuza.movalysfwk.mobile.mf4android.application.AndroidApplication;
-import com.adeuza.movalysfwk.mobile.mf4android.context.AndroidMMContext;
+import com.adeuza.movalysfwk.mobile.mf4android.application.MFApplicationHolder;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.Action;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.ActionException;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.DefaultActionStep;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.action.NullActionParameterImpl;
-import com.adeuza.movalysfwk.mobile.mf4mjcommons.application.Application;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displayresetsettingsandexitdialog.DisplayResetSettingsAndExitDialogAction;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.context.MContext;
+import com.sopragroup.mobility.mdk.R;
 
 /**
  * <p>
@@ -57,8 +58,19 @@ public class DisplayResetSettingsAndExitDialogActionImpl implements DisplayReset
 	 */
 	@Override
 	public NullActionParameterImpl doAction(MContext p_oContext, NullActionParameterImpl p_oParameterIn) {
-		Intent oIntent= new Intent(((AndroidMMContext)p_oContext).getAndroidNativeContext(),ResetSettingsAndExitDialogActivity.class);
-		 ((AndroidApplication) Application.getInstance()).startActivityForResult(oIntent, ResetSettingsAndExitDialogActivity.REDIRECT_TO_PARAMETER_ACTIVITY_REQUEST_CODE);
+		final Activity activity = AndroidApplication.getInstance().getCurrentActivity();
+
+		new AlertDialog.Builder(activity)
+				.setMessage(R.string.screen_reset_settings_and_exit_text)
+				.setTitle(R.string.activityname_parameter)
+				.setPositiveButton(R.string.screen_reset_settings_and_exit_text_exit_button, new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						MFApplicationHolder.getInstance().getApplication().launchStopApplication();
+					}
+				})
+				.show();
+
 		return null;
 	}
 
