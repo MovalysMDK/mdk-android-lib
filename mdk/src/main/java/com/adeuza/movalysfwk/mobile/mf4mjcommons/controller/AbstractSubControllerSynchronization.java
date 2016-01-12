@@ -24,6 +24,8 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.ManageSynchron
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.SynchronisationResponseTreatmentInformation;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.SynchronizationActionParameterIN;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.SynchronizationListener;
+import com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.ConfigurationsHandler;
+import com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.FwkPropertyName;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.context.MContext;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.context.MContextFactory;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.core.Notifier;
@@ -454,7 +456,12 @@ public abstract class AbstractSubControllerSynchronization extends SubController
 		oSynchroDialogParameter.synchronisationParameters	= new SynchronizationActionParameterIN();
 		oSynchroDialogParameter.screen = p_oScreen;
 		oSynchroDialogParameter.async = p_bAsync;
-		
+
+		if (Application.getInstance().isSyncTransparentEnabled()) {
+			oSynchroDialogParameter.synchronisationParameters.setActionAttachedActivity(false);
+			oSynchroDialogParameter.synchronisationParameters.disableProgressDialog();
+		}
+
 		this.doDisplaySynchronisationDialog(oSynchroDialogParameter);
 	}
 

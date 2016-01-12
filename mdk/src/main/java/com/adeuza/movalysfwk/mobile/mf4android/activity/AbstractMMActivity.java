@@ -682,7 +682,7 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 	 */
 	public void launchActionOnApplicationScope(Class<? extends Action<?,?,?,?>> p_oActionClass, ActionParameter p_oParameterIn) {
 		if (p_oParameterIn != null)
-			p_oParameterIn.setActionAttachedActivity(true);
+			p_oParameterIn.setActionAttachedActivity(false);
 		
 		this.launchAction(p_oActionClass, p_oParameterIn, this);
 	}

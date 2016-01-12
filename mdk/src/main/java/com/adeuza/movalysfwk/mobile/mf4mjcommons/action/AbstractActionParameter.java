@@ -32,7 +32,7 @@ public abstract class AbstractActionParameter implements Serializable {
 	private long actionId = 0;
 
 	/** unique number of launched action */
-	private boolean actionAttachedActivity = false;
+	private boolean actionAttachedActivity = true;
 	
 	private Map<String, Object> parameters;
 	
@@ -80,7 +80,7 @@ public abstract class AbstractActionParameter implements Serializable {
 	/**
 	 * Sets the Action Attached Activity (True/False)
 	 *
-	 * @param p_bActionAttachedActivity
+	 * @param p_bActive
 	 */
 	public void setActionAttachedActivity(boolean p_bActive) {
 		this.actionAttachedActivity = p_bActive;

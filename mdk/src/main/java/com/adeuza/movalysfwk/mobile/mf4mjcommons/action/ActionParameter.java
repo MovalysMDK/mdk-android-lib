@@ -48,7 +48,7 @@ public interface ActionParameter extends Serializable {
 	/**
 	 * Sets the Action Attached Activity (True/False)
 	 *
-	 * @param p_bActionAttachedActivity
+	 * @param p_bActive
 	 */
 	public void setActionAttachedActivity(boolean p_bActive);
 	

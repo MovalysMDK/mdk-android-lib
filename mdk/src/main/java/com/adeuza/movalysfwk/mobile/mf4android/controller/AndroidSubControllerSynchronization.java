@@ -15,6 +15,7 @@
  */
 package com.adeuza.movalysfwk.mobile.mf4android.controller;
 
+import com.adeuza.movalysfwk.mobile.mf4mjcommons.application.Application;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.displaysynchrodialog.SynchronizationDialogParameterIN;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.ClassicSynchronizationAction;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.SynchronizationActionParameterIN;
@@ -39,6 +40,11 @@ public class AndroidSubControllerSynchronization extends AbstractSubControllerSy
 		oSynchroDialogParameter.synchronisationParameters.nextScreen = p_oNextScreen;
 		oSynchroDialogParameter.screen = p_oScreen;
 
+		if (Application.getInstance().isSyncTransparentEnabled()) {
+			oSynchroDialogParameter.synchronisationParameters.setActionAttachedActivity(false);
+			oSynchroDialogParameter.synchronisationParameters.disableProgressDialog();
+		}
+
 		this.doDisplaySynchronisationDialog(oSynchroDialogParameter);
 	}
 
@@ -60,6 +66,11 @@ public class AndroidSubControllerSynchronization extends AbstractSubControllerSy
 		oInParameter.synchronisationParameters.firstSynchro = true;
 		oInParameter.screen = p_oScreen;
 		oInParameter.async = p_bAsync;
+
+		if (Application.getInstance().isSyncTransparentEnabled()) {
+			oInParameter.synchronisationParameters.setActionAttachedActivity(false);
+			oInParameter.synchronisationParameters.disableProgressDialog();
+		}
 
 		this.doDisplaySynchronisationDialog(oInParameter);
 	}

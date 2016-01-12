@@ -89,7 +89,7 @@ public enum FwkPropertyName implements PropertyName {
 	synchronization_emptyDB_failure_popup,
 	/** maximum duration without syncing application */
 	synchronization_max_time_without_sync,
-	
+
 	/** maximum number of selectable items */
 	default_maxNumberSelectableItem,
 	

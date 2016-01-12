@@ -393,7 +393,7 @@ public class ActionListenerHandler {
 		AbstractMMActivity oActivity = (AbstractMMActivity) Application.getInstance().getScreenObjectFromName(p_sScreenIdentifier);
 	
 		// Search Activity Active
-		if (p_oInParam != null && p_oInParam.isActionAttachedActivity()) {
+		if (p_oInParam != null && !p_oInParam.isActionAttachedActivity()) {
 			ListenerIdentifier oListenerIdentifier = Application.getInstance().getScreenObjecthasWindowFocus();
 			if (oListenerIdentifier !=  null) {
 				oActivity = (AbstractMMActivity)oListenerIdentifier;

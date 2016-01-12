@@ -277,7 +277,7 @@ public abstract class AbstractBaseFwkControllerImpl implements FwkController {
 	 */
 	public void launchActionOnApplicationScope(Class<? extends Action<?,?,?,?>> p_oActionClass, ActionParameter p_oParameterIn, Object p_oSource) {
 		if (p_oParameterIn != null)
-			p_oParameterIn.setActionAttachedActivity(true);
+			p_oParameterIn.setActionAttachedActivity(false);
 
 		AbstractTaskableAction<?, ?, ?, ?> oAction = (AbstractTaskableAction<?, ?, ?, ?>) BeanLoader.getInstance().getBean(p_oActionClass);
 		this.launchActionByActionTask(null, oAction, p_oActionClass, p_oParameterIn, p_oSource);
