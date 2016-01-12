@@ -56,6 +56,14 @@ public interface MMActionTask<IN extends ActionParameter, OUT extends ActionPara
 	 */
 	public AbstractTaskableAction<IN, OUT, STATE, PROGRESS> getAction();
 
+
+	/**
+	 * Retourne l'objet action Interface
+	 *
+	 * @return Objet action
+	 */
+	public Class<? extends Action<?,?,?,?>> getActionInterface();
+
 	/**
 	 * Retourne l'objet parameterIn
 	 *

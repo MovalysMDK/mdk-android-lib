@@ -256,7 +256,15 @@ public class ActionASyncTask <IN extends ActionParameter, OUT extends ActionPara
 	public AbstractTaskableAction<IN, OUT, STATE, PROGRESS> getAction() {
 		return this.androidActionTaskDelegate.getAction();
 	}
-	
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public Class<? extends Action<? ,? ,?,?>> getActionInterface() {
+		return this.androidActionTaskDelegate.getActionInterface();
+	}
+
 	/**
 	 * {@inheritDoc}
 	 */

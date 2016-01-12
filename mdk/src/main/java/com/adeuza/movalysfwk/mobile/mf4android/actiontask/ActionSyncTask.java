@@ -159,6 +159,14 @@ implements MMAndroidActionTask<IN,OUT,STATE,PROGRESS>  {
 	 * {@inheritDoc}
 	 */
 	@Override
+	public Class<? extends Action<? ,? ,?,?>> getActionInterface() {
+		return this.androidActionTaskDelegate.getActionInterface();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
 	public ActionTaskIn<IN> getParameterIn() {
 		return this.androidActionTaskDelegate.getParameterIn();
 	}

@@ -31,6 +31,9 @@ implements Action<IN,OUT,PROGRESS,PROGRESSPARAMETER> {
 	/** la tâche qui lance l'action */
 	private MMActionTask<IN, OUT, PROGRESS, PROGRESSPARAMETER> handler = null;
 
+	/** Progress State */
+	private ActionTaskProgress<PROGRESS, PROGRESSPARAMETER> stateProgress;
+
 	/**
 	 * <p>hasPreExecuteDialog.</p>
 	 *
@@ -71,7 +74,17 @@ implements Action<IN,OUT,PROGRESS,PROGRESSPARAMETER> {
 		ActionTaskProgress<PROGRESS, PROGRESSPARAMETER> atp = new ActionTaskProgress<PROGRESS, PROGRESSPARAMETER>();
 		atp.setStep(p_oState);
 		atp.setValue(p_oProgressInformations);
+		this.stateProgress = atp;
+
 		this.handler.publishActionProgress(atp);
+	}
+
+	/**
+	 * Get State Progress Of Action
+	 * @return ActionTaskProgress
+	 */
+	public ActionTaskProgress<PROGRESS,PROGRESSPARAMETER> getStateProgressOfAction() {
+		return this.stateProgress;
 	}
 
 	public String[] getRequieredPermissions() {

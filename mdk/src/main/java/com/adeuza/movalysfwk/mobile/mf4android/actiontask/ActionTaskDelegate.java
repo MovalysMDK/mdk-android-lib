@@ -58,7 +58,6 @@ public class ActionTaskDelegate<IN extends ActionParameter, OUT extends ActionPa
 	/** l'action associée de départ */
 	private AbstractTaskableAction<IN,OUT,STATE,PROGRESS> action;
 
-	
 	/** l'interface de l'action de départ*/
 	private Class<? extends Action<?,?,?,?>> actionInterface; 
 
@@ -192,6 +191,15 @@ public class ActionTaskDelegate<IN extends ActionParameter, OUT extends ActionPa
 	@Override
 	public AbstractTaskableAction<IN, OUT,STATE, PROGRESS> getAction() {
 		return this.action;
+	}
+
+	/**
+	 * Retourne la classe interface de l'action de départ
+	 * @return Class actionInterface
+	 */
+	@Override
+	public Class<? extends Action<?, ?, ?, ?>> getActionInterface() {
+		return this.actionInterface;
 	}
 
 	/**
