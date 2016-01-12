@@ -121,7 +121,7 @@ public class AbstractMMFragment extends Fragment implements ListenerIdentifier {
 	 */
 	public void launchActionOnApplicationScope(Class<? extends Action<?,?,?,?>> p_oActionClass, ActionParameter p_oParameterIn) {
 		if (p_oParameterIn != null)
-			p_oParameterIn.setActionAttachedActivity(true);
+			p_oParameterIn.setActionAttachedActivity(false);
 		
 		((AbstractMMActivity) this.getActivity()).launchAction(p_oActionClass, p_oParameterIn, this);
 	}
