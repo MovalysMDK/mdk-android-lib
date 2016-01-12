@@ -310,7 +310,7 @@ public abstract class AbstractAutoBindMMActivity extends AbstractMvcMMActivity i
 
 		Object oConfig = this.getLastCustomNonConfigurationInstance();
 
-		//DMA/SMA/LBR : suite erreur sur les restauration en cas de besoin de ressources.
+		//DMA/SMA : suite erreur sur les restauration en cas de besoin de ressources.
 		//stackoverflow n°13997550
 		if (p_oSavedInstanceState!=null){
 			p_oSavedInstanceState.setClassLoader(AndroidConfigurableVisualComponentSavedState.class.getClassLoader());	
@@ -368,7 +368,7 @@ public abstract class AbstractAutoBindMMActivity extends AbstractMvcMMActivity i
 	@Override
 	protected void onRestoreInstanceState(Bundle p_oSavedInstanceState) {
 		this.restoreData = true;
-		//DMA/SMA/LBR : suite erreur sur les restauration en cas de besoin de ressources.
+		//DMA/SMA : suite erreur sur les restauration en cas de besoin de ressources.
 		//stackoverflow n°13997550 bug 6822 chez Google
 		p_oSavedInstanceState.setClassLoader(AndroidConfigurableVisualComponentSavedState.class.getClassLoader());
 		if (this.getLastCustomNonConfigurationInstance() == null) {

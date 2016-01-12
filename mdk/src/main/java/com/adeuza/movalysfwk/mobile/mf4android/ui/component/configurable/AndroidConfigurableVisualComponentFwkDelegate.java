@@ -178,27 +178,19 @@ public class AndroidConfigurableVisualComponentFwkDelegate extends AbstractConfi
 	 * @param p_oState the current view previous state
 	 */
 	public void onRestoreInstanceState(Parcelable p_oState) {
-		//Log.d("LBR","[AndroidConfigurableVisualComponentDelegate.onRestoreInstanceState] "+currentView.getClass().getName());
-
 		if (currentView instanceof InstanceStatable){
 			((AndroidConfigurableVisualComponentDelegate)this.currentCvComponent.getComponentDelegate()).setWritingData(true);
 			
-			//Log.d("LBR","[AndroidConfigurableVisualComponentDelegate.onRestoreInstanceState] "+currentView.getClass().getName()+" implément InstanceStatable.");
-
 			if(!(p_oState instanceof AndroidConfigurableVisualComponentSavedState)){
-				//Log.d("LBR","[AndroidConfigurableVisualComponentDelegate.onRestoreInstanceState] "+currentView.getClass().getName()+" appel InstanceStatable.superOnRestoreInstanceState.");
-
 				((InstanceStatable)currentView).superOnRestoreInstanceState(p_oState);
 				return;
 			}
 
-			//Log.d("LBR","[AndroidConfigurableVisualComponentDelegate.onRestoreInstanceState] "+currentView.getClass().getName()+" implément AndroidConfigurableVisualComponentSavedState.");
 			AndroidConfigurableVisualComponentSavedState savedState = (AndroidConfigurableVisualComponentSavedState) p_oState;
 
 			// set the rules before calling super because super call configurationSetValue
 			this.setHasRules(savedState.getHasRules());
 			
-			//Log.d("LBR","[AndroidConfigurableVisualComponentDelegate.onRestoreInstanceState] "+currentView.getClass().getName()+" appel AndroidConfigurableVisualComponentSavedState.superOnRestoreInstanceState.");
 			// Etat sauvegardé par la classe mère
 			((InstanceStatable)currentView).superOnRestoreInstanceState(savedState.getSuperState());
 
