@@ -345,7 +345,7 @@ public abstract class AbstractBaseFwkControllerImpl implements FwkController {
 		ActionTaskIn oAti = new ActionTaskIn();
 		oTask.setParameterIn(oAti);
 		oAti.setIn(p_oParameterIn);
-		if ( ListenerIdentifier.class.isAssignableFrom(p_oSource.getClass())) {
+		if (p_oSource != null && ListenerIdentifier.class.isAssignableFrom(p_oSource.getClass())) {
 			oAti.setSource(((ListenerIdentifier)p_oSource).getUniqueId());
 		}
 		else {
