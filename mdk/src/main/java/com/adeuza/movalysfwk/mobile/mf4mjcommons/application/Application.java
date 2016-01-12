@@ -37,6 +37,7 @@ import java.util.WeakHashMap;
 
 import com.adeuza.movalysfwk.mf4jcommons.crypt.AESUtil;
 import com.adeuza.movalysfwk.mf4jcommons.model.configuration.entity.utils.StringUtils;
+import com.adeuza.movalysfwk.mobile.mf4android.actiontask.ActionASyncTask;
 import com.adeuza.movalysfwk.mobile.mf4android.activity.AbstractMMActivity;
 import com.adeuza.movalysfwk.mobile.mf4javacommons.dataloader.AbstractSynchronisableListDataloader;
 import com.adeuza.movalysfwk.mobile.mf4javacommons.dataloader.Dataloader;
@@ -207,14 +208,13 @@ public abstract class Application  implements NotifierLauncher {
 	/** active display by class */
 	private Map<ListenerIdentifier, String> mapActiveDisplayByClass = new WeakHashMap<>();
 
-	/**
-	 * Actions in progress for each activity
-	 */
+	/** Actions in progress for each activity */
 	private Map<String, ActiveDisplayActions> mapActionsByActiveDisplay = new HashMap<>();
-	
-	/**
-	 * Actions in progress for each activity
-	 */
+
+	/** Actions in progress */
+	private Map<String, WeakReference<MMActionTask<?,?,?,?>>> mapActionsRunning = new HashMap<>();
+
+	/** Actions in progress for each activity */
 	private List<String> storeEventsForDisplayList = new ArrayList<>();
 	
 	/** User interface */
@@ -226,7 +226,6 @@ public abstract class Application  implements NotifierLauncher {
 	 * @return instance of application
 	 */
 	public static Application getInstance() {
-		// LBR: Test
 		BeanLoader beanLoader = null;
 		beanLoader = BeanLoader.getInstance();
 		if (beanLoader != null && beanLoader.hasDefinition(ExtBeanType.Application)) {
@@ -532,7 +531,7 @@ public abstract class Application  implements NotifierLauncher {
 	
 	/**
 	 * Enable event storage for display
-	 * @param p_oObject
+	 * @param p_oListenerIdentifier
 	 */
 	public void enableStoreEventsForDisplay(ListenerIdentifier p_oListenerIdentifier) {
 		this.storeEventsForDisplayList.add(p_oListenerIdentifier.getUniqueId());
@@ -577,7 +576,6 @@ public abstract class Application  implements NotifierLauncher {
 
 	/**
 	 * Returns the screen object from its name;
-	 * @param p_sName the name to look for
 	 * @return the screen object
 	 */
 	public ListenerIdentifier getScreenObjecthasWindowFocus() {
@@ -602,7 +600,7 @@ public abstract class Application  implements NotifierLauncher {
 	public String getScreenNameFromObject(ListenerIdentifier p_oObject) {
 		return this.mapActiveDisplayByClass.get(p_oObject);
 	}
-	
+
 	/**
 	 * Register a running action for an active display
 	 * @param p_oListenerIdentifier active display
@@ -617,6 +615,9 @@ public abstract class Application  implements NotifierLauncher {
 			}
 			oRunningActions.registerAction(p_oAction);
 		}
+
+		if(p_oAction != null)
+			this.mapActionsRunning.put(String.valueOf(p_oAction.hashCode()), new WeakReference<MMActionTask<?, ?, ?, ?>>(p_oAction));
 	}
 	
 	/**
@@ -633,12 +634,14 @@ public abstract class Application  implements NotifierLauncher {
 				oRunningActions.unregisterAction(p_oAction);
 			}
 		}
+
+		if(p_oAction != null)
+			this.mapActionsRunning.remove(String.valueOf(p_oAction.hashCode()));
 	}
 	
 	/**
 	 * Register a running action for an active display
 	 * @param p_oListenerIdentifier active display
-	 * @param p_oAction running action
 	 */
 	public void unregisterAllRunningActions( ListenerIdentifier p_oListenerIdentifier) {
 		this.mapActionsByActiveDisplay.remove(p_oListenerIdentifier.getUniqueId());
@@ -661,7 +664,27 @@ public abstract class Application  implements NotifierLauncher {
 		
 		return r_listActions;
 	}
-	
+
+	/**
+	 * Return all actions running
+	 * @return all actions running
+	 */
+	public List<MMActionTask<?, ?, ?, ?>> getAllActionsRunning() {
+		List<MMActionTask<?, ?, ?, ?>> r_listActions = new ArrayList<>();
+
+		for (Map.Entry<String, WeakReference<MMActionTask<?,?,?,?>>> oWeakRefAction : this.mapActionsRunning.entrySet()) {
+			WeakReference<MMActionTask<?,?,?,?>> oActionRunning = oWeakRefAction.getValue();
+			if (oActionRunning != null) {
+				MMActionTask<?,?,?,?> oAction = oActionRunning.get();
+				if (oAction != null && oAction instanceof ActionASyncTask<?,?,?,? >) {
+					r_listActions.add(oAction);
+				}
+			}
+		}
+
+		return r_listActions;
+	}
+
 	/**
 	 * <p>getViewModelCreator.</p>
 	 *
@@ -1657,7 +1680,7 @@ public abstract class Application  implements NotifierLauncher {
 
 	/**
 	 * Return true if the permission is requested for application running.
-	 * @param permission the permission string
+	 * @param p_sPermission the permission string
 	 * @return true if the permission is mandatory requested, false otherwise
 	 */
 	public abstract boolean isNotMantatoryRequested(String p_sPermission);
