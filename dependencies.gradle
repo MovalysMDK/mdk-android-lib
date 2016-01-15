@@ -9,7 +9,7 @@ ext {
     spoonClientVersion = "1.1.9"
     junitVersion = "4.12"
 
-    mdkWidgetVersion = '1.0.1-SNAPSHOT'
+    mdkWidgetVersion = "1.0.1-SNAPSHOT"
 
     acraVersion = "4.6.1"
     zxingVersion = "2.2"
