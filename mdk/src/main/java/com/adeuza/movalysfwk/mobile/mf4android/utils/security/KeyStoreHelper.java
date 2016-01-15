@@ -33,6 +33,9 @@ import com.adeuza.movalysfwk.mobile.mf4android.utils.security.KeyStore.State;
  *
  */
 public class KeyStoreHelper {
+	/** is MARSHMALLOW or superior version */
+	private static final boolean IS_M = Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
+
 	/** is jelly bean or superior version */
 	private static final boolean IS_JB43 = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2;
 	//private static final boolean IS_JB = Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
@@ -55,7 +58,9 @@ public class KeyStoreHelper {
 	public KeyStoreHelper(Context p_oContext) {
 
 		this.context = p_oContext;
-		if (IS_KK) {
+		if (IS_M) {
+			ks = KeyStoreM.getInstance();
+		} else if (IS_KK) {
 			ks = KeyStoreKk.getInstance();
 		} else if (IS_JB43) {
 			ks = KeyStoreJb43.getInstance();
@@ -107,7 +112,14 @@ public class KeyStoreHelper {
 	 */
 	public String getStoreType() {
 		String r_sStoreType = null;
-		if (IS_KK) {
+		if (IS_M) {
+			if (((KeyStoreM) ks).isHardwareBacked()) {
+				r_sStoreType = "HW-backed";
+			} else {
+				r_sStoreType = "SW only";
+			}
+
+		} else if (IS_KK) {
 			if (((KeyStoreKk) ks).isHardwareBacked()) {
 				r_sStoreType = "HW-backed";
 			} else {
@@ -129,7 +141,9 @@ public class KeyStoreHelper {
 	 */
 	public State getStoreState() {
 		State storeState = null;
-		if (IS_KK) {
+		if (IS_M) {
+			storeState = ((KeyStoreM) ks).state();
+		} else if (IS_KK) {
 			storeState = ((KeyStoreKk) ks).state();
 		} else if (IS_JB43) {
 			storeState = ((KeyStoreJb43) ks).state();
