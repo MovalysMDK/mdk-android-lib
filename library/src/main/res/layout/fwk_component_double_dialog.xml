@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_double__doubleDialog__panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@color/dialog_text_background"
+    android:orientation="vertical" >
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSeparator
+        android:id="@+id/component_double__doubleDialog_content__separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/dialog_separator" />
+
+    <LinearLayout
+        android:id="@+id/component_double__doubleDialog_content__top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_text_background"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMDoublePickerGroup
+            android:id="@+id/component_doublepicker__picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/dialog_text"
+        android:paddingTop="3dp" />
+
+    <TableLayout
+        android:id="@+id/component_double__doubleDialog_button__mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_button_background"
+        android:paddingTop="5dp"
+        android:stretchColumns="0,1,2" >
+
+        <TableRow
+            android:id="@+id/component_double__doubleDialog_button__group"
+            android:padding="2dp" >
+
+            <Button
+                android:id="@+id/component_double_dialog__positive__button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generic_message_valid" />
+
+            <Button
+                android:id="@+id/component_double_dialog__negative__button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/generic_message_cancel" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

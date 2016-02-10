@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_signatureDialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/serparator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/signature_color" />
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSignatureDrawing
+        android:id="@+id/component_signature__signatureDialog__gesture"
+        android:layout_width="250dip"
+        android:layout_height="125dip"
+        android:layout_gravity="center_horizontal" />
+    <!--
+         pas de background possible sinon inclus dans l'image android:background="@drawable/textfield" 
+		/
+    -->
+
+    <View
+        android:id="@+id/serparator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/signature_color" />
+
+    <!--
+         <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMImageButton
+		android:id="@+id/component_signature__signatureDialog_erase__button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:src="@android:drawable/ic_menu_delete" android:layout_gravity="center_horizontal|center_vertical" />
+    -->
+
+
+    <!-- Layout horizontale pour les boutons -->
+
+    <TableLayout
+        android:id="@+id/component_signature__signatureDialog__button_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dialog_button_background"
+        android:stretchColumns="0,1,2" >
+
+        <TableRow
+            android:id="@+id/row_button"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/component_signature__signatureDialog__button_table_OK__button"
+                android:text="@string/generic_message_valid" />
+
+            <Button
+                android:id="@+id/component_signature__signatureDialog_erase__button"
+                android:text="@string/generic_message_clear" />
+
+            <Button
+                android:id="@+id/component_signature__signatureDialog__button_table_KO__button"
+                android:text="@string/generic_message_cancel" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

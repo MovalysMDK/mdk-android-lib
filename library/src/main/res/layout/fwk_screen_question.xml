@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/screen_question"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:background="@color/dialog_separator_background"
+	android:layout_gravity="center_vertical|center_horizontal">
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSeparator
+		android:id="@+id/top_separator" 
+		android:layout_height="1dip" android:layout_width="match_parent" 
+		android:background="@color/dialog_separator" />
+	<!-- layout horizontal pour l'image et le texte -->
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout 
+		android:id="@+id/screen_question_top"
+		android:layout_width="wrap_content"	android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:background="@color/dialog_text_background">
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMImageView
+			android:id="@+id/screen_question_icon"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@android:drawable/ic_dialog_alert"
+			android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+			android:layout_marginTop="15dp" android:layout_marginBottom="15dp" 
+			android:layout_gravity="center_vertical|center_horizontal"/>
+		<!-- texte -->
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView 
+			android:id="@+id/screen_question_text"
+			android:layout_width="wrap_content"  android:layout_height="wrap_content"
+			android:textColor="@color/dialog_text"
+			android:layout_gravity="center_vertical|center_horizontal"/>
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout>
+	<View android:id="@+id/bottom_separator" 
+	android:layout_width="match_parent" android:layout_height="1dp"
+	android:background="@color/dialog_text"/>
+	<!-- Layout horizontale pour les boutons -->
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableLayout 
+		android:id="@+id/screen_question_button_mainlayout"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:stretchColumns="0,1,2"  android:padding="5dp"
+		android:background="@color/dialog_button_background">
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableRow 
+		android:id="@+id/screen_question_button_layout" android:padding="2dp">
+		<!-- emplacement des bouttons -->	
+		</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableRow>
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTableLayout>
+</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout>

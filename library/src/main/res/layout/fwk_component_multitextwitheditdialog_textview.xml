@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_multitextwitheditdialog_textview__group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip" >
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextViewEllipsized
+        android:saveEnabled="false"
+        android:id="@+id/component_multitextwitheditdialog__textview__edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="4000"
+        android:maxLines="4"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

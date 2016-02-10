@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout  
+	android:id="@+id/screen_synchro_state"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:background="#FF808080">
+	
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView
+		android:id="@+id/screen_synchro_progress_title"
+		android:text="@string/screen_synchro_progress_title"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="1dp"
+		android:background="#FFFFFF"/>
+	
+	<!-- layout vertical pour l'affichage des barres de progression -->
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout 
+		android:id="@+id/screen_synchro_state_top"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="1dp"
+		android:background="#FFFFFF">
+	
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView 
+			android:id="@+id/screen_synchro_progress_text"
+			android:text="@string/screen_synchro_progress_text"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="1dp"
+			android:textColor="#ff444444" />
+		
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMProgressBar 
+			android:id="@+id/screen_synchro_global_progress"
+			style="?attr/MovalysProgressBarHorizontal"
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="1dp" />
+		
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView 
+			android:id="@+id/screen_synchro_progress_text2"
+			android:text=""
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="1dp"
+			android:textColor="#ff444444" />	        
+		
+		<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMProgressBar 
+			android:id="@+id/screen_synchro_detail_progress"
+			style="?attr/MovalysProgressBarHorizontal"
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="10dp"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp" />
+	
+	</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout>
+	
+</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMLinearLayout>

@@ -1,0 +1,139 @@
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+def artifactoryRepositoryUrl
+if (isReleaseBuild()) {
+    println 'RELEASE BUILD'
+    artifactoryRepositoryUrl = hasProperty('RELEASE_REPOSITORY_URL') ? artifactoryRepoReleases
+            : "http://pdtinteg.ptx.fr.sopra/artifactory/prj-mdk-releases/"
+} else {
+    println 'SNAPSHOT BUILD'
+    artifactoryRepositoryUrl = hasProperty('SNAPSHOT_REPOSITORY_URL') ? artifactoryRepoSnapshots
+            : "http://pdtinteg.ptx.fr.sopra/artifactory/prj-mdk-snapshots/"
+}
+
+def getRepositoryUsername() {
+    return hasProperty('artifactoryUsername') ? artifactoryUsername : ""
+}
+
+def getRepositoryPassword() {
+    return hasProperty('artifactoryPassword') ? artifactoryPassword : ""
+}
+
+afterEvaluate { project ->
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                beforeDeployment {
+                    MavenDeployment deployment -> signing.signPom(deployment)
+                }
+
+                pom.artifactId = POM_ARTIFACT_ID
+
+                repository(url: artifactoryRepositoryUrl) {
+                    authentication(userName: getRepositoryUsername(), password: getRepositoryPassword())
+                }
+
+                pom.project {
+                    name POM_NAME
+                    packaging POM_PACKAGING
+                    description POM_DESCRIPTION
+                    url POM_URL
+
+                    scm {
+                        url POM_SCM_URL
+                        connection POM_SCM_CONNECTION
+                        developerConnection POM_SCM_DEV_CONNECTION
+                    }
+
+                    licenses {
+                        license {
+                            name POM_LICENCE_NAME
+                            url POM_LICENCE_URL
+                            distribution POM_LICENCE_DIST
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id POM_DEVELOPER_ID
+                            name POM_DEVELOPER_NAME
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    task install(type: Upload, dependsOn: assemble) {
+        repositories.mavenInstaller {
+            configuration = configurations.archives
+
+            pom.groupId = GROUP
+            pom.artifactId = POM_ARTIFACT_ID
+            pom.version = VERSION_NAME
+
+            pom.project {
+                name POM_NAME
+                packaging POM_PACKAGING
+                description POM_DESCRIPTION
+                url POM_URL
+
+                scm {
+                    url POM_SCM_URL
+                    connection POM_SCM_CONNECTION
+                    developerConnection POM_SCM_DEV_CONNECTION
+                }
+
+                licenses {
+                    license {
+                        name POM_LICENCE_NAME
+                        url POM_LICENCE_URL
+                        distribution POM_LICENCE_DIST
+                    }
+                }
+
+                developers {
+                    developer {
+                        id POM_DEVELOPER_ID
+                        name POM_DEVELOPER_NAME
+                    }
+                }
+            }
+        }
+    }
+
+    signing {
+        required { isReleaseBuild() && gradle.taskGraph.hasTask("uploadArchives") }
+        sign configurations.archives
+    }
+
+    task androidJavadocs(type: Javadoc) {
+        options {
+            //linksOffline "http://d.android.com/reference", "${android.sdkDirectory}/docs/reference"
+        }
+        failOnError false
+        exclude '**/BuildConfig.java'
+        exclude '**/R.java'
+        source = android.sourceSets.main.java.sourceFiles
+        classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
+    }
+
+    task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+        classifier = 'javadoc'
+        //basename = artifact_id
+        from androidJavadocs.destinationDir
+    }
+
+    task androidSourcesJar(type: Jar) {
+        classifier = 'sources'
+        //basename = artifact_id
+        from android.sourceSets.main.java.sourceFiles
+    }
+
+    artifacts {
+        //archives packageReleaseJar
+        archives androidSourcesJar
+        archives androidJavadocsJar
+    }
+}

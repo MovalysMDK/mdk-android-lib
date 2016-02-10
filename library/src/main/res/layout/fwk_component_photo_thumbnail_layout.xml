@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:movalys="http://www.adeuza.com/movalys/mm/android"
+	android:id="@+id/component_photo_thumbnail_layout"
+	android:layout_height="wrap_content" 
+	android:layout_width="match_parent">
+	<ImageView
+	    android:saveEnabled="false"
+		android:id="@+id/component_photo_thumbnail__image_photo__value"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:maxWidth="96px" 
+		android:scaleType="centerInside"
+		android:adjustViewBounds="true"
+		android:padding="2dip"/>
+	<TextView
+	    android:saveEnabled="false"
+		android:id="@+id/component_photo_thumbnail__name__value"
+		style="?attr/detail_value" 
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/component_photo_thumbnail__image_photo__value"
+		android:ellipsize="end"/>
+	
+	<TextView
+	    android:saveEnabled="false"
+		android:id="@+id/component_photo_thumbnail__description__value"
+		style="?attr/detail_value" 
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/component_photo_thumbnail__image_photo__value"
+		android:layout_below="@id/component_photo_thumbnail__name__value"
+		android:ellipsize="end"/>
+	
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMDateTimeTextView
+	    android:saveEnabled="false"
+		android:id="@+id/component_photo_thumbnail__date__value"
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"
+		style="?attr/detail_value" 
+		movalys:mode="datetime" 
+		movalys:time_format="short"
+		android:layout_toRightOf="@id/component_photo_thumbnail__image_photo__value"
+		android:layout_below="@id/component_photo_thumbnail__description__value" />
+
+</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout>

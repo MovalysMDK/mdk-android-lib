@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Movalys Components -->
+    <attr name="MovalysProgressBarIndeterminate" format="reference"/>
+    <attr name="MovalysProgressBarHorizontal" format="reference"/>
+    <attr name="MovalySeekBar" format="reference"/>
+    
+    <attr name="fixedListItemBloc" format="reference"/>
+	<attr name="LISTITEM_1" format="reference"/>
+	<attr name="LISTITEM_2" format="reference"/>
+	<attr name="LISTITEM_3" format="reference"/>
+    
+    <!-- Movalys style -->
+    <attr name="detail_label" format="reference"/>
+    <attr name="detail_value" format="reference"/>
+    <attr name="detail_edit" format="reference"/>
+    <attr name="SectionTitle" format="reference"/>
+    
+    <attr name="detail_valuemultiautocomplete" format="reference"/>
+    <attr name="LineSeparatorView" format="reference"/>
+    <attr name="splashscreen_copyright" format="reference"/>
+    <attr name="splashscreen" format="reference"/>
+    
+    <attr name="FilterButton" format="reference"/>
+    <attr name="Button" format="reference"/>
+    <attr name="ImageButton" format="reference"/>
+    <attr name="flipperexpandabletitle_valueItem1" format="reference"/>
+    <attr name="flipperexpandabletitle_valueItem2" format="reference"/>
+    <attr name="expandableGroup_valueItem1" format="reference"/>
+    <attr name="expandableGroup_valueItem2" format="reference"/>
+    <attr name="expandableChild_valueItem1" format="reference"/>
+    <attr name="expandableChild_valueItem2" format="reference"/>
+    <attr name="simplelistitem_valueItem1" format="reference"/>
+    <attr name="simplelistitem_valueItem2" format="reference"/>
+    
+    <attr name="simpleSpinner_Item" format="reference"/>
+    <attr name="simpleSpinner_dropDown" format="reference"/>
+    <attr name="SpinnerCustom" format="reference"/>
+    
+    <attr name="tab_theme" format="reference"/>
+    <attr name="SearchSpinnerCustom" format="reference"/>
+    
+</resources>

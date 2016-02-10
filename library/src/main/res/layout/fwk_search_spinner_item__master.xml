@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/search_spinner_item__master" 
+	android:layout_width="match_parent" android:layout_height="wrap_content">
+
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMRelativeLayout
+		android:id="@+id/search_spinner_text_master" 
+		android:layout_width="match_parent" 
+		android:layout_marginTop="4dip"
+		android:layout_height="wrap_content" 
+		android:layout_alignBaseline="@id/search_spinner_item__master" />
+
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMTextView
+		android:id="@+id/simple_spinner_emptyitem__value" 
+		android:singleLine="true"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@id/search_spinner_text_master"
+		android:ellipsize="marquee"/>
+
+</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout>

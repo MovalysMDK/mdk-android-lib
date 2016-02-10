@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mdkapp="http://schemas.android.com/apk/res-auto">
+    
+	<!-- configuration -->
+	<item android:id="@+id/menu_base_configuration"
+			android:icon="@android:drawable/ic_menu_preferences"
+			android:title="@string/menu_base_configuration__title"
+			android:visible="@string/menu_base_configuration$visible"
+			android:orderInCategory="97">
+
+		<menu>
+			<item android:id="@+id/menu_base_configuration_doDisplaySetting"
+					android:title="@string/menu_base_configuration_doDisplaySetting__title"
+					android:visible="@string/menu_base_configuration_doDisplaySetting$visible"/>
+
+			<item android:id="@+id/menu_base_configuration_doResetSetting"
+					android:title="@string/menu_base_configuration_doResetSetting__title"
+					android:visible="@string/menu_base_configuration_doResetSetting$visible"/>
+
+			<item android:id="@+id/menu_base_configuration_doResetDataBase"
+					android:title="@string/menu_base_configuration_doResetDataBase__title"
+					android:visible="@string/menu_base_configuration_doResetDataBase$visible"/>
+					
+			<item android:id="@+id/menu_base_configuration_doSendReport" 
+					android:title="@string/menu_base_configuration_doSendReport__title"
+					android:visible="@string/menu_base_configuration_doSendReport$visible"/>
+			<item android:id="@+id/menu_base_configuration_doImportDatabase" 
+					android:title="@string/menu_base_configuration_doImportDatabase__title"
+					android:visible="@string/menu_base_configuration_doImportDatabase$visible"/>
+		</menu>
+	</item>
+	
+	<!-- synchronisation -->
+	<item android:id="@+id/menu_base_doClassicSynchronisation" 
+			android:icon="@drawable/ic_menu_refresh"
+			android:title="@string/menu_base_doClassicSynchronisation__title"
+			android:orderInCategory="98"/>
+
+	<!-- Quit -->
+	<item android:id="@+id/menu_base_doDisplayExitApplicationDialog" 
+			android:icon="@android:drawable/ic_menu_close_clear_cancel"
+			android:title="@string/menu_base_doDisplayExitApplicationDialog__title"
+			android:visible="@string/menu_base_doDisplayExitApplicationDialog$visible"
+			android:orderInCategory="99"/>
+</menu>

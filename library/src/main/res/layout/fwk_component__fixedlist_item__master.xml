@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merge 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/component__fixedlist_item__master">
+	
+	<!-- the generated content will be included here -->
+	
+	<ImageView
+		android:id="@+id/component__fixedlist_item_deleteButton__button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:src="@drawable/ic_btn_drop"
+		android:layout_alignParentRight="true"
+		android:layout_gravity="center_vertical|right"/>
+		
+</merge>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_duration__duration__panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:shrinkColumns="1"
+    android:stretchColumns="0" >
+
+    <TableRow android:id="@+id/component_duration__duration__group" >
+
+        <TextView
+            android:id="@+id/component_duration__duration__label"
+            style="?attr/detail_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+    </TableRow>
+
+    <TableRow android:id="@+id/component_duration__duration__group2" >
+
+        <EditText
+            android:saveEnabled="false"
+            android:id="@+id/component_duration__duration__edit"
+            style="?attr/detail_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <ImageButton
+            android:saveEnabled="false"
+            android:id="@+id/component_duration__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_dialog_time" />
+    </TableRow>
+
+</TableLayout>

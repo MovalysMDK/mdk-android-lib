@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- Stop the startup process -->
+	<item	android:id="@+id/menu_base_doStopApplicationStartup"
+			android:icon="@drawable/ic_menu_stop"
+			android:title="@string/menu_base_doStopApplicationStartup__title"
+			android:visible="false"/>
+
+	<!-- restart the startup process -->
+	<item	android:id="@+id/menu_base_doRestartApplicationStartup"
+			android:icon="@android:drawable/ic_menu_revert"
+			android:title="@string/menu_base_doRestartApplicationStartup__title"
+			android:visible="false"/>
+
+	<!-- startup configuration -->
+	<item	android:id="@+id/menu_base_configuration_during_application_stop"
+			android:icon="@android:drawable/ic_menu_preferences" 
+			android:title="@string/menu_base_configuration_during_application_stop__title"
+			android:visible="false">
+
+		<menu>
+			<item android:id="@+id/menu_base_configuration_during_application_stop_doDeleteSerializedConfiguration"
+					android:title="@string/menu_base_configuration_during_application_stop_doDeleteSerializedConfiguration__title"/>
+
+			<item android:id="@+id/menu_base_configuration_during_application_stop_doResetSetting"
+					android:title="@string/menu_base_configuration_during_application_stop_doResetSetting__title"/>
+
+			<item android:id="@+id/menu_base_configuration_during_application_stop_doResetDataBase"
+					android:title="@string/menu_base_configuration_during_application_stop_doResetDataBase__title"/>
+		</menu>
+	</item>
+
+	<!-- Quit -->
+	<item	android:id="@+id/menu_base_doDisplayExitApplicationDialog" 
+			android:icon="@android:drawable/ic_menu_close_clear_cancel"
+			android:title="@string/menu_base_doDisplayExitApplicationDialog__title" />
+</menu>

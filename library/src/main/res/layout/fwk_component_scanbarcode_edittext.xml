@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_scanbarcode__scanbarcode__panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:shrinkColumns="0"
+    android:stretchColumns="0" >
+
+    <TableRow android:id="@+id/component_scanbarcode__scanbarcode__group" >
+
+        <LinearLayout
+            android:id="@+id/component_scanbarcode__scanbarcode__layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/component_scanbarcode__scanbarcode__label"
+                style="?attr/detail_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/component_scanbarcode__scanbarcode__edit"
+                style="?attr/detail_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false" />
+
+            <TextView
+                android:id="@+id/component_scanbarcode__scanbarcode__textformat"
+                style="?attr/detail_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:saveEnabled="false" />
+        </LinearLayout>
+        <!-- bouton -->
+
+        <ImageButton
+            android:contentDescription="@string/content_description_scanbarcode"
+            android:id="@+id/component_scanbarcode__scanbarcode__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_dialog_scan" />
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/component__simple_spinner_emptyitem__master"
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	android:paddingLeft="5dip" 
+	android:paddingRight="5dip">
+
+	<TextView
+		android:id="@+id/simple_spinner_emptyitem__value" 
+		android:singleLine="true"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		android:ellipsize="marquee"/>
+</com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout>

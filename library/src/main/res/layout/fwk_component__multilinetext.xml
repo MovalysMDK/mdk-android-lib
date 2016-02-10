@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMultiTextViewWithEditDialogGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_customfields__edittext__edit"
+    style="?attr/detail_edit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:saveEnabled="false"
+    android:scrollbars="vertical" />

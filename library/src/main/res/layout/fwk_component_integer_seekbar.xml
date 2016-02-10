@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_seekbar__integer__group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:stretchColumns="0" >
+
+    <TableRow android:id="@+id/component_seekbar__row1__group" >
+
+        <SeekBar
+            android:id="@+id/component_seekbar__integer__seekbar"
+            style="?attr/MovalySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:saveEnabled="false" />
+
+        <TextView
+            android:id="@+id/component_seekbar__integer__value"
+            style="?attr/detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="2"
+            android:saveEnabled="false" />
+    </TableRow>
+
+</TableLayout>

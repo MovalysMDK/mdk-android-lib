@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<color name="dark_grey">#CC000000</color>
+	<color name="detail_label">#CCCCCC</color>
+		
+	<color name="detail_value_default">#FFFFFF</color>
+	<color name="detail_value_pressed">#EFEFEF</color>
+	<color name="detail_value_focused">#EFEFEF</color>
+	
+	<color name="dialog_button_background">#FF808080</color>
+	<color name="dialog_separator">#FFFFFF</color>
+	<color name="dialog_separator_background">#FFFFFF</color>
+	<color name="dialog_text">#FFFFFF</color>
+	<color name="dialog_text_background">#FF444444</color>
+	<color name="dialog_background">#ff444444</color>
+
+	<color name="numberpicker_text">#FFFFFF</color>
+	<color name="numberpicker_text_edition">#000000</color>
+
+	<color name="red">#B71717</color>
+	<color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+
+	<color name="signature_color">#FFFFFF</color>
+	<color name="splash_background">#FFFFFFFF</color>
+	
+	
+	<color name="simpleListItem1">#FFFFFF</color>
+	<color name="simpleListItem2">#CCCCCC</color>
+	<color name="expandableGroupBackground">#FF222222</color>
+	<color name="expandableGroupItem1">#FFFFFF</color>
+	<color name="expandableGroupItem2">#CC000000</color>
+	<color name="expandableTitleItem1">#FFB71717</color>
+	<color name="expandableTitleItem2">#CCCCCCCC</color>
+	<color name="simpleSpinnerItem">#000000</color>
+	
+	<color name="background_Bloc">#EDECE3</color>
+	<color name="background_Bloc_pressed_start">#30B3E4</color>
+	<color name="background_Bloc_pressed_center">#30B3E4</color>
+	<color name="background_Bloc_pressed_end">#30B3E4</color>
+	<color name="background_Bloc_pressed_stroke">#AEDCEB</color>
+	<color name="background_Bloc_focused_start">#50A9DDF0</color>
+	<color name="background_Bloc_focused_center">#50A9DDF0</color>
+	<color name="background_Bloc_focused_end">#50A9DDF0</color>
+	<color name="background_Bloc_focused_stroke">#33B5E5</color>
+	<color name="background_Bloc_solid">#404040</color>
+	<color name="background_Bloc_stroke">#FFFFFF</color>
+	<color name="background_Title">#558CA0</color>
+	
+	<color name="searchSpinner_background">#000000</color>
+	<color name="searchSpinner_popupTitle">#FFFFFF</color>
+    <color name="searchSpinner_list_background">#FFFFFF</color>
+</resources>

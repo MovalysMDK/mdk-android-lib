@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- com.adeuza.movalysfwk.mobile.mf4android.ui.views.MM -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_position__position__panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dip" >
+
+    <ImageButton
+        android:id="@+id/component_position__position_map__button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/content_description_map"
+        android:src="@android:drawable/ic_dialog_map" />
+
+    <TextView
+        android:id="@+id/component_position__position__label"
+        style="?attr/detail_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/component_position__position_map__button"
+        android:text="@string/component_position__label" />
+
+    <TextView
+        android:id="@+id/component_position__position_latitude__label"
+        style="?attr/detail_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/component_position__position__label" />
+
+    <TextView
+        android:id="@+id/component_position__position_longitude__label"
+        style="?attr/detail_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/component_position__position_latitude__label" />
+
+    <TextView
+        android:id="@+id/component_position__position_latitude__value"
+        style="?attr/detail_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/component_position__position_latitude__label"
+        android:layout_alignBottom="@+id/component_position__position_latitude__label"
+        android:layout_toRightOf="@+id/component_position__position_latitude__label"
+        android:paddingLeft="2dip"
+        android:saveEnabled="false" />
+
+    <TextView
+        android:id="@+id/component_position__position_longitude__value"
+        style="?attr/detail_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/component_position__position_longitude__label"
+        android:layout_alignBottom="@+id/component_position__position_longitude__label"
+        android:layout_toRightOf="@+id/component_position__position_longitude__label"
+        android:paddingLeft="2dip"
+        android:saveEnabled="false" />
+
+</RelativeLayout>

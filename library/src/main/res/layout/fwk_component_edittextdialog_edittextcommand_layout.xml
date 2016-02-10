@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/component_edittextdialog_edittextcommand_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:background="@color/dialog_background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/component_edittextdialog__textview__label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/component_edittextdialog__sep1__separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/white" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/component_edittextdialog__textview__value"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/dialog_background"
+        android:fadeScrollbars="true"
+        android:focusable="true"
+        android:inputType="textLongMessage|textMultiLine|textAutoCorrect|textAutoComplete"
+        android:maxLength="4000"
+        android:minLines="4"
+        android:scrollbars="vertical"
+        android:textColor="@color/white" >
+
+        <requestFocus />
+    </MultiAutoCompleteTextView>
+
+    <TextView
+        android:id="@+id/component_edittextdialog__sep2__separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/white"
+        android:padding="5dip" />
+
+    <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout
+        android:id="@+id/component_edittextdialog_edittextcommand_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:contentDescription="@string/content_description_ok"
+            android:id="@+id/component_edittextdialog__ok__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dip"
+            android:src="@drawable/ic_btn_ok" />
+
+        <ImageButton
+            android:contentDescription="@string/content_description_cancel"
+            android:id="@+id/component_edittextdialog__cancel__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:layout_toLeftOf="@id/component_edittextdialog__ok__button"
+            android:src="@drawable/ic_btn_cancel" />
+
+        <ImageButton
+            android:contentDescription="@string/content_description_erase"
+            android:id="@+id/component_edittextdialog__erase__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:layout_toLeftOf="@id/component_edittextdialog__cancel__button"
+            android:src="@android:drawable/ic_input_delete" />
+
+        <ImageButton
+            android:contentDescription="@string/content_description_speaknow"
+            android:id="@+id/component_edittextdialog__speaknow__button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:layout_toLeftOf="@id/component_edittextdialog__erase__button"
+            android:src="@drawable/ic_btn_speak_now" />
+    </com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMMasterRelativeLayout>
+
+</LinearLayout>

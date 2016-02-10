@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ne contient que le titre du MMFixedList qui est lui même un linearLayout-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	android:id="@+id/component__fixedlist_title__group">
+	
+	<ImageView
+		android:id="@+id/component__fixedlist_addButton__button"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_btn_create"/>
+
+	<ImageView 
+		android:id="@+id/component__fixedlist_SectionCoteSubscriber"
+		android:src="@drawable/section_cote" 
+		android:layout_alignParentRight="true" 
+		android:layout_width="wrap_content"	
+		android:layout_height="wrap_content" 
+		android:visibility="gone"/>
+<!-- 
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSectionTitle
+		android:id="@+id/component__fixedlist_title__value"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		style="?attr/SectionTitle" 
+		android:gravity="center"
+		android:layout_below="@id/component__fixedlist_title__group"
+		android:layout_toLeftOf="@id/component__fixedlist_SectionCoteSubscriber"
+		android:layout_toRightOf="@id/component__fixedlist_addButton__button"
+		android:layout_alignTop="@id/component__fixedlist_addButton__button"
+		android:layout_alignBottom="@id/component__fixedlist_SectionCoteSubscriber"/>
+ -->
+	<com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMSectionTitle
+		android:id="@+id/component__fixedlist_title__value"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		style="?attr/SectionTitle" 
+		android:gravity="center"
+		android:layout_toLeftOf="@id/component__fixedlist_SectionCoteSubscriber"
+		android:layout_toRightOf="@id/component__fixedlist_addButton__button"
+		android:layout_alignTop="@id/component__fixedlist_addButton__button"
+		android:layout_alignBottom="@id/component__fixedlist_addButton__button"
+		android:layout_marginBottom="2dip" 
+		/>
+	
+</RelativeLayout>

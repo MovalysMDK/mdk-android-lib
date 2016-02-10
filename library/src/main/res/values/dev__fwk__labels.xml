@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="actiondowriteemail_chooser">Send an email with:</string>
+	<string name="alert_application_notiddle">Impossible action: an action is already in progress!</string>
+	<string name="alert_connection_disable">No connexion found</string>
+	<string name="alert_gps_disabled">GPS antenna is deactivated, positionning will be less precise&#8230;</string>
+	<string name="alert_map_missing">This feature requires a map displaying application. Please install such an application.</string>
+	<string name="alert_market_noapp">You do not have access to the Android Market, please install manually an application to scan the bar code.</string>
+	<string name="alert_phonecall_notiddle">Unable to call, the line is busy</string>
+	<string name="alert_scancodebar_install">Do you want to install the code bar scanner ?</string>
+	<string name="alert_scancodebar_missing">This feature requires a code bar scanning application. Do you want to install such an application?</string>
+	<string name="menu_base_configuration__title">Configuration</string>
+	<string name="menu_base_configuration_during_application_stop__title">Configuration</string>
+	<string name="menu_base_doDisplayExitApplicationDialog__title">Exit</string>
+	<string name="menu_base_doRestartApplicationStartup__title">Restart</string>
+	<string name="menu_base_doStopApplicationStartup__title">Stop the startup</string>
+	<string name="menu_base_doClassicSynchronisation__title">Synchronization</string>
+	<string name="menu_base_doSaveForm__title">Save</string>
+
+	<string name="close_application_popup_KO_button">No</string>
+	<string name="close_application_popup_OK_button">Yes</string>
+	<string name="close_application_popup_title">Exit</string>
+	<string name="close_application_popup_text">Do you want to quit?</string>
+	
+	<string name="component_multiautocomplete__editText__label">Enter your text here</string>
+	<string name="component_multitextwitheditdialog__textview__label">Click for edit</string>
+	
+	<string name="component_position__label">Position</string>
+	<string name="component_position__mapDialog_Address__label">Address</string>
+	<string name="component_position__mapDialog_Coordinates__label">Lat. / Long.</string>
+	<string name="component_position__mapDialog__message">Centered the map on:</string>
+	<string name="component_position__mapDialog__title">Display the map</string>
+	<string name="component_position__positionDialog_accuracy__label">Precision (m) :</string>
+	<string name="component_position__positionDialog_latitude__label">Lat. :</string>
+	<string name="component_position__positionDialog_longitude__label">Long. :</string>
+	<string name="component_position__positionDialog__title">Positionning in progress&#8230;</string>
+	
+	<string name="component_datetime_dialog__positivebutton__label">Set</string>
+	<string name="component_datetime_dialog__negativebutton__label">Cancel</string>
+	<string name="component_double_dialog__positivebutton__label">Set</string>
+	<string name="component_double_dialog__negativebutton__label">Cancel</string>
+	<string name="component_double__doubleDialog__title">Modify the decimal number</string>
+	<string name="component_duration__durationDialog__title">Modify duration</string>
+	<string name="error_component_datatime_picker_bad_date">Year must be greater than 1900 and lower than 2100</string>
+	    
+	<string name="component_photo__choose_photo__title">Choose a picture</string>
+	<string name="component_photo__date__label">Date</string>
+	<string name="component_photo__name__label">Title</string>
+	<string name="component_photo__description__label">Description</string>
+	<string name="component_photo__position__label">Location</string>
+	<string name="component_photo__position_latitude__label">Lat. </string>
+	<string name="component_photo__position_longitude__label">Long. </string>
+	<string name="component_photo__default_description__value">Image capture by camera</string>
+	<string name="component_photo__load__notfound">Picture not found on the device</string>
+	<string name="component_photo__load__downloadfailed">Failed to download the picture</string>
+	<string name="component_photo__external_shared__message">Unable to take a picture while the USB cable is plugged</string>
+	<string name="component_photo__external_notready__message">Unable to take a picture as an SD card is not present</string>
+	<string name="component_photo__external_readonly__message">Unable to take a picture as the SD card is on read-only</string>
+	<string name="component_photo__external_mounting__message">Mounting your SD Card, please wait&#8230;</string>
+		
+	<string name="component_signature__signatureDialog__title">Signature</string>
+	<string name="menu_base_configuration_doResetDataBase__title">Reset database</string>
+	<string name="menu_base_configuration_during_application_stop_doResetDataBase__title">Reset database</string>
+	<string name="menu_base_configuration_doResetSetting__title">Reset preferences</string>
+	<string name="menu_base_configuration_during_application_stop_doResetSetting__title">Reset preferences</string>
+	<string name="menu_base_configuration_during_application_stop_doDeleteSerializedConfiguration__title">Reset cache</string>
+	<string name="menu_base_configuration_doDisplaySetting__title">Preferences</string>
+	<string name="menu_base_configuration_doSendReport__title">Send a report</string>
+	<string name="menu_base_configuration_doImportDatabase__title">Import database</string>
+
+	<string name="component_btprint__btprintDialog__title">Printing of the receipt</string>
+	<string name="component_btprint__btprintDialog_message__label">Printing : </string>
+	<string name="component_btprint__btprintDialog_error__label">Error : </string>
+	<string name="component_btprint__btprintDialog_reference__label">Ref n° : </string>
+	<string name="component_btprint__btprintDialog_UNKNOWN__error">Error</string>
+	<string name="component_btprint__btprintDialog_PRINTER_ERR_INIT__error">Initialization failure</string>
+	<string name="component_btprint__btprintDialog_PRINTER_ERR_OVERFLOW__error">Overflow error</string>
+	<string name="component_btprint__btprintDialog_PRINTER_ERR_UNSUPORTED__error">Unsupported function</string>
+	<string name="component_btprint__btprintDialog_PRINTER_ERR_BUFFER_FULL__error">Not enough memory</string>
+	<string name="component_btprint__btprintDialog_PRINTER_ERR_OPEN_CONN__error">Connection failed</string>
+	<string name="component_btprint__btprintDialog_PRINTER_ERR_READ_DATA__error">Error reading data</string>
+	<string name="component_btprint__btprintDialog_PRINTER_STATUS_COVEROPEN__error">Cover is opened</string>
+	<string name="component_btprint__btprintDialog_PRINTER_STATUS_EMPTYPAPER__error">No more paper</string>
+	<string name="component_btprint__btprintDialog_PRINTER_STATUS_ERROR__error">Imprimante en erreur</string>
+	<string name="component_btprint__btprintDialog_PRINTER_PWR_LOW__error">Battery too low</string>
+	<string name="component_btprint__btprintDialog_PRINTER_PWR_SMALL__error">Battery too low</string>
+
+	<string name="searchSpinnerDialogTitle">Search&#8230;</string>
+	
+	<string name="error">Error(s)</string>
+	<string name="error_mandatory">This field is mandatory!</string>
+	<string name="error_inform">Error in form!</string>
+	<string name="error_minsize1">The field must have a size of </string>
+	<string name="error_minsize2"> char !</string>
+	<string name="error_invalid_data_format_max_length">Invalid data : Max length exceeded</string>
+	<string name="error_invalid_data_format_max_hour">Invalid data : Maximum time exceeded</string>
+	<string name="error_invalid_data_format_min_hour">Invalid data : Minimum time exceeded</string>
+	<string name="error_invalid_data_format_nb_digit">Invalid data : Number of digits exceeded</string>
+	<string name="error_invalid_data_max_value">Invalid data : Maximal Value exceeded </string>
+	<string name="error_invalid_data_min_value">Invalid data : Minimal Value exceeded</string>
+	<string name="error_invalid_decimal_data">Invalid decimal data</string>
+	<string name="error_invalid_integer_data">Invalid integer data</string>
+	
+	<string name="generic_message_cancel">Cancel</string>
+	<string name="generic_message_clear">Erase</string>
+	<string name="generic_message_no">No</string>
+	<string name="generic_message_ok">OK</string>
+	<string name="generic_message_valid">Validate</string>
+	<string name="generic_message_yes">Yes</string>
+	<string name="generic_message_close">Close</string>
+
+	<string name="preference_category_display">Display</string>
+	<string name="preference_category_identification">Identification</string>
+	<string name="preference_category_proxy">Proxy</string>
+	<string name="preference_category_server">Server</string>
+	<string name="preference_landscapeColumnNumber_dialogMessage">Allows you to define how many columns can be displayed when the phone is in the landscape mode</string>
+	<string name="preference_landscapeColumnNumber_dialogTitle">Number of columns in the landscape mode</string>
+	<string name="preference_landscapeColumnNumber_summary">Number of columns when the phone is in the horizontal position</string>
+	<string name="preference_landscapeColumnNumber_title">Number of columns in the landscape mode</string>
+	<string name="preference_landscapeWidthMargin_dialogMessage">Allows you to adapt the useful width according to terminals, enter the margin in pixels</string>
+	<string name="preference_landscapeWidthMargin_dialogTitle">Horizontal margin in the landscape mode</string>
+	<string name="preference_landscapeWidthMargin_summary">Horizontal margin in the landscape mode</string>
+	<string name="preference_landscapeWidthMargin_title">Margin in the landscape mode</string>
+	<string name="preference_login_title">Login</string>
+	<string name="preference_login_summary">Enter your login</string>
+	<string name="preference_login_dialogTitle">Enter your login</string>
+	<string name="preference_password_title">Password</string>
+	<string name="preference_password_summary">Enter your password</string>
+	<string name="preference_password_dialogTitle">Enter your password</string>
+	<string name="preference_portraitColumnNumber_dialogMessage">Allows you to define how many columns can be displayed when the phone is in the portrait mode</string>
+	<string name="preference_portraitColumnNumber_dialogTitle">Number of columns in the portrait mode</string>
+	<string name="preference_portraitColumnNumber_summary">Number of columns when the phone is in the vertical position</string>
+	<string name="preference_portraitColumnNumber_title">Number of columns in the portrait mode</string>
+	<string name="preference_portraitWidthMargin_dialogMessage">Allows you to adapt the useful width according to terminals, enter the margin in pixels</string>
+	<string name="preference_portraitWidthMargin_dialogTitle">Horizontal margin in the portrait mode</string>
+	<string name="preference_portraitWidthMargin_summary">Horizontal margin in the portrait mode</string>
+	<string name="preference_portraitWidthMargin_title">Margin in the portrait mode</string>
+	<string name="preference_proxylogin_dialogTitle">Enter your login (proxy)</string>
+	<string name="preference_proxylogin_summary">Enter your login (proxy)</string>
+	<string name="preference_proxylogin_title">Login (proxy)</string>
+	<string name="preference_proxypassword_dialogTitle">Enter your password (proxy)</string>
+	<string name="preference_proxypassword_summary">Enter your password (proxy)</string>
+	<string name="preference_proxypassword_title">Password (proxy)</string>
+	<string name="preference_proxyurlserver_title">Url (proxy)</string>
+	<string name="preference_proxyurlserver_summary">Enter your url (proxy)</string>
+	<string name="preference_proxyurlserver_dialogTitle">Enter your url (proxy)</string>
+	<string name="preference_url_title">Url</string>
+	<string name="preference_url_summary">Enter your url</string>
+	<string name="preference_url_dialogTitle">Enter your url</string>
+
+	<string name="screen_redirect_to_parameter_param_button">Settings</string>
+	<string name="screen_redirect_to_parameter_question">Would you set or exit the application?</string>
+	<string name="screen_redirect_to_parameter_stop_button">Quit</string>
+	<string name="screen_redirect_to_parameter_text">The application is not configured.</string>
+	
+	<string name="screen_reset_settings_and_exit_text_exit_button">Exit</string>
+	<string name="screen_reset_settings_and_exit_text">The settings have been reset. The application must be restarted to apply new changes.</string>
+
+	<!-- activité de synchronisation (dialog box avec progress bar) -->
+	<string name="screen_synchro_activity_name">Synchronization</string>
+	<string name="screen_synchro_progress_title">Synchronization in progress &#8230;</string>
+	<string name="screen_synchronisation_request">Wifi not available. Do you wish to perform a synchronization to initialize the application data ?</string>
+	<string name="screen_initFailed_noConnectionFailure">Initialization failure : not connected to the server. The application will close.</string>	
+	<string name="screen_initFailed_brokenSyncFailure">Initialization failure : interrupted synchronization. The application will close.</string>
+	<string name="screen_initFailed_firstSyncIsRequired">The first synchronization is required to use the application. The application will close.</string>
+	<string name="screen_initFailed_errorInSyncFailure">Initialization failure : error(s) in the synchronization. The application will close.</string>
+	<string name="screen_synchronisation_emptyDB_failure_button">OK</string>
+	<string name="screen_synchro_progress_text">Loading&#8230;</string>
+	<string name="screen_synchro_state_close_button">Close</string>
+	<string name="screen_synchronisation_delayedsync_failure_title">Authentification failed</string>
+	<string name="screen_synchronisation_delayedsync_failure">Last synchronisation is too old. Application must be restarted to synchronize data.</string>
+	<string name="screen_synchronisation_authentication_failure_title">Authentification failure</string>
+	<string name="screen_synchronisation_authentication_failure">Authentification failure. Check your login, password and date/time.</string>
+	<string name="screen_synchronisation_failure_button">OK</string>
+	<string name="screen_synchronisation_incompatibles_times_failure">La synchronisation a échoué : l\'heure de votre terminal n\'est pas la même que l\'heure du serveur. Veuillez mettre l\'heure en cohérence.</string>
+	<string name="screen_synchronisation_incompatibles_times_failure_force_close_application">The application will close : l\'heure de votre terminal n\'est pas la même que l\'heure du serveur. Veuillez mettre l\'heure en cohérence.</string>
+	<string name="screen_synchronisation_incompatibles_times_failure_title">La synchronisation a échoué.</string>
+
+	<!-- notification : synchro en cour -->
+	<string name="ongoing_synchro_notification_tricker_text">Synchronization in progress&#8230;</string>
+	<string name="ongoing_synchro_notification_content_text">Synchronization in progress&#8230;</string>
+
+	<!-- notification : synchro OK -->
+	<string name="ok_synchro_notification_tricker_text">Synchronization successful&#8230;</string>
+	<string name="ok_synchro_notification_content_text">Synchronization successful&#8230;</string>
+
+	<!-- notification : synchro à faire (Push) -->
+	<string name="launch_synchro_bo2mm_notification_tricker_text">exécutez une synchronisation</string>
+	<string name="launch_synchro_bo2mm_notification_content_text">Veuillez exécuter une synchronisation</string>
+	
+	<!-- notification : synchro à faire -->
+	<string name="launch_synchro_mm2bo_notification_tricker_text">Start a synchronization</string>
+	<string name="launch_synchro_mm2bo_notification_content_text">Please start a synchronization</string>
+
+	<!-- notification : synchro à faire (double sens) -->
+	<string name="launch_synchro_double_notification_tricker_text">exécutez une synchronisation</string>
+	<string name="launch_synchro_double_notification_content_text">Des données entrantes et sortantes sont à synchroniser</string>
+	
+	<!-- notification : synchro plantée (RestException)-->
+	<string name="crash_synchro_notification_tricker_text">Unable to synchronize</string>
+	<string name="crash_synchro_notification_content_text">A problem occurred during synchronization. If the problem persists, please contact Adeuza Customer Service.</string>
+
+	<!-- notification : synchro plantée (RestException) -->
+	<string name="ko_authentification_synchro_notification_content_text">Login or password error</string>
+	<string name="ko_authentification_synchro_notification_tricker_text">Unable to synchronize</string>
+
+	<!-- notification : synchro plantée à cause de la licence -->
+	<string name="ko_licence_synchro_notification_tricker_text">Unable to synchronize</string>
+	<string name="ko_licence_synchro_notification_content_text">You are not authorized to use Movalys Framework with Android.</string>
+
+	<!-- notification : synchro plantée (RestException) -->
+	<string name="ko_connected_synchro_notification_tricker_text">Unable to synchronize</string>
+	<string name="ko_connected_synchro_notification_content_text">The network connection is not activated.</string>
+
+	<!-- notification : synchro plantée (RestException) -->    
+	<string name="ko_join_synchro_notification_tricker_text">Unable to synchronize</string>
+	<string name="ko_join_synchro_notification_content_text">Unable to establish a connection to the server</string>
+
+	<!-- notification : synchro plantée (RestException) -->    
+	<string name="ko_incompatible_time_synchro_notification_content_text">The synchronization failed : Please put the time in coherence with the server.</string>
+	<string name="ko_incompatible_time_synchro_notification_tricker_text">Unable to synchronize</string>
+
+	<string name="screen_synchro_global_progress_text">Global synchronization step</string>
+	<string name="screen_synchro_detail_progress_text">Detailed synchronization step</string>
+	
+	<string name="Message_fin_synchro">Synchronization terminated.</string>
+
+	<string name="synchronisation_beforepreparesynchro">Prep. synchronization&#8230;</string>
+	<string name="synchronisation_beforepreparedata">Prep. data to send&#8230;</string>
+	<string name="synchronisation_waitserver">Wait server&#8230;</string>
+	<string name="synchronisation_treatreturndata">Treat return data&#8230;</string>
+	<string name="synchronisation_endsynchro"></string>
+	
+	<!-- Crash labels (acra)-->
+	<string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help him fix the issue !</string>
+	<string name="crash_notif_ticker_text">Unexpected error, please send a report&#8230;</string>
+	<string name="crash_notif_title">Application has crashed&#8230;</string>
+	<string name="crash_notif_text">Please click here to help fix the issue.</string>
+	<string name="crash_dialog_title">Application has crashed</string>
+	<string name="crash_dialog_text">An unexpected error occurred forcing the
+		application to stop. Please help us fix this by sending us error data,
+		all you have to do is click \'OK\'.
+	</string>
+	<string name="crash_dialog_comment_prompt">You might add your comments about the problem below:</string>
+	<string name="crash_dialog_ok_toast">Thank you !</string>
+	
+	<string name="lose_form_modifications_text">Save modifications ?</string>
+	<string name="lose_form_modifications_title">Forgotten backup</string>
+	<string name="lose_form_modifications_ok_button">Yes</string>
+	<string name="lose_form_modifications_ko_button">No</string>
+	<string name="lose_form_modifications_cancel_button">Cancel</string>
+
+	<string name="InvalidViewModelDataError">Invalid data</string>
+	<string name="error_invalid_data">Invalid data</string>
+	<string name="error_invalid_data_format">Invalid data format</string>
+	<string name="error_application">Application error</string>
+	<string name="error_launch_action">Action launch error</string>
+	<string name="error_action">Action error</string>
+	<string name="UserErrorMessage_0001">User error 0001</string>
+	<string name="UserErrorMessage_0002">User error 0002</string>
+	<string name="UserErrorMessage_0003">User error 0003</string>
+	
+		
+	<!-- import database labels -->
+	<string name="import_database_popup_title">Database import</string>
+	<string name="import_database_filenotfound">No database to import.</string>
+	<string name="import_database_popup_OK_button">OK</string>
+	<string name="import_database_popup_KO_button">Cancel</string>
+	<string name="import_database_exit_application">Import succeeded : application must be restarted.</string>
+	<string name="import_database_confirm_import">Database file found. Press OK to start import.</string>
+	<string name="import_database_nosdcard">Import failed: no sd card detected.</string>
+
+	<string name="dialog_confirmPasswordForImportDatabase_title_text">Validation</string>
+	<string name="dialog_confirmPasswordForImportDatabase_content_text">Password</string>
+	<string name="dialog_confirmPasswordForImportDatabase_ok_btn">OK</string>
+	<string name="dialog_confirmPasswordForImportDatabase_ko_btn">Cancel</string>
+	<string name="dialog_confirmPasswordForImportDatabase_error_text">Bad password</string>
+	
+	<!-- Tabs -->
+	<string name="tab_default_title">Tab %1$d (%2$d)</string>
+	<string name="tab_default_empty_title">Tab %1$d</string>
+
+	<!-- Push d'interventions -->
+	<string name="preference_category_push">Push</string>
+	
+	<!-- Push d'interventions : activation -->
+	<string name="preference_push_activation_title">Alarm Activation</string>
+	<string name="preference_push_activation_summary">Click to Activate the Push Alarm</string>
+	<string name="preference_push_activation_off_summary">Push Alarm Deactivated</string>
+	<string name="preference_push_activation_on_summary">Push Alarm Activated</string>
+	
+	<!-- Push d'interventions : sonnerie -->
+	<string name="preference_push_ringtone_title">Select a Ringtone</string>
+	<string name="preference_push_ringtone_summary">Select the Push Ringtone</string>
+	
+	<string name="component__webbrowser_alert_message_title">Error : </string>
+	<string name="component__webbrowser_location_msg_title">Location</string>
+    <string name="component__webbrowser_location_msg_sensor">Location is desactivated (GPS or Network), do you want to activate it ?</string>
+    <string name="component__webbrowser_location_msg_message">Do you authorize the use of your location ?</string>
+    <string name="component__webbrowser_location_msg_ok">Always</string>
+    <string name="component__webbrowser_location_msg_ko">No</string>
+    <string name="component__webbrowser_location_msg_one">One time</string>   
+    <string name="component__webbrowser_loading_msg">Loading</string>   
+    
+    <string name="component_dialog_fragment__positivebutton__label">OK</string>
+    <string name="component_dialog_fragment__negativebutton__label">Cancel</string>
+    <string name="component_dialog_fragment_signature__erasebutton__label">Clear</string>
+    
+    <string name="component_search_dialog_title">Search</string>
+    
+    <!-- message d'erreur affichable par regexp -->
+    <string name="component_url__bad_entry">input an URL</string>
+    <string name="component_email__bad_entry">input an email</string>
+    <string name="component_phone__bad_entry">input a phone number</string>
+    <string name="component_string__bad_entry">input a string</string>
+</resources>
