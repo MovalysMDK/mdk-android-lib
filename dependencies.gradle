@@ -5,11 +5,11 @@ ext {
 
     espressoVersion = "2.2"
     testRunnerVersion = "0.3"
-    mdkEspressoVersion = '1.2.0-RC3'
+    mdkEspressoVersion = '1.2.0-SNAPSHOT'
     spoonClientVersion = "1.1.9"
     junitVersion = "4.12"
 
-    mdkWidgetVersion = '1.2.0-RC3'
+    mdkWidgetVersion = '1.2.0-SNAPSHOT'
 
     acraVersion = "4.6.1"
     zxingVersion = "2.2"
