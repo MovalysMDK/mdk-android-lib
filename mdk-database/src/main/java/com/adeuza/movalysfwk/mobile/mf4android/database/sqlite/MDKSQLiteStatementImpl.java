@@ -15,12 +15,12 @@
  */
 package com.adeuza.movalysfwk.mobile.mf4android.database.sqlite;
 
-import java.sql.Timestamp;
-
 import android.database.sqlite.SQLiteStatement;
 
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.core.beans.Enum;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.data.dao.DaoException;
+
+import java.sql.Timestamp;
 
 /**
  * Statement.
@@ -48,15 +48,25 @@ public class MDKSQLiteStatementImpl implements MDKSQLiteStatement {
 	}
 
 	@Override
-	public void bindLong(long p_lValue) throws DaoException {
-		this.statement.bindLong(this.position, p_lValue);
-		this.position++;
+	public void bindLong(Long p_lValue) throws DaoException {
+		if ( p_lValue == null ) {
+			bindNull();
+		}
+		else {
+			this.statement.bindLong(this.position, p_lValue);
+			this.position++;
+		}
 	}
 	
 	@Override
-	public void bindDouble(double p_dDouble) throws DaoException {
-		this.statement.bindDouble(this.position, p_dDouble);
-		this.position++;
+	public void bindDouble(Double p_dDouble) throws DaoException {
+		if ( p_dDouble == null ) {
+			bindNull();
+		}
+		else {
+			this.statement.bindDouble(this.position, p_dDouble);
+			this.position++;
+		}
 	}
 	
 	@Override
@@ -115,21 +125,26 @@ public class MDKSQLiteStatementImpl implements MDKSQLiteStatement {
 	}
 
 	@Override
-	public void bindChar(char p_iValue) throws DaoException {
+	public void bindChar(Character p_iValue) throws DaoException {
 		this.statement.bindString(this.position, Character.toString(p_iValue));
 		this.position++;
 	}
 
 	@Override
-	public void bindByte(byte p_iValue) throws DaoException {
+	public void bindByte(Byte p_iValue) throws DaoException {
 		this.statement.bindLong(this.position, p_iValue);
 		this.position++;
 	}
 
 	@Override
-	public void bindShort(short p_iValue) throws DaoException {
-		this.statement.bindLong(this.position, p_iValue);
-		this.position++;
+	public void bindShort(Short p_iValue) throws DaoException {
+		if ( p_iValue == null ) {
+			bindNull();
+		}
+		else {
+			this.statement.bindLong(this.position, p_iValue);
+			this.position++;
+		}
 	}
 	
 	@Override

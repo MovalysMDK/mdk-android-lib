@@ -47,7 +47,7 @@ public interface MDKSQLiteStatement {
 	 * @param p_dDouble double value.
 	 * @throws DaoException binding failure
 	 */
-	void bindDouble(double p_dDouble) throws DaoException;
+	void bindDouble(Double p_dDouble) throws DaoException;
 	
 	/**
 	 * Bind a long value.
@@ -55,7 +55,7 @@ public interface MDKSQLiteStatement {
 	 * @param p_lValue long value to bind
 	 * @throws DaoException binding failure
 	 */
-	void bindLong(long p_lValue) throws DaoException;
+	void bindLong(Long p_lValue) throws DaoException;
 
 	/**
 	 * Bind a boolean value.
@@ -86,19 +86,19 @@ public interface MDKSQLiteStatement {
 	 * Bind a char value.
 	 * @param p_iValue char value.
 	 */
-	void bindChar(char p_iValue) throws DaoException;
+	void bindChar(Character p_iValue) throws DaoException;
 
 	/**
 	 * Bind a byte value.
 	 * @param p_iValue byte value.
 	 */
-	void bindByte(byte p_iValue) throws DaoException;
+	void bindByte(Byte p_iValue) throws DaoException;
 
 	/**
 	 * Bind a short value.
 	 * @param p_iValue short value.
 	 */
-	void bindShort(short p_iValue) throws DaoException;
+	void bindShort(Short p_iValue) throws DaoException;
 	
 	/**
 	 * Execute delete query.
