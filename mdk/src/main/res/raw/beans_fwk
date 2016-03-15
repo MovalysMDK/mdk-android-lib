@@ -163,6 +163,7 @@ MMPositionEditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.
 
 # Component wrappers
 CheckBoxWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMCheckBoxWrapper
+TextViewWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMEditTextWrapper
 EditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMEditTextWrapper
 MDKRichEditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
 MDKRichPhoneWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
