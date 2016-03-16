@@ -15,11 +15,6 @@
  */
 package com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-
 import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
@@ -28,6 +23,7 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableVisualComponentDelegate;
 import com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableVisualComponentFwkDelegate;
@@ -40,7 +36,12 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.core.services.BeanLoader;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.ConfigurableVisualComponent;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.wrapper.AbstractComponentWrapper;
 
-public class MMEditTextWrapper extends AbstractComponentWrapper<EditText> implements TextWatcher, ComponentValidator {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+
+public class MMTextWrapper extends AbstractComponentWrapper<TextView> implements TextWatcher, ComponentValidator {
 
 	/** DELAY used before value update in viewmodel */
 	private static final int UPDATEVM_DELAY = 200;
@@ -70,12 +71,12 @@ public class MMEditTextWrapper extends AbstractComponentWrapper<EditText> implem
 		@Override
 		public void handleMessage(Message p_oMsg) {
 			if (p_oMsg.what == MESSAGE_TEXT_CHANGED) {
-				MMEditTextWrapper.this.aivFwkDelegate.changed();
+				MMTextWrapper.this.aivFwkDelegate.changed();
 			}
 		}
 	};
 	
-	public MMEditTextWrapper() {
+	public MMTextWrapper() {
 		super();
 	}
 	
@@ -164,12 +165,14 @@ public class MMEditTextWrapper extends AbstractComponentWrapper<EditText> implem
 	 */
 	@Override
 	public void onTextChanged(CharSequence p_oText, int p_oStart, int p_oBefore, int p_oAfter) {
-		Editable r_oEditable = this.component.get().getText();
-		if (r_oEditable != null && r_oEditable.length() > 0 
-				&& (this.component.get().getInputType() & InputType.TYPE_MASK_CLASS) == InputType.TYPE_CLASS_NUMBER
-				&& (this.component.get().getInputType() & InputType.TYPE_MASK_FLAGS) == InputType.TYPE_NUMBER_FLAG_DECIMAL
-				&& r_oEditable.charAt(0) == '.' ) {
-			r_oEditable.insert(0, "0");
+		if(this.component.get().getText() instanceof Editable) {
+			Editable r_oEditable = (Editable) this.component.get().getText();
+			if (r_oEditable != null && r_oEditable.length() > 0
+					&& (this.component.get().getInputType() & InputType.TYPE_MASK_CLASS) == InputType.TYPE_CLASS_NUMBER
+					&& (this.component.get().getInputType() & InputType.TYPE_MASK_FLAGS) == InputType.TYPE_NUMBER_FLAG_DECIMAL
+					&& r_oEditable.charAt(0) == '.') {
+				r_oEditable.insert(0, "0");
+			}
 		}
 		
 		if ( this.aivDelegate!=null && !this.aivDelegate.isWritingData() ) {

@@ -17,7 +17,7 @@ package com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable;
 
 import android.text.InputType;
 import android.util.AttributeSet;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import com.adeuza.movalysfwk.mobile.mf4android.ui.component.interfaces.ComponentEnable;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.ConfigurableVisualComponent;
@@ -28,7 +28,7 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.wrapper.ComponentW
  * <p>Handle behaviors on TextView and all inherited classes</p>
  *
  */
-public class AndroidConfigurableEditTextComponentDelegate extends AndroidConfigurableTextViewComponentDelegate {
+public class AndroidConfigurableTextComponentDelegate extends AndroidConfigurableTextViewComponentDelegate {
 
 	/**
 	 * Android namespace
@@ -50,18 +50,18 @@ public class AndroidConfigurableEditTextComponentDelegate extends AndroidConfigu
 	 * @param p_oCurrentView the component (inherited from TextView)
 	 * @param p_oDelegateType the type of the delegate
 	 */
-	public AndroidConfigurableEditTextComponentDelegate(ConfigurableVisualComponent p_oCurrentView, Class<?> p_oDelegateType) {
+	public AndroidConfigurableTextComponentDelegate(ConfigurableVisualComponent p_oCurrentView, Class<?> p_oDelegateType) {
 		super(p_oCurrentView, p_oDelegateType);
 		
-		EditText oEditText = null;
+		TextView oView = null;
 		
 		if (p_oCurrentView instanceof ComponentWrapper) {
-			oEditText = (EditText) ((ComponentWrapper) p_oCurrentView).getComponent();
+			oView = (TextView) ((ComponentWrapper) p_oCurrentView).getComponent();
 		} else {
-			oEditText = (EditText) p_oCurrentView;
+			oView = (TextView) p_oCurrentView;
 		}
 		
-		initView(oEditText, null);
+		initView(oView, null);
 	}
 	
 	/**
@@ -70,18 +70,19 @@ public class AndroidConfigurableEditTextComponentDelegate extends AndroidConfigu
 	 * @param p_oDelegateType the type of the delegate
 	 * @param p_oAttrs this AttributeSet of the View
 	 */
-	public AndroidConfigurableEditTextComponentDelegate(ConfigurableVisualComponent p_oCurrentView, Class<?> p_oDelegateType, AttributeSet p_oAttrs) {
+	public AndroidConfigurableTextComponentDelegate(ConfigurableVisualComponent p_oCurrentView, Class<?> p_oDelegateType, AttributeSet p_oAttrs) {
 		super(p_oCurrentView, p_oDelegateType, p_oAttrs);
-		
-		EditText oEditText = null;
-		
+
+
+		TextView oView = null;
+
 		if (p_oCurrentView instanceof ComponentWrapper) {
-			oEditText = (EditText) ((ComponentWrapper) p_oCurrentView).getComponent();
+			oView = (TextView) ((ComponentWrapper) p_oCurrentView).getComponent();
 		} else {
-			oEditText = (EditText) p_oCurrentView;
+			oView = (TextView) p_oCurrentView;
 		}
 		
-		initView(oEditText, p_oAttrs);
+		initView(oView, p_oAttrs);
 	}
 	
 	/**
@@ -89,7 +90,7 @@ public class AndroidConfigurableEditTextComponentDelegate extends AndroidConfigu
 	 * @param p_oCurrentView current view 
 	 * @param p_oAttrs xml attributes
 	 */
-	protected final void initView( EditText p_oCurrentView, AttributeSet p_oAttrs ) {
+	protected final void initView( TextView p_oCurrentView, AttributeSet p_oAttrs ) {
 		
 		// Define a default hint to prevent from a memory leak
 		if ( (p_oCurrentView.getHint() == null || p_oCurrentView.getHint().toString().isEmpty()) && (p_oAttrs == null || p_oAttrs.getAttributeValue(ANDROID_NAMESPACE, HINT_ATTR) == null) ) {
@@ -107,7 +108,7 @@ public class AndroidConfigurableEditTextComponentDelegate extends AndroidConfigu
 	 */
 	@Override
 	public void destroy() {
-		EditText text = (EditText) this.currentView;
+		TextView text = (TextView) this.currentView;
 		
 		// This must be done to fix a memory leak of EditText.
 		text.setHint(" ");

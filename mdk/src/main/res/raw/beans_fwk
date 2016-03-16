@@ -128,7 +128,8 @@ NullOrEmptyEMailSVMImplComputer=com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.com
 ## Component Delegate && Wrappers
 MMAutoCompleteTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
 MMMultiAutoCompleteEditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
-EditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableEditTextComponentDelegate
+TextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextComponentDelegate
+EditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextComponentDelegate
 MMTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
 MMTextViewEllipsizedDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
 MMSpinnerCheckedTextViewDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableTextViewComponentDelegate
@@ -163,8 +164,8 @@ MMPositionEditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.
 
 # Component wrappers
 CheckBoxWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMCheckBoxWrapper
-TextViewWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMEditTextWrapper
-EditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMEditTextWrapper
+TextViewWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMTextWrapper
+EditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMTextWrapper
 MDKRichEditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
 MDKRichPhoneWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
 MDKRichUriWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
