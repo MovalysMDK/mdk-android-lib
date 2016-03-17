@@ -59,7 +59,12 @@ public class MMEncryptedPasswordTextPreference extends MMEditTextPreference {
 	@Override
 	protected void onDialogClosed(boolean p_bPositiveResult) {
 		try {
-			super.getEditText().setText( LocalAuthHelperImpl.getInstance().encrypt(this.getContext(), getEditText().getText().toString()) );
+			String sPassword = getEditText().getText().toString();
+			String sEncryptedPassword = "";
+			if (sPassword.length() != 0) {
+				sEncryptedPassword = LocalAuthHelperImpl.getInstance().encrypt(this.getContext(), sPassword);
+			}
+			super.getEditText().setText(sEncryptedPassword);
 		} catch (Exception e) {
 			throw new RuntimeException(TAG+" :Encryption probleme detected", e);
 		}
