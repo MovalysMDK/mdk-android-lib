@@ -172,6 +172,16 @@ public class Starter {
 		
 		oAppli.init(logger, p_oProgressHandler, sDatabaseName, iDatabaseVersion);
 	}
+
+	/**
+	 * Application init Logger
+	 */
+	protected void initLogger() {
+		Application oAppli = Application.getInstance();
+		String sLoggerName = oAppli.getStringResource(FwkPropertyName.logger_name);
+		AndroidLoggerImpl logger = AndroidLoggerImpl.getInstance(sLoggerName);
+		oAppli.setLogger(logger);
+	}
 	
 	/**
 	 * Load bean configuration

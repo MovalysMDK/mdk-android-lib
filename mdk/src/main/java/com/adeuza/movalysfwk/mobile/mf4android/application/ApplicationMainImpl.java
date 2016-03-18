@@ -36,6 +36,7 @@ import com.adeuza.movalysfwk.mobile.mf4android.activity.AbstractMMActivity;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.application.Application;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.application.ApplicationMain;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.synchro.SynchronizationActionParameterOUT;
+import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.DumbProgressHandler;
 
 /**
  * <p>MovalysIntervention temporary activity</p>
@@ -108,8 +109,9 @@ public class ApplicationMainImpl extends AbstractMMActivity implements Applicati
 			this.starter.configureBeanLoader();
 			this.starter.configureEntityHelper();
 			this.starter.preInit();
+			this.starter.initLogger();
 		}
-		
+
 		//Step 2 : in onCreate instanciate application object
 		super.onCreate(p_oSavedInstState);
 		// on cache l'actionbar
