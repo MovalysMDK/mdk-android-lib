@@ -159,7 +159,22 @@ public final class DateUtils {
 			return null;
 		}
 	}
-	
+
+	/**
+	 * <p>getTime.</p>
+	 *
+	 * @param p_oDate a {@link java.lang.Long} object.
+	 * @return Timestamp object.
+	 */
+	public static java.sql.Timestamp getTime(Date p_oDate){
+		if (p_oDate!=null){
+			return new java.sql.Timestamp(p_oDate.getTime());
+		}
+		else{
+			return null;
+		}
+	}
+
 	/**
 	 * Return the date in parameter with hour, minute,second and millisecond to maximum values possible
 	 *
