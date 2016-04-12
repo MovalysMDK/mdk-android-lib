@@ -90,7 +90,7 @@ public abstract class AbstractSqlJoin {
 			sConditionBuilder.append(' ');
 			sConditionBuilder.append(SqlKeywords.ON);
 			sConditionBuilder.append(' ');
-			this.onConditions.toSql(p_oSql, p_oToSqlContext);
+			this.onConditions.toSql(sConditionBuilder, p_oToSqlContext);
 		}
 		
 		p_oSql.append( this.getJoinType()).append(' ');
