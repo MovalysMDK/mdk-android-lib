@@ -177,5 +177,22 @@ public class MDKAdapter<
 				new Class[]{ View.class }, 
 				new Object[]{ p_oView });
 	}
-	
+
+	/**
+	 * Return the view type
+	 * @param p_iPosition the position
+	 * @return Default 0
+	 */
+	public int getItemViewType(int p_iPosition)  {
+		return 0;
+	}
+
+	/**
+	 * Return the View Type Count
+	 * @return Default 1
+	 */
+	public int getViewTypeCount()  {
+		return 1;
+	}
+
 }

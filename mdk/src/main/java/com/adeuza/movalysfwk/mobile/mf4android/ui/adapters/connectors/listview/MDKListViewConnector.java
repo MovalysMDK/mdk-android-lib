@@ -110,7 +110,7 @@ public class MDKListViewConnector extends BaseAdapter implements MDKViewConnecto
 
 	@Override
 	public View getView(int p_iPosition, View p_oView, ViewGroup p_oViewGroup) {
-		return this.mAdapter.getLegacyViewByLevel(Level.CHILD, false, 
+		return this.mAdapter.getLegacyViewByLevel(Level.CHILD, false,
 				p_oView, p_oViewGroup, getItemViewType(p_iPosition), p_iPosition);
 	}
 	
@@ -118,4 +118,15 @@ public class MDKListViewConnector extends BaseAdapter implements MDKViewConnecto
 	public MDKAdapter<?,?,?> getAdapter() {
 		return this.mAdapter;
 	}
+
+	@Override
+	public int getItemViewType(int p_iPosition) {
+		return this.mAdapter.getItemViewType(p_iPosition);
+	}
+
+	@Override
+	public int getViewTypeCount() {
+		return this.mAdapter.getViewTypeCount();
+	}
+
 }
