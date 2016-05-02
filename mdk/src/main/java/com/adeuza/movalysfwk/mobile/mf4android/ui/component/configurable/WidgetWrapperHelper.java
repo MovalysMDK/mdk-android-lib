@@ -32,6 +32,11 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.ViewModel;
 public class WidgetWrapperHelper {
 
 	private static final String WRAPPER_SUFFIX = "Wrapper";
+
+    /**
+     * Package name of the legacy widgets. Used to disable wrapping of legacy widgets
+     */
+    private static final String LEGACY_WIDGET_PACKAGE = "com.adeuza.movalysfwk.mobile.mf4android.ui.views";
 	
 	/**
 	 * Singleton instance.
@@ -79,16 +84,21 @@ public class WidgetWrapperHelper {
 		StringBuilder oBeanKey = new StringBuilder();
 		Class<?> oCurrentClass = p_oViewClass;
 		boolean hasFoundDef = false;
-		
-		while (!hasFoundDef && oCurrentClass != null) { 
-			oBeanKey.setLength(0);
-			
-			oBeanKey.append(computeName(oCurrentClass.getSimpleName(), p_bIsConnector));
-			
-			hasFoundDef = BeanLoader.getInstance().hasDefinition(oBeanKey.toString());
-			
-			oCurrentClass = oCurrentClass.getSuperclass();
-		}
+
+        // If the component is a legacy component, do not wrap it
+        if (oCurrentClass.getPackage().getName() != LEGACY_WIDGET_PACKAGE) {
+            // Try to wrap the component, by bubbling intot he parent class until a corresponding
+            // wrapper is found
+            while (!hasFoundDef && oCurrentClass != null) {
+                oBeanKey.setLength(0);
+
+                oBeanKey.append(computeName(oCurrentClass.getSimpleName(), p_bIsConnector));
+
+                hasFoundDef = BeanLoader.getInstance().hasDefinition(oBeanKey.toString());
+
+                oCurrentClass = oCurrentClass.getSuperclass();
+            }
+        }
 		
 		String r_oBeanKey = null;
 		
