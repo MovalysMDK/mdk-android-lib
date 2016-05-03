@@ -86,7 +86,7 @@ public class WidgetWrapperHelper {
 		boolean hasFoundDef = false;
 
         // If the component is a legacy component, do not wrap it
-        if (oCurrentClass.getPackage().getName() != LEGACY_WIDGET_PACKAGE) {
+        if (oCurrentClass.getPackage().getName().equals(LEGACY_WIDGET_PACKAGE) == false) {
             // Try to wrap the component, by bubbling intot he parent class until a corresponding
             // wrapper is found
             while (!hasFoundDef && oCurrentClass != null) {
