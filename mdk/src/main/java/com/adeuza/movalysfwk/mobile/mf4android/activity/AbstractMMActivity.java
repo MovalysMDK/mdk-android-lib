@@ -192,7 +192,7 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 	@Override
 	protected void onStop() {
 		
-		// Dismiss dialog is an action is running
+		// Dismiss dialog if an action is running
 		List<MMActionTask<?, ?, ?, ?>> listActions = this.getAndroidApplication().getRunningActionsForActiveDisplay(this);
 		if ( !listActions.isEmpty()) {
 			for ( MMActionTask<?,?,?,?> oAction : listActions) {
