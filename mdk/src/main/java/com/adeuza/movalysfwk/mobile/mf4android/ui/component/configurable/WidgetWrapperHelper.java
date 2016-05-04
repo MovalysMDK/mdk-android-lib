@@ -34,9 +34,9 @@ public class WidgetWrapperHelper {
 	private static final String WRAPPER_SUFFIX = "Wrapper";
 
     /**
-     * Used for parsing the base package of a class package name
+     * Package name of the legacy widgets. Used to disable wrapping of legacy widgets
      */
-    private static final String PACKAGE_SEPARATOR = "\\.";
+    private static final String LEGACY_WIDGET_PACKAGE = "com.adeuza.movalysfwk.mobile.mf4android.ui.views";
 	
 	/**
 	 * Singleton instance.
@@ -80,34 +80,34 @@ public class WidgetWrapperHelper {
 	 * @param p_bIsConnector true if we are looking for a connector, else we are looking for a component wrapper
 	 * @return the wrapper name found, null otherwise
 	 */
-	private String getWrapperClassForComponent(Class<?> p_oViewClass, boolean p_bIsConnector) {
-		StringBuilder oBeanKey = new StringBuilder();
-		Class<?> oCurrentClass = p_oViewClass;
-		boolean hasFoundDef = false;
+    private String getWrapperClassForComponent(Class<?> p_oViewClass, boolean p_bIsConnector) {
+        StringBuilder oBeanKey = new StringBuilder();
+        Class<?> oCurrentClass = p_oViewClass;
+        boolean hasFoundDef = false;
 
-		// Try to wrap the component, by bubbling into the parent class until a corresponding
-		// wrapper is found.
-		// Bubbling stops for components (not for connectors) when the base package has changed :
-        // this is in order to prevent the wrapping of legacy components
-        String basePackage = oCurrentClass.getPackage().getName().split(PACKAGE_SEPARATOR)[0];
-		while (!hasFoundDef && oCurrentClass != null && (p_bIsConnector || basePackage.equals(oCurrentClass.getPackage().getName().split(PACKAGE_SEPARATOR)[0]))) {
-			oBeanKey.setLength(0);
+        // If the component is a legacy component, do not wrap it
+        if (p_bIsConnector || oCurrentClass.getPackage().getName().equals(LEGACY_WIDGET_PACKAGE) == false) {
+            // Try to wrap the component, by bubbling intot he parent class until a corresponding
+            // wrapper is found
+            while (!hasFoundDef && oCurrentClass != null) {
+                oBeanKey.setLength(0);
 
-			oBeanKey.append(computeName(oCurrentClass.getSimpleName(), p_bIsConnector));
+                oBeanKey.append(computeName(oCurrentClass.getSimpleName(), p_bIsConnector));
 
-			hasFoundDef = BeanLoader.getInstance().hasDefinition(oBeanKey.toString());
+                hasFoundDef = BeanLoader.getInstance().hasDefinition(oBeanKey.toString());
 
-			oCurrentClass = oCurrentClass.getSuperclass();
-		}
-		
-		String r_oBeanKey = null;
-		
-		if (hasFoundDef) {
-			r_oBeanKey = oBeanKey.toString();
-		}
-		
-		return r_oBeanKey;
-	}
+                oCurrentClass = oCurrentClass.getSuperclass();
+            }
+        }
+
+        String r_oBeanKey = null;
+
+        if (hasFoundDef) {
+            r_oBeanKey = oBeanKey.toString();
+        }
+
+        return r_oBeanKey;
+    }
 	
 	/**
 	 * Returns true if the view with the given class can be binded to a wrapper
