@@ -195,7 +195,9 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 		// Dismiss dialog is an action is running
 		List<MMActionTask<?, ?, ?, ?>> listActions = this.getAndroidApplication().getRunningActionsForActiveDisplay(this);
 		if ( !listActions.isEmpty()) {
-			listActions.get(0).dismissProgressDialog();
+			for ( MMActionTask<?,?,?,?> oAction : listActions) {
+				oAction.dismissProgressDialog();
+			}
 		}
 		
 		// Unregister active display
