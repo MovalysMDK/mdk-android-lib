@@ -32,6 +32,11 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.ViewModel;
 public class WidgetWrapperHelper {
 
 	private static final String WRAPPER_SUFFIX = "Wrapper";
+
+    /**
+     * Used for parsing the base package of a class package name
+     */
+    private static final String PACKAGE_SEPARATOR = "\\.";
 	
 	/**
 	 * Singleton instance.
@@ -84,8 +89,8 @@ public class WidgetWrapperHelper {
 		// wrapper is found.
 		// Bubbling stops when the base package has changed : this is in order to prevent the
         // wrapping of legacy components
-        String basePackage = oCurrentClass.getPackage().getName().split(".")[0];
-		while (!hasFoundDef && oCurrentClass != null && basePackage.equals(oCurrentClass.getPackage().getName().split(".")[0])) {
+        String basePackage = oCurrentClass.getPackage().getName().split(PACKAGE_SEPARATOR)[0];
+		while (!hasFoundDef && oCurrentClass != null && basePackage.equals(oCurrentClass.getPackage().getName().split(PACKAGE_SEPARATOR)[0])) {
 			oBeanKey.setLength(0);
 
 			oBeanKey.append(computeName(oCurrentClass.getSimpleName(), p_bIsConnector));
