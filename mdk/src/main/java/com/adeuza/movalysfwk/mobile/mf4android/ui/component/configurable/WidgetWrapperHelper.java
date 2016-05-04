@@ -87,10 +87,10 @@ public class WidgetWrapperHelper {
 
 		// Try to wrap the component, by bubbling into the parent class until a corresponding
 		// wrapper is found.
-		// Bubbling stops when the base package has changed : this is in order to prevent the
-        // wrapping of legacy components
+		// Bubbling stops for components (not for connectors) when the base package has changed :
+        // this is in order to prevent the wrapping of legacy components
         String basePackage = oCurrentClass.getPackage().getName().split(PACKAGE_SEPARATOR)[0];
-		while (!hasFoundDef && oCurrentClass != null && basePackage.equals(oCurrentClass.getPackage().getName().split(PACKAGE_SEPARATOR)[0])) {
+		while (!hasFoundDef && oCurrentClass != null && (p_bIsConnector || basePackage.equals(oCurrentClass.getPackage().getName().split(PACKAGE_SEPARATOR)[0]))) {
 			oBeanKey.setLength(0);
 
 			oBeanKey.append(computeName(oCurrentClass.getSimpleName(), p_bIsConnector));
