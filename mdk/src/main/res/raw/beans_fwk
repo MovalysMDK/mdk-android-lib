@@ -162,10 +162,12 @@ MMSeekBarDoubleFwkDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.
 MMSeekBarIntegerDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableSeekBarComponentDelegate
 MMPositionEditTextDelegate=com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurablePositionComponentDelegate
 
-# Component wrappers
+# Generic wrappers
 CheckBoxWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMCheckBoxWrapper
 TextViewWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMTextWrapper
 EditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MMTextWrapper
+
+# Component wrappers
 MDKRichEditTextWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
 MDKRichPhoneWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
 MDKRichUriWrapper=com.adeuza.movalysfwk.mobile.mf4android.ui.component.wrappers.MDKRichWidgetWrapper
