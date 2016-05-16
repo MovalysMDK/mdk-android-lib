@@ -34,7 +34,9 @@ import com.adeuza.movalysfwk.mobile.mf4android.ui.annotations.BaseComponent;
 import com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableVisualComponentDelegate;
 import com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.AndroidConfigurableVisualComponentFwkDelegate;
 import com.adeuza.movalysfwk.mobile.mf4android.ui.component.configurable.DelegateInitialiserHelper;
+import com.adeuza.movalysfwk.mobile.mf4android.ui.component.interfaces.ComponentReadableWrapper;
 import com.adeuza.movalysfwk.mobile.mf4android.ui.component.interfaces.ComponentValidator;
+import com.adeuza.movalysfwk.mobile.mf4android.ui.component.interfaces.ComponentWritableWrapper;
 import com.adeuza.movalysfwk.mobile.mf4android.ui.views.base.MMBaseEditText;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.entity.AbstractEntityFieldConfiguration;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.configuration.validator.IFormFieldValidator;
@@ -48,8 +50,8 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.component.configurable.Visua
  * <p>EditText widget used in the Movalys Mobile product for Android</p>
  */
 @BaseComponent(baseName="MMBaseEditText", baseClass="android.widget.EditText", appCompatClass="android.support.v7.widget.AppCompatEditText")
-public class MMEditText extends MMBaseEditText implements ConfigurableVisualComponent, InstanceStatable,
-		ComponentValidator {
+public class MMEditText extends MMBaseEditText implements ConfigurableVisualComponent, InstanceStatable, ComponentValidator,
+		ComponentReadableWrapper<String>, ComponentWritableWrapper<String> {
 
 	/** DELAY used before value update in viewmodel */
 	private static final int UPDATEVM_DELAY = 200;
@@ -392,4 +394,36 @@ public class MMEditText extends MMBaseEditText implements ConfigurableVisualComp
 		return this.oValidator;
 	}
 
+    @Override
+    public String configurationGetValue() {
+        String oReturnValue = this.getText().toString();
+
+        if (oReturnValue.length() == 0) {
+            oReturnValue = null;
+        }
+
+        if(oReturnValue != null && this.getComponentFwkDelegate().customFormatter() != null) {
+            oReturnValue = (String) this.getComponentFwkDelegate().customFormatter().unformat(oReturnValue);
+        }
+        return oReturnValue;
+    }
+
+    /**
+	 * {@inheritDoc}
+     */
+	@Override
+	public boolean isFilled() {
+		return this.configurationGetValue() != null && this.configurationGetValue().length() > 0;
+	}
+
+    @Override
+    public void configurationSetValue(String p_oObjectToSet) {
+		String oObjectToSet = p_oObjectToSet;
+
+        if (!this.aivDelegate.isNullOrEmptyValue(oObjectToSet) && this.getComponentFwkDelegate().customFormatter() != null) {
+			oObjectToSet = (String) this.getComponentFwkDelegate().customFormatter().format(oObjectToSet);
+        }
+
+		this.setText(oObjectToSet);
+    }
 }
