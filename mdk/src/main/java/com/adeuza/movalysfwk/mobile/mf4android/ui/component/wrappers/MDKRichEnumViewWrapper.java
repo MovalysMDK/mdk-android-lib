@@ -111,12 +111,14 @@ public class MDKRichEnumViewWrapper<T extends Enum> extends AbstractComponentWra
 
     @Override
     public void configurationSetValue(T p_oObjectToSet) {
+        this.writingData = true;
         View v = this.component.get();
         if (v != null) {
             if (v instanceof HasEnum) {
                 ((HasEnum) v).setValueFromEnum(p_oObjectToSet);
             }
         }
+        this.writingData = false;
     }
 
     @Override

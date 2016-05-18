@@ -103,6 +103,7 @@ public class MDKPresenterViewWrapper extends AbstractComponentWrapper<View>
 
     @Override
     public void configurationSetValue(MDKPresenterSVMImpl p_oObjectToSet) {
+        this.writingData = true;
         View v = this.component.get();
         if (v != null) {
             if (v instanceof HasPresenter) {
@@ -115,6 +116,7 @@ public class MDKPresenterViewWrapper extends AbstractComponentWrapper<View>
                 ((HasPresenter) v).setPresenter(oObjectToSet);
             }
         }
+        this.writingData = false;
     }
 
     @Override

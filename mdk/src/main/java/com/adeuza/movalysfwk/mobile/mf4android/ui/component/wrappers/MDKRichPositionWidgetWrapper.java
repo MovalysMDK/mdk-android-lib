@@ -119,6 +119,7 @@ public class MDKRichPositionWidgetWrapper extends AbstractComponentWrapper<View>
 
 	@Override
 	public void configurationSetValue(AddressLocationSVMImpl p_oObjectToSet) {
+		this.writingData = true;
 		View v = this.component.get();
 		if (v != null) {
 			if (v instanceof HasPosition) {
@@ -144,6 +145,7 @@ public class MDKRichPositionWidgetWrapper extends AbstractComponentWrapper<View>
 				((HasPosition)v).setPosition(position);
 			}
 		}
+		this.writingData = false;
 	}
 
 	@Override

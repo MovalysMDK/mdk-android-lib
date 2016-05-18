@@ -111,6 +111,7 @@ public class MDKRichSeekBarWrapper extends AbstractComponentWrapper<View>
 
     @Override
     public void configurationSetValue(Integer p_oObjectToSet) {
+        this.writingData = true;
         View v = this.component.get();
         if (v != null) {
             if (v instanceof HasSeekBar) {
@@ -121,6 +122,7 @@ public class MDKRichSeekBarWrapper extends AbstractComponentWrapper<View>
                 ((HasSeekBar) v).setSeekProgress(oProgress);
             }
         }
+        this.writingData = false;
     }
 
     @Override

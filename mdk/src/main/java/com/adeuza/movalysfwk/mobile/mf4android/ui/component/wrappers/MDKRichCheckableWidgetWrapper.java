@@ -113,6 +113,7 @@ public class MDKRichCheckableWidgetWrapper extends AbstractComponentWrapper<View
 
 	@Override
 	public void configurationSetValue(Boolean p_oObjectToSet) {
+		this.writingData = true;
 		View v = this.component.get();
 		if (v != null) {
 			if (v instanceof HasChecked) {
@@ -123,6 +124,7 @@ public class MDKRichCheckableWidgetWrapper extends AbstractComponentWrapper<View
 				}
 			}
 		}
+		this.writingData = false;
 	}
 
 	@Override

@@ -198,6 +198,7 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
 
     @Override
     public void configurationSetValue(ITEMVM p_oObjectToSet) {
+        this.writingData = true;
         if (p_oObjectToSet != null && !p_oObjectToSet.equals(this.configurationGetValue())
                 || p_oObjectToSet == null && this.configurationGetValue() != null) {
             int iPositionSelected = 0;
@@ -211,6 +212,7 @@ public class MDKRichSpinnerWrapper<ITEM extends MIdentifiable, ITEMVM extends It
         } else if (p_oObjectToSet == null && this.getSelectedItemPosition() != 0) {
             this.setSelection(0);
         }
+        this.writingData = false;
     }
 
     @Override

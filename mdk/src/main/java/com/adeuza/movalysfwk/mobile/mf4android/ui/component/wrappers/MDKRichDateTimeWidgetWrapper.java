@@ -105,6 +105,7 @@ public class MDKRichDateTimeWidgetWrapper extends AbstractComponentWrapper<View>
 
 	@Override
 	public void configurationSetValue(Long p_oObjectToSet) {
+		this.writingData = true;
 		View v = this.component.get();
 		if (v != null) {
 			if (v instanceof HasDate
@@ -112,6 +113,7 @@ public class MDKRichDateTimeWidgetWrapper extends AbstractComponentWrapper<View>
 				((HasDate) v).setDate(new Date(p_oObjectToSet));
 			}
 		}
+		this.writingData = false;
 	}
 
 	@Override
