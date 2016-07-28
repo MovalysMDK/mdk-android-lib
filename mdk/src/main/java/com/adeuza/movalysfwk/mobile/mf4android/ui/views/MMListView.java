@@ -144,6 +144,7 @@ public class MMListView<ITEM extends MIdentifiable, ITEMVM extends ItemViewModel
 		super.setAdapter(p_oAdapter);
 		
 		Object oBaseAdapter = null;
+		oldAdapter = false;
 		
 		if (p_oAdapter instanceof MDKViewConnector) {
 			MDKViewConnector oConnector = (MDKViewConnector) p_oAdapter;
