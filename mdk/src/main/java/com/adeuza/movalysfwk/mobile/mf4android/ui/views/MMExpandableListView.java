@@ -213,9 +213,19 @@ public class MMExpandableListView<ITEM extends MIdentifiable, SUBITEM extends MI
 		if (oBaseAdapter instanceof OnChildClickListener) {
 			setOnChildClickListener((OnChildClickListener) oBaseAdapter);
 		}
+
+        onPostBindAdapter();
 	}
-	
-	@Override
+
+
+    /**
+     * Callback after binding adapter.
+     */
+    private void onPostBindAdapter() {
+        //nothing to do
+    }
+
+    @Override
 	public void setListAdapter(MMListAdapter p_oAdapter) {
 		this.setAdapter((ExpandableListAdapter) p_oAdapter);
 		if ( p_oAdapter instanceof MMPerformItemClickListener) {
@@ -228,6 +238,37 @@ public class MMExpandableListView<ITEM extends MIdentifiable, SUBITEM extends MI
 	public MMListAdapter getListAdapter() {
 		return (MMListAdapter) this.getExpandableListAdapter();
 	}
+
+	/**
+	 * Gets the number of items in this list.
+	 *
+	 * @return the number of items
+	 */
+	public int getNbGroups(){
+		if(this.getExpandableListAdapter()!=null) {
+			return this.getExpandableListAdapter().getGroupCount();
+		}else{
+			return 0;
+		}
+	}
+
+    /**
+     * Gets the total number of items in the groups of the list.
+     *
+     * @return the number of items
+     */
+    public int getNbTotalItems(){
+        if(this.getExpandableListAdapter()!=null) {
+            int count=0;
+            for(int i=0; i<this.getExpandableListAdapter().getGroupCount();i++) {
+                count+=this.getExpandableListAdapter().getChildrenCount(i);
+            }
+            return count;
+        }else{
+            return 0;
+        }
+    }
+
 	
 	@Override
 	public boolean performItemClick( final View p_oView, final int p_iPosition, final long p_iId) {
