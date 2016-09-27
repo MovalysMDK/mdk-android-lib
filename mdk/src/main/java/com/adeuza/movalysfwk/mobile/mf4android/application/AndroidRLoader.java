@@ -31,7 +31,7 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.messages.ErrorDefinition;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.messages.MobileFwkException;
 
 /**
- * <p>TODO Décrire la classe CheckApplicationRInit</p>
+ * <p>TODO Décrire la classe AndroidRLoader</p>
  *
  *
  *
@@ -51,6 +51,8 @@ public class AndroidRLoader {
 	private String mainPackage;
 
 	private static final int ANDROID_ID_COUNT = 2048 ;
+
+	private static final String JAVA_SERIAL_VERSION_UID = "serialVersionUID";
 	/**
 	 * Default constructor. Initialize the attributes.
 	 */
@@ -154,7 +156,7 @@ public class AndroidRLoader {
 			int iValue = 0;
 			for (Field oField : p_oClass.getFields()) {
 				sKey = oField.getName();
-				if (oField.getType().isPrimitive()) {
+				if (oField.getType().isPrimitive() && !sKey.equals(JAVA_SERIAL_VERSION_UID)) {
 					iValue = oField.getInt(null);
 					this.androidIdInt2String.put(iValue, sKey); // un entier pour une seule chaîne
 					this.androidIdString2Int.put(p_sKey.getKey() + sKey, iValue); // mais plusieurs chaîne pour un entier d'où la clé supplémentaire
