@@ -112,6 +112,7 @@ public class BusinessRuleRegistry {
 		if (p_sKey == null || p_sKey.equals("")) {
 			return r_oList;
 		} else {
+			List<Method> r_oListDeleted = r_oList;
 			for (Method oMethod : r_oList) {
 				BusinessRule oDefine = oMethod.getAnnotation(BusinessRule.class);
 				
@@ -125,9 +126,10 @@ public class BusinessRuleRegistry {
 				}
 				
 				if (!p_sKey.equals(sName)) {
-					r_oList.remove(oMethod);
+					r_oListDeleted.remove(oMethod);
 				}
 			}
+			r_oList = r_oListDeleted;
 		}
 		return r_oList;
 	}
