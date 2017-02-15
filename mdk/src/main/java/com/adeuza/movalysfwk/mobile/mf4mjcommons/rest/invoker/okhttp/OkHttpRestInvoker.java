@@ -226,16 +226,7 @@ public class OkHttpRestInvoker<R extends IRestResponse> implements IRestInvoker<
 			}
 			
 			// Create request body
-			if ( p_oInvocationConfig.getRequestWriter() != null && p_oInvocationConfig.getRequestWriter().hasData()) {
-				// Do POST if data should be send
-				RequestBody oRequestBody = this.buildRequest(p_oInvocationConfig);
-				Application.getInstance().getLog().debug("synchro", "OkHttpRestInvoker POST method");
-				oRequestBuilder.post(oRequestBody);
-			}
-			else {
-				Application.getInstance().getLog().debug("synchro", "OkHttpRestInvoker GET method");
-				oRequestBuilder.get();
-			}
+			defineHttpMethod(p_oInvocationConfig, oRequestBuilder);
 			
 			// Create request
 			this.request = oRequestBuilder.build();
@@ -243,7 +234,21 @@ public class OkHttpRestInvoker<R extends IRestResponse> implements IRestInvoker<
 		} catch (MalformedURLException oMalformedURLException) {
 			throw new RestException("OkHttpRestInvoker.invoke error", oMalformedURLException);
 		}
-		
+	}
+
+	protected void defineHttpMethod(RestInvocationConfig<R> p_oInvocationConfig, Request.Builder p_oRequestBuilder) throws RestException {
+
+		// Create request body
+		if ( p_oInvocationConfig.getRequestWriter() != null && p_oInvocationConfig.getRequestWriter().hasData()) {
+			// Do POST if data should be send
+			RequestBody oRequestBody = this.buildRequest(p_oInvocationConfig);
+			Application.getInstance().getLog().debug("synchro", "OkHttpRestInvoker POST method");
+			p_oRequestBuilder.post(oRequestBody);
+		}
+		else {
+			Application.getInstance().getLog().debug("synchro", "OkHttpRestInvoker GET method");
+			p_oRequestBuilder.get();
+		}
 	}
 
 	/**
