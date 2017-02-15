@@ -246,9 +246,14 @@ public class BasicComponentConfiguration extends VisualComponentConfiguration {
 			}
 			
 			oComponent.getComponentDelegate().doOnPostAutoBind();
-			
 		}
 
+		for(ConfigurableVisualComponent oComponent : p_oComponents) {
+			oViewModel.registerHidableDataComponents(oComponent);
+		}
+		for(ConfigurableVisualComponent oComponent : p_oComponents) {
+			oComponent.getComponentDelegate().configurationPrepareHide(p_oComponents);
+		}
 	}
 
 	/**
