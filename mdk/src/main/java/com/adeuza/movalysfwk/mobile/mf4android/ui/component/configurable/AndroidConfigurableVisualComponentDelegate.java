@@ -63,7 +63,7 @@ public class AndroidConfigurableVisualComponentDelegate<VALUE> extends AbstractC
 	/** component view */
 	protected View currentView;
 	/** auto-hide the component in case it empty */
-	protected boolean autoHide;
+	protected boolean autoHide = true;
 	/** framework is writing data */
 	protected boolean writingData = false;
 	/**
