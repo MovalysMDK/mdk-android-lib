@@ -99,7 +99,7 @@ public class AndroidConfigurableTextComponentDelegate extends AndroidConfigurabl
 		
 		// Set inputType to "no suggestion" to prevent from a memory leak
 		if ( (p_oCurrentView.getInputType() & InputType.TYPE_MASK_CLASS) == InputType.TYPE_CLASS_TEXT && (p_oAttrs == null || p_oAttrs.getAttributeValue(ANDROID_NAMESPACE, INPUTTYPE_ATTR) == null) ) {
-			p_oCurrentView.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+			p_oCurrentView.setInputType(p_oCurrentView.getInputType() |InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
 		}
 	}
 	
