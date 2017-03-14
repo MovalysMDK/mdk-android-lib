@@ -673,10 +673,10 @@ public abstract class AbstractMMActivity extends LifecycleDispatchActionBarActiv
 	 * @param p_oSource the source object
 	 */
 	public void launchSyncAction(Class<? extends Action<?,?,?,?>> p_oActionClass, ActionParameter p_oParameterIn, Object p_oSource) {
-		Application.getInstance().getController().launchActionByActionTask(this, p_oActionClass, p_oParameterIn, p_oSource);
+		Application.getInstance().getController().launchSyncAction(this, p_oActionClass, p_oParameterIn, p_oSource);
 	}
 
-	
+
 	/**
 	 * Lance une action depuis l'écran courant avec une écoute sur tous les écrans
 	 * @param p_oActionClass l'action à lancer (le nom de l'interface)

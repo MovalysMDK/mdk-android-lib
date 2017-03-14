@@ -121,7 +121,7 @@ public abstract class AbstractFwkControllerImpl extends AbstractBaseFwkControlle
 			
 			//POSTEXECUTE : si des threads différents traitements dans le thread ui
             Application.getInstance().getLog().debug(TAG, "postExecute " + p_oAction.getClass().getSimpleName());
-			lanchActionPostExecute(p_oContext, p_oAction, p_oParameterIn, oLaunchParameter, r_oResult);
+			launchActionPostExecute(p_oContext, p_oAction, p_oParameterIn, oLaunchParameter, r_oResult);
 
 			long lEnd = System.currentTimeMillis();
 			Application.getInstance().getLog().debug("PERF", p_oAction.getClass().getName() + " : " + (lEnd-lStart) + "ms");
@@ -234,7 +234,7 @@ public abstract class AbstractFwkControllerImpl extends AbstractBaseFwkControlle
 	 * @throws ActionException if any
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	private void lanchActionPostExecute(MContext p_oContext, Action p_oAction, ActionParameter p_oParameterIn,
+	private void launchActionPostExecute(MContext p_oContext, Action p_oAction, ActionParameter p_oParameterIn,
 			LaunchParameter p_oLaunchParameter, ActionParameter p_oResult) throws ActionException {
 		if (p_oLaunchParameter==null || !p_oLaunchParameter.isUseActionTask()) {
             Application.getInstance().getLog().debug(TAG, "lanchActionPostExecute launch outside of a task");

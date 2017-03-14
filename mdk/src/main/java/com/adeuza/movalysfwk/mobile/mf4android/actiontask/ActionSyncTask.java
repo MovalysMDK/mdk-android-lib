@@ -127,7 +127,7 @@ implements MMAndroidActionTask<IN,OUT,STATE,PROGRESS>  {
 	 */
 	@Override
 	public void publishActionRunnableProgress(Runnable p_oRunnable, boolean p_bBlocking) {
-		this.androidActionTaskDelegate.publishActionRunnableProgress(p_oRunnable, p_bBlocking);
+		this.androidActionTaskDelegate.publishActionRunnableProgress(p_oRunnable, false);
 		
 	}
 
