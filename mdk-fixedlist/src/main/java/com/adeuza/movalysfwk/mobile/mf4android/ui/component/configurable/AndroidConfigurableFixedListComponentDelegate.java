@@ -138,6 +138,8 @@ public class AndroidConfigurableFixedListComponentDelegate<VALUE extends ListVie
 	@SuppressWarnings({ "unchecked" })
 	@Override
 	public void configurationSetValue(VALUE p_oObjectToSet) {
+		super.configurationSetValue(p_oObjectToSet);
+
 		if (this.currentView instanceof MMFixedList) {
 			MMFixedList currentFixedList = (MMFixedList) this.currentView;
 			currentFixedList.getAdapter().setMasterVM(p_oObjectToSet);
@@ -160,7 +162,16 @@ public class AndroidConfigurableFixedListComponentDelegate<VALUE extends ListVie
 	public boolean isFilled() {
 		return ((MMFixedList) this.currentView).getItemCount() > 0;
 	}
-	
+
+	/**
+	 * {@inheritDoc}
+	 * @see AndroidConfigurableVisualComponentDelegate#isNullOrEmptyValue(Object)
+	 */
+	@Override
+	public boolean isNullOrEmptyValue(VALUE p_oObject) {
+		return (p_oObject == null || p_oObject.getCount() == 0);
+	}
+
 	/**
 	 * {@inheritDoc}
 	 * @see AndroidConfigurableVisualComponentDelegate#validate(BasicComponentConfiguration, Map, StringBuilder)
