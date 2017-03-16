@@ -321,6 +321,25 @@ public class AndroidConfigurableVisualComponentDelegate<VALUE> extends AbstractC
 	}
 
 	/**
+	 * Getter of the AutoHide attribute
+	 * @return true if the framework is AutoHide, false otherwise
+	 */
+
+
+
+	private boolean isAutoHide() {
+		return autoHide;
+	}
+
+	/**
+	 * Setter for writing data
+	 * @param p_bAutoHide true if the framework is AutoHide, false otherwise
+	 */
+	private void setAutoHide(boolean p_bAutoHide) {
+		this.autoHide = p_bAutoHide;
+	}
+
+	/**
 	 * Setter for writing data
 	 * @param p_bWritingData true if the framework is writing data (not the user), false otherwise
 	 */
@@ -387,4 +406,5 @@ public class AndroidConfigurableVisualComponentDelegate<VALUE> extends AbstractC
 			}
 		}
 	}
+
 }
