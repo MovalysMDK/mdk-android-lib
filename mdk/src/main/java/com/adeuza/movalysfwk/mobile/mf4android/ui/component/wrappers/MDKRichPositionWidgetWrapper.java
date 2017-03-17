@@ -120,6 +120,17 @@ public class MDKRichPositionWidgetWrapper extends AbstractComponentWrapper<View>
 	@Override
 	public void configurationSetValue(AddressLocationSVMImpl p_oObjectToSet) {
 		this.writingData = true;
+
+		if (!this.aivFwkDelegate.isEdit()) {
+			if (this.isNullOrEmptyValue(p_oObjectToSet)) {
+				this.configurationHide(false);
+			} else {
+				this.configurationUnHide(false);
+			}
+		} else {
+			this.configurationUnHide(false);
+		}
+
 		View v = this.component.get();
 		if (v != null) {
 			if (v instanceof HasPosition) {
@@ -173,7 +184,8 @@ public class MDKRichPositionWidgetWrapper extends AbstractComponentWrapper<View>
 
 	@Override
 	public boolean isNullOrEmptyValue(AddressLocationSVMImpl p_oObject) {
-		return p_oObject == null;
+		return p_oObject == null  || (p_oObject.getCity()==null && p_oObject.getCompl()==null && p_oObject.getCoutry()==null
+				&& p_oObject.getStreet()==null && p_oObject.getLatitude()==0.00 && p_oObject.getLongitude()==0.00);
 	}
 
 	@Override

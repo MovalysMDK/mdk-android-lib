@@ -114,6 +114,17 @@ public class MDKRichCheckableWidgetWrapper extends AbstractComponentWrapper<View
 	@Override
 	public void configurationSetValue(Boolean p_oObjectToSet) {
 		this.writingData = true;
+
+		if (!this.aivFwkDelegate.isEdit()) {
+			if (this.isNullOrEmptyValue(p_oObjectToSet)) {
+				this.configurationHide(false);
+			} else {
+				this.configurationUnHide(false);
+			}
+		} else {
+			this.configurationUnHide(false);
+		}
+
 		View v = this.component.get();
 		if (v != null) {
 			if (v instanceof HasChecked) {

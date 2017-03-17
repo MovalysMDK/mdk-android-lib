@@ -127,6 +127,17 @@ public class MDKRichMediaWrapper extends AbstractComponentWrapper<View>
     @Override
     public void configurationSetValue(MPhotoVO p_oObjectToSet) {
         this.writingData = true;
+
+        if (!this.aivFwkDelegate.isEdit()) {
+            if (this.isNullOrEmptyValue(p_oObjectToSet)) {
+                this.configurationHide(false);
+            } else {
+                this.configurationUnHide(false);
+            }
+        } else {
+            this.configurationUnHide(false);
+        }
+
         this.mPhotoVO = p_oObjectToSet;
         View v = this.component.get();
         if (v != null && p_oObjectToSet != null && v instanceof HasMedia) {

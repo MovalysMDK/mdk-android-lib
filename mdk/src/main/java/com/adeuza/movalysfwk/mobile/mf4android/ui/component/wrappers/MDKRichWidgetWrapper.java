@@ -128,6 +128,17 @@ public class MDKRichWidgetWrapper extends AbstractComponentWrapper<View> impleme
 	@Override
 	public void configurationSetValue(String p_oObjectToSet) {
 		this.writingData = true;
+
+		if (!this.aivFwkDelegate.isEdit()) {
+			if (this.isNullOrEmptyValue(p_oObjectToSet)) {
+				this.configurationHide(false);
+			} else {
+				this.configurationUnHide(false);
+			}
+		} else {
+			this.configurationUnHide(false);
+		}
+
 		View v = this.component.get();
 		if (v != null) {
 			if (v instanceof HasText) {
@@ -156,7 +167,11 @@ public class MDKRichWidgetWrapper extends AbstractComponentWrapper<View> impleme
 
 	@Override
 	public boolean isNullOrEmptyValue(String p_oObject) {
-		return p_oObject == null || p_oObject.length() < 1;
+		boolean r_bNullOrEmptyValue = false;
+
+		r_bNullOrEmptyValue = p_oObject == null || p_oObject.length() < 1;
+
+		return r_bNullOrEmptyValue;
 	}
 
 	@Override

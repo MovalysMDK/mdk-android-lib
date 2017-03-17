@@ -46,6 +46,9 @@ public class MDKRichEnumViewWrapper<T extends Enum> extends AbstractComponentWra
         implements AndroidComponentWrapper, ConfigurableVisualComponent,
         VisualComponentDelegate<T>, ChangeListener {
 
+    /** VALUE none */
+    public static final String FWK_NONE = "FWK_NONE";
+
     /** framework delegate of the wrapper */
     private AndroidConfigurableVisualComponentFwkDelegate aivFwkDelegate;
 
@@ -112,6 +115,17 @@ public class MDKRichEnumViewWrapper<T extends Enum> extends AbstractComponentWra
     @Override
     public void configurationSetValue(T p_oObjectToSet) {
         this.writingData = true;
+
+        if (!this.aivFwkDelegate.isEdit()) {
+            if (this.isNullOrEmptyValue(p_oObjectToSet)) {
+                this.configurationHide(false);
+            } else {
+                this.configurationUnHide(false);
+            }
+        } else {
+            this.configurationUnHide(false);
+        }
+
         View v = this.component.get();
         if (v != null) {
             if (v instanceof HasEnum) {
@@ -129,7 +143,7 @@ public class MDKRichEnumViewWrapper<T extends Enum> extends AbstractComponentWra
 
     @Override
     public boolean isNullOrEmptyValue(T p_oObject) {
-        return p_oObject == null;
+        return p_oObject == null || p_oObject.name().equals(FWK_NONE);
     }
 
     @Override
