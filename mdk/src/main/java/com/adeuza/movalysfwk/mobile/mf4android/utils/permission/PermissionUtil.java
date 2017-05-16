@@ -184,7 +184,9 @@ public class PermissionUtil {
          * </pre>
          */
         public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-            Log.i(TAG, String.format("ReqCode: %d, ResCode: %d, PermissionName: %s", requestCode, grantResults[0], permissions[0]));
+            if (grantResults != null && permissions != null && grantResults.length > 0  && permissions.length > 0) {
+                Log.i(TAG, String.format("ReqCode: %d, ResCode: %d, PermissionName: %s", requestCode, grantResults[0], permissions[0]));
+            }
 
             if (mRequestCode == requestCode) {
                 if (mResultFunc != null) {
