@@ -1140,7 +1140,7 @@ public abstract class AbstractViewModel implements ViewModel {
 	 */
 	@Override
 	public Map<String, Object> getDelegateAttributesForComponent(int p_iComponentId) {
-		return delegatesAttributes.get(key);
+		return this.delegatesAttributes.get(p_iComponentId);
 	}
 
 	/**
